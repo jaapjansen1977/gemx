@@ -8,6 +8,9 @@ Dit is geen benchmark van de Windows-laptop.
 De gebruikte Python-code en installatie-/uitvoerinstructies staan in
 [probe/README.md](probe/README.md).
 
+De proefclip is ook beschikbaar als [afspeelbare MuJoCo-skeletdemo](mujoco_demo/README.md),
+met een [gerenderde preview](mujoco_demo/preview.mp4).
+
 - [Alle resultaten als ZIP](reports/jaap-cpu-pilot-01.zip)
 - [Video met skelet-overlay](reports/jaap-motion-overlay.mp4)
 

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "mujoco": "3.3.7",
+  "frames": 60,
+  "joints": 77,
+  "bones": 76,
+  "max_position_error_m": 0.0,
+  "max_rotation_matrix_error": 2.023442543741538e-06,
+  "max_bone_endpoint_error_m": 6.800116025829084e-16,
+  "qpos_count": 0,
+  "scope": "kinematic reproduction of GEM-X export, not physical or clinical accuracy"
+}

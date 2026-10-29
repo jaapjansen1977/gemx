@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "mujoco": "3.3.7",
+  "frames": 60,
+  "joints": 77,
+  "bones": 76,
+  "max_position_error_m": 0.0,
+  "max_rotation_matrix_error": 2.023442543741538e-06,
+  "max_bone_endpoint_error_m": 6.800116025829084e-16,
+  "qpos_count": 0,
+  "scope": "kinematic reproduction of GEM-X export, not physical or clinical accuracy",
+  "source_sha256": "96ada449ab6a127229113b4a8d0a7463052b5ddaf701282b29071e4fef82f058",
+  "conversion": "p_mj = C @ p_native + display_offset; R_mj = C @ R_native; SOMA-local axes unchanged",
+  "C": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "display_offset_m": [
+    0.0,
+    0.0,
+    1.0000264286994933
+  ],
+  "units": {
+    "position": "meters",
+    "time": "seconds",
+    "quaternion": "wxyz"
+  },
+  "meaning": "Mocap bodies, no forces, no joints/qpos, no dynamics or IK retargeting. Constant display lift; raw export unchanged."
+}

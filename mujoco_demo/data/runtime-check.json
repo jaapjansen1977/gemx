@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "clean Python environment; 60 frames rendered with actual MuJoCo",
+  "torch_installed": false,
+  "python_network_connect_attempts": 0,
+  "wall_s": 10.47281195800042,
+  "renderer": "Mesa llvmpipe CPU/EGL",
+  "windows_viewer_tested": false,
+  "gem_x_installed": false
+}

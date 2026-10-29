@@ -1,0 +1,470 @@
+<mujoco model="GEM-X kinematic skeleton">
+<compiler angle="radian"/>
+<option gravity="0 0 0"/>
+<visual><global offwidth="960" offheight="960"/><quality shadowsize="2048"/><headlight ambient=".4 .4 .4" diffuse=".8 .8 .8" specular=".1 .1 .1"/></visual>
+<default><geom contype="0" conaffinity="0"/></default>
+<asset><texture type="skybox" builtin="gradient" width="512" height="3072" rgb1=".12 .17 .23" rgb2=".3 .35 .4"/><texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".22 .25 .29" rgb2=".29 .32 .36"/><material name="floor" texture="grid" texrepeat="8 8"/></asset>
+<worldbody><light pos="0 -2 4" dir="0 0 -1" diffuse=".9 .9 .9"/>
+<geom name="floor" type="plane" size="5 5 .1" material="floor"/>
+<body name="joint_Hips" mocap="true" pos="0.0 0.0 1.0000264286994933" quat="0.7007347625776122 -0.06196869158363672 -0.708123248458243 -0.06076297204428953"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="joint_Spine1" mocap="true" pos="-0.0004598738451022655 0.000655236653983593 1.0535846330225467" quat="0.7017607480874315 -0.08748379289267812 -0.7059012774287299 -0.039772162995831015"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_1" mocap="true" pos="-0.00022993692255113274 0.0003276183269917965 1.02680553086102" quat="0.9999720792744653 -0.006116539731919616 -0.004292856066793063 0.0"><geom name="bone_geom_1" type="capsule" size="0.01 0.02678209322166615" rgba=".9 .9 .85 1"/></body>
+<body name="joint_Spine2" mocap="true" pos="-0.00044121633982285857 0.005851555150002241 1.130176419019699" quat="0.6897342162502664 -0.041675252091947855 -0.7174882652561223 -0.08797996088009799"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_2" mocap="true" pos="-0.000450545092462562 0.003253395901992917 1.0918805260211228" quat="0.9994264501180888 -0.033863786269934235 0.00012158873086707301 0.0"><geom name="bone_geom_2" type="capsule" size="0.01 0.03838392813485922" rgba=".9 .9 .85 1"/></body>
+<body name="joint_Chest" mocap="true" pos="-0.004060172010213137 0.00038588978350162506 1.2073588907718658" quat="0.6905996402223041 -0.05792269931657388 -0.7177494820680881 -0.06747428265418769"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_3" mocap="true" pos="-0.0022506941750179976 0.003118722466751933 1.1687676548957824" quat="0.9991027891591807 0.035312094030909257 -0.02338103311442445 0.0"><geom name="bone_geom_3" type="capsule" size="0.01 0.03873017003518327" rgba=".9 .9 .85 1"/></body>
+<body name="joint_Neck1" mocap="true" pos="-0.014466335996985435 -0.0027089931536465883 1.4777753591537475" quat="0.707882227347842 -0.142727913835816 -0.6910428758174761 0.03148394192356338"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_4" mocap="true" pos="-0.009263254003599286 -0.0011615516850724816 1.3425671249628066" quat="0.9997987418906784 0.00571898268512964 -0.019229377287468093 0.0"><geom name="bone_geom_4" type="capsule" size="0.01 0.1353171579304002" rgba=".9 .9 .85 1"/></body>
+<body name="joint_Neck2" mocap="true" pos="-0.011236523278057575 0.015482463873922825 1.550693416595459" quat="0.7031717634647411 -0.25273739727053546 -0.6524380550647649 0.12648266043259968"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_5" mocap="true" pos="-0.012851429637521505 0.006386735360138118 1.5142343878746032" quat="0.9923121354118868 -0.12185468025273345 0.021634759411778202 0.0"><geom name="bone_geom_5" type="capsule" size="0.01 0.03761118151580052" rgba=".9 .9 .85 1"/></body>
+<body name="joint_Head" mocap="true" pos="-0.0038626817986369133 0.047573022544384 1.6046519517898559" quat="0.6973272152469796 -0.038156674483599655 -0.7088627727187421 -0.09895651833882425"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_6" mocap="true" pos="-0.007549602538347244 0.031527743209153414 1.5776726841926574" quat="0.9627092465977628 -0.2636669206590251 0.060585984066904845 0.0"><geom name="bone_geom_6" type="capsule" size="0.01 0.0316057788002088" rgba=".9 .9 .85 1"/></body>
+<body name="joint_HeadEnd" mocap="true" pos="-0.007730450481176376 0.0347004160284996 1.7691009879112243" quat="0.6973584132542988 -0.03817211833653801 -0.7088264944430162 -0.09899057339349535"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_7" mocap="true" pos="-0.005796566139906645 0.0411367192864418 1.68687646985054" quat="0.9991687545353827 0.03904096074203578 -0.011730445198333961 0.0"><geom name="bone_geom_7" type="capsule" size="0.01 0.08249871076923196" rgba=".9 .9 .85 1"/></body>
+<body name="joint_Jaw" mocap="true" pos="0.0021387236192822456 0.07818479090929031 1.6085657715797423" quat="0.6968401721966142 -0.04015019667095791 -0.7089877355904665 -0.10068826596271925"><geom type="sphere" size="0.017" rgba=".9 .9 .85 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_8" mocap="true" pos="-0.0008619790896773338 0.06287890672683716 1.606608861684799" quat="0.7498296602783201 -0.6492711361623524 0.12728893240712968 0.0"><geom name="bone_geom_8" type="capsule" size="0.01 0.01571953573395709" rgba=".9 .9 .85 1"/></body>
+<body name="joint_LeftEye" mocap="true" pos="-0.019040711224079132 0.1310606300830841 1.6541940212249755" quat="0.6971998575581814 -0.03812018278598184 -0.7089551992001442 -0.09920552309372022"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_9" mocap="true" pos="-0.011451696511358023 0.08931682631373405 1.6294229865074157" quat="0.867235600173355 -0.489868441644754 -0.08905797927474503 0.0"><geom name="bone_geom_9" type="capsule" size="0.01 0.04912985302667264" rgba=".15 .65 1 1"/></body>
+<body name="joint_RightEye" mocap="true" pos="0.04115087911486626 0.11916924268007278 1.654667818546295" quat="0.6972080245901806 -0.03817262709030887 -0.7089344149157417 -0.09927646416022802"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_10" mocap="true" pos="0.01864409865811467 0.0833711326122284 1.6296598851680755" quat="0.868633181060532 -0.41944395825003333 0.2637103764515252 0.0"><geom name="bone_geom_10" type="capsule" size="0.01 0.0491269435524681" rgba="1 .45 .2 1"/></body>
+<body name="joint_LeftShoulder" mocap="true" pos="-0.020356198772788048 0.05136580020189285 1.4458828210830688" quat="0.15400349651661552 -0.035011667951318985 0.9858116948810233 -0.05685427339899597"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_11" mocap="true" pos="-0.012208185391500592 0.02587584499269724 1.3266208559274673" quat="0.9939160306019724 -0.10491092267426248 -0.033535390500989415 0.0"><geom name="bone_geom_11" type="capsule" size="0.01 0.12222742847415365" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftArm" mocap="true" pos="-0.1658620834350586 0.03811239078640938 1.3999921917915343" quat="0.5991562828737742 -0.01670421434718496 0.8003548401999215 -0.012839302336318834"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_12" mocap="true" pos="-0.09310914110392332 0.044739095494151115 1.4229375064373015" quat="0.5917543179447062 0.0731226207193063 -0.8027950607302812 0.0"><geom name="bone_geom_12" type="capsule" size="0.01 0.07657278431214554" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftForeArm" mocap="true" pos="-0.23541876673698425 0.027702579274773598 1.1630885541439056" quat="0.6338636766776603 0.10865370453789715 0.7647833959431757 0.038955990149061925"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_13" mocap="true" pos="-0.20064042508602142 0.03290748503059149 1.28154037296772" quat="0.1437945719828899 0.1464728131374644 -0.9787077378256774 0.0"><geom name="bone_geom_13" type="capsule" size="0.01 0.12356155338367915" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHand" mocap="true" pos="-0.2781713008880615 0.08103196322917938 0.9253413915634154" quat="0.4994165196687842 0.24260386267724388 0.8211290445813939 -0.13218773710464662"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_14" mocap="true" pos="-0.2567950338125229 0.05436727125197649 1.0442149728536605" quat="0.13951495330364855 -0.7726023302741852 -0.6193716308159259 0.0"><geom name="bone_geom_14" type="capsule" size="0.01 0.12368863699262096" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandThumb1" mocap="true" pos="-0.26238736510276794 0.10866662114858627 0.9065249651670455" quat="0.3872956373528604 0.5932970668028994 0.5815131401661365 -0.399803886455143"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_15" mocap="true" pos="-0.27027933299541473 0.09484929218888283 0.9159331783652305" quat="0.495505242682209 -0.7542460696609854 0.4307985850434066 0.0"><geom name="bone_geom_15" type="capsule" size="0.003 0.018485567678103075" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandThumb2" mocap="true" pos="-0.26221776008605957 0.124799944460392 0.8672943651676177" quat="0.44471181379377434 0.5214664122148143 0.557974655536817 -0.4679406665194116"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_16" mocap="true" pos="-0.26230256259441376 0.11673328280448914 0.8869096651673316" quat="0.1938551339342163 -0.9809759603863344 0.010312719886428384 0.0"><geom name="bone_geom_16" type="capsule" size="0.003 0.021209389802986145" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandThumb3" mocap="true" pos="-0.2638915479183197 0.1293768435716629 0.8401109367609023" quat="0.4630876066509329 0.5100355536761213 0.5715443361285845 -0.44581461886297413"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_17" mocap="true" pos="-0.26305465400218964 0.12708839401602745 0.85370265096426" quat="0.08857983662179744 -0.935476564681706 -0.3421070146538499 0.0"><geom name="bone_geom_17" type="capsule" size="0.003 0.013808406417153972" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandThumbEnd" mocap="true" pos="-0.26547786593437195 0.13468608260154724 0.8093971401453017" quat="0.4051041162723834 0.5958607595197946 0.5578764623418814 -0.41184276490982824"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_18" mocap="true" pos="-0.2646847069263458 0.13203146308660507 0.824754038453102" quat="0.08912787613362229 -0.9543330055834928 -0.28513985366813727 0.0"><geom name="bone_geom_18" type="capsule" size="0.003 0.015604820781324092" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandIndex1" mocap="true" pos="-0.2770440876483917 0.10624963790178299 0.9002945959568023" quat="0.47140487926387886 0.253601859272242 0.8391329869012224 -0.09653686898849868"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_19" mocap="true" pos="-0.2776076942682266 0.09364080056548119 0.9128179937601089" quat="0.38448361437099626 -0.9222109732769841 0.041222215463661616 0.0"><geom name="bone_geom_19" type="capsule" size="0.003 0.01778021158296785" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandIndex2" mocap="true" pos="-0.30289021134376526 0.12650606036186218 0.8494347572326659" quat="0.7262098963695723 0.19445806066557536 0.6235287401172773 -0.21451610500109097"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_20" mocap="true" pos="-0.2899671494960785 0.11637784913182259 0.8748646765947341" quat="0.2827492165365495 -0.5916846795314371 -0.7549583568354934 0.0"><geom name="bone_geom_20" type="capsule" size="0.003 0.030269902361929207" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandIndex3" mocap="true" pos="-0.2983424663543701 0.12409715354442596 0.8149383902549743" quat="0.9314214711461086 0.04754033067622169 0.25698487155707167 -0.2532839036299182"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_21" mocap="true" pos="-0.3006163388490677 0.12530160695314407 0.8321865737438201" quat="0.07397874173752383 0.46679891411865215 0.8812638194936746 0.0"><geom name="bone_geom_21" type="capsule" size="0.003 0.01743906642572384" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandIndex4" mocap="true" pos="-0.2818463444709778 0.11411852389574051 0.8037239402532577" quat="0.9617304346144844 -0.020062937536557662 0.06672255666326034 -0.2649908490985245"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_22" mocap="true" pos="-0.29009440541267395 0.11910783872008324 0.809331165254116" quat="0.49859566931479554 0.44865630056991695 0.7416939277757688 0.0"><geom name="bone_geom_22" type="capsule" size="0.003 0.011151894185500076" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandIndexEnd" mocap="true" pos="-0.25917279720306396 0.10046147555112839 0.8005864858627318" quat="0.9660412062038213 -0.04569726586103552 0.012251190371434522 -0.2540197947868923"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_23" mocap="true" pos="-0.2705095708370209 0.10728999972343445 0.8021552130579948" quat="0.664187696853755 0.3857178825676643 0.640372093720223 0.0"><geom name="bone_geom_23" type="capsule" size="0.003 0.013327118361165183" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandMiddle1" mocap="true" pos="-0.28815874457359314 0.09739216417074203 0.9018588751554488" quat="0.46985374126432755 0.17498424927417675 0.8493508143335182 -0.1649883890364903"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_24" mocap="true" pos="-0.28316502273082733 0.08921206369996071 0.9136001333594321" quat="0.33564355946919305 -0.8040107257822874 -0.490825991379725 0.0"><geom name="bone_geom_24" type="capsule" size="0.003 0.015156135581591982" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandMiddle2" mocap="true" pos="-0.31721609830856323 0.10570234805345535 0.851842963695526" quat="0.8286182678744133 0.12495038753558348 0.522924633757915 -0.15597754392432536"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_25" mocap="true" pos="-0.3026874214410782 0.1015472561120987 0.8768509194254874" quat="0.2684377271340719 -0.2648762259392418 -0.9261650887305553 0.0"><geom name="bone_geom_25" type="capsule" size="0.003 0.02921891665261789" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandMiddle3" mocap="true" pos="-0.29985278844833374 0.10021521151065826 0.8129643738269805" quat="0.9843941842942896 0.03733495876013236 0.08041725203036505 -0.15201071132602473"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_26" mocap="true" pos="-0.3085344433784485 0.10295877978205681 0.8324036687612533" quat="0.21726719784497553 0.2941322792021783 0.930742266726898 0.0"><geom name="bone_geom_26" type="capsule" size="0.003 0.02146589123998939" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandMiddle4" mocap="true" pos="-0.27384209632873535 0.09210752695798874 0.808273547887802" quat="0.9654284347062535 -0.037212723263419296 -0.20218754200781283 -0.1602602525418969"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_27" mocap="true" pos="-0.28684744238853455 0.0961613692343235 0.8106189608573913" quat="0.6443308828239575 0.2275765620507099 0.7301004190140417 0.0"><geom name="bone_geom_27" type="capsule" size="0.003 0.01382293837555716" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandMiddleEnd" mocap="true" pos="-0.2539750933647156 0.08536069095134735 0.817493924498558" quat="0.962337059712138 -0.020008525876727544 -0.21084809491362927 -0.17044096710629839"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_28" mocap="true" pos="-0.26390859484672546 0.08873410895466805 0.81288373619318" quat="0.8373532645266014 0.17578647596521 0.5176278829954738 0.0"><geom name="bone_geom_28" type="capsule" size="0.003 0.011458980623478884" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandRing1" mocap="true" pos="-0.28966113924980164 0.08397474139928818 0.9008617192506789" quat="0.4749616065481006 0.13175971790789723 0.8513600580020367 -0.17954637473601956"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_29" mocap="true" pos="-0.2839162200689316 0.08250335231423378 0.9131015554070472" quat="0.2236819170350485 -0.24182496568591338 -0.9441859382359666 0.0"><geom name="bone_geom_29" type="capsule" size="0.003 0.013600833480676304" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandRing2" mocap="true" pos="-0.31862425804138184 0.08700535446405411 0.8526346623897552" quat="0.8350339802397166 0.1139417781631631 0.5158768074224148 -0.15364453325025898"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_30" mocap="true" pos="-0.30414269864559174 0.08549004793167114 0.876748190820217" quat="0.26829022000365293 -0.10025344752715287 -0.9581073030247249 0.0"><geom name="bone_geom_30" type="capsule" size="0.003 0.028168670003881485" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandRing3" mocap="true" pos="-0.3014635443687439 0.08133161067962646 0.8160482138395309" quat="0.9944182389258577 0.06055900647292386 -0.02062694114994045 -0.08390174089615354"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_31" mocap="true" pos="-0.31004390120506287 0.08416848257184029 0.834341438114643" quat="0.22741755570087582 0.3056863578628297 0.9245740132491271 0.0"><geom name="bone_geom_31" type="capsule" size="0.003 0.0204037354411135" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandRing4" mocap="true" pos="-0.2758274972438812 0.07692398130893707 0.816851371526718" quat="0.9844499864102696 0.08298803920137368 -0.15139947421197006 -0.0323945800199755"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_32" mocap="true" pos="-0.28864552080631256 0.07912779599428177 0.8164497926831245" quat="0.71793505800083 0.11795220165665508 0.6860441171074149 0.0"><geom name="bone_geom_32" type="capsule" size="0.003 0.013012293909300074" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandRingEnd" mocap="true" pos="-0.2582470774650574 0.07528220862150192 0.8222564250230788" quat="0.9756494486891336 0.09093713071366087 -0.1995807508320205 0.002472939037469394"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_33" mocap="true" pos="-0.2670372873544693 0.0761030949652195 0.8195538982748984" quat="0.8039614836663157 0.055294582443739256 0.592105093656041 0.0"><geom name="bone_geom_33" type="capsule" size="0.003 0.009232837868924575" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandPinky1" mocap="true" pos="-0.293121337890625 0.07147157937288284 0.8997327551245689" quat="0.5163907266817757 0.07509186678264067 0.8313644632454336 -0.19114119962163578"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_34" mocap="true" pos="-0.28564631938934326 0.07625177130103111 0.9125370733439921" quat="0.29837530462029577 0.5142075173756747 -0.8040912924955044 0.0"><geom name="bone_geom_34" type="capsule" size="0.003 0.015578084013404648" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandPinky2" mocap="true" pos="-0.31691989302635193 0.06768020987510681 0.8533627182245254" quat="0.8091927687183602 0.06876021917003389 0.5647291306068397 -0.14683359410450336"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_35" mocap="true" pos="-0.30502061545848846 0.06957589462399483 0.8765477366745471" quat="0.2373557459405905 0.15283097997703832 -0.9593252532005212 0.0"><geom name="bone_geom_35" type="capsule" size="0.003 0.02612913140217397" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandPinky3" mocap="true" pos="-0.3073386251926422 0.06287604570388794 0.8253091365098952" quat="0.9650274059432012 0.06969707074818947 0.2520641557250867 -0.0181131307690601"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_36" mocap="true" pos="-0.31212925910949707 0.06527812778949738 0.8393359273672103" quat="0.18146336142095812 0.44078166341482217 0.8790805274029616 0.0"><geom name="bone_geom_36" type="capsule" size="0.003 0.01501569290529689" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandPinky4" mocap="true" pos="-0.29331231117248535 0.06287891417741776 0.8174456149339675" quat="0.999395976937393 0.030377249900438816 0.009095742182455261 0.014218700502871126"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_37" mocap="true" pos="-0.3003254681825638 0.06287747994065285 0.8213773757219314" quat="0.5054605629650842 -0.0001764584404314849 0.8628496903571554 0.0"><geom name="bone_geom_37" type="capsule" size="0.003 0.00804009429041834" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftHandPinkyEnd" mocap="true" pos="-0.27515220642089844 0.06340533494949341 0.8171309620141982" quat="0.9986071633981091 0.0325304189287579 -0.018895756570659623 0.03699264032107373"><geom type="sphere" size="0.005" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_38" mocap="true" pos="-0.2842322587966919 0.06314212456345558 0.8172882884740829" quat="0.7009576554179133 -0.020665474140771717 0.7129034320927056 0.0"><geom name="bone_geom_38" type="capsule" size="0.003 0.009085228806664718" rgba=".15 .65 1 1"/></body>
+<body name="joint_RightShoulder" mocap="true" pos="0.0110333152115345 0.04609816521406174 1.4470147430896758" quat="0.21911016472587416 0.10970662540605623 0.031878511970385735 0.9689886235298996"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_39" mocap="true" pos="0.0034865716006606817 0.02324202749878168 1.3271868169307708" quat="0.9950920363450568 -0.09396412789979701 0.03102550355238068 0.0"><geom name="bone_geom_39" type="capsule" size="0.01 0.12222147216398642" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightArm" mocap="true" pos="0.14600242674350739 -0.020108662545681 1.4165455639362334" quat="0.17773185386032844 0.5823127460239984 -0.08171355970087664 0.7890793040641558"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_40" mocap="true" pos="0.07851787097752094 0.012994751334190369 1.4317801535129546" quat="0.6329932392343004 0.34093982708217363 0.6950392747124765 0.0"><geom name="bone_geom_40" type="capsule" size="0.01 0.07669481075669811" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightForeArm" mocap="true" pos="0.20892401039600372 -0.06519278138875961 1.1859159559011458" quat="-0.06082849441258557 0.6002228709519901 -0.217667371819879 0.7672374565274269"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_41" mocap="true" pos="0.17746321856975555 -0.042650721967220306 1.3012307599186896" quat="0.16120137599000403 0.5748189219472798 0.8022451765827553 0.0"><geom name="bone_geom_41" type="capsule" size="0.01 0.12163646612304743" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHand" mocap="true" pos="0.2762768566608429 0.022602304816246033 0.9644599199295043" quat="-0.15885676648768426 0.49081564529395555 -0.04726486043204543 0.855354057127278"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_42" mocap="true" pos="0.2426004335284233 -0.02129523828625679 1.075187937915325" quat="0.22962338287206455 -0.7722170004843325 0.5924137120301737 0.0"><geom name="bone_geom_42" type="capsule" size="0.01 0.1237812172039769" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandThumb1" mocap="true" pos="0.2707499861717224 0.05731801688671112 0.9529872998595237" quat="0.537098448122539 -0.3997770652073527 -0.24717226353400537 -0.7004351699465359"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_43" mocap="true" pos="0.27351342141628265 0.03996016085147858 0.958723609894514" quat="0.5872571542390711 -0.799333915164856 -0.12725693247226524 0.0"><geom name="bone_geom_43" type="capsule" size="0.003 0.018488834287435946" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandThumb2" mocap="true" pos="0.27514103055000305 0.08087557554244995 0.9179320201277732" quat="-0.46429971863464503 0.4844452285231296 0.299858110951873 0.6781030195577488"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_44" mocap="true" pos="0.27294550836086273 0.06909679621458054 0.9354596599936484" quat="0.2953409673389317 -0.9392153527734415 0.17506637063115246 0.0"><geom name="bone_geom_44" type="capsule" size="0.003 0.0212315359643496" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandThumb3" mocap="true" pos="0.27789944410324097 0.09028015285730362 0.8919926524162292" quat="-0.46851038703766223 0.4966063546401733 0.2864359145724727 0.6721864418536345"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_45" mocap="true" pos="0.276520237326622 0.08557786419987679 0.9049623362720012" quat="0.17964566400455886 -0.9439652371085442 0.27687012575388303 0.0"><geom name="bone_geom_45" type="capsule" size="0.003 0.013864574615512373" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandThumbEnd" mocap="true" pos="0.2800346612930298 0.10116270184516907 0.8624979645013808" quat="0.5271654891602311 -0.43375345681227845 -0.27176071741979174 -0.6783071562421652"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_46" mocap="true" pos="0.2789670526981354 0.09572142735123634 0.877245308458805" quat="0.17885653914046126 -0.9654670342667696 0.18943005081249673 0.0"><geom name="bone_geom_46" type="capsule" size="0.003 0.015755361310639315" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandIndex1" mocap="true" pos="0.28391095995903015 0.0516304150223732 0.9456605106592177" quat="-0.1663660346978999 0.48407310354777566 -0.08746785983240135 0.8546022153123994"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_47" mocap="true" pos="0.2800939083099365 0.037116359919309616 0.955060215294361" quat="0.4843504200748043 -0.8461034015607338 0.22251675092162415 0.0"><geom name="bone_geom_47" type="capsule" size="0.003 0.0177082502256589" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandIndex2" mocap="true" pos="0.3125528395175934 0.07383643090724945 0.8976258948445319" quat="-0.1774200818552494 0.7471966765101997 -0.003672773260745716 0.6404730688351881"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_48" mocap="true" pos="0.29823189973831177 0.06273342296481133 0.9216432027518748" quat="0.3175882793537606 -0.5809979394892615 0.7493858012575033 0.0"><geom name="bone_geom_48" type="capsule" size="0.003 0.030086494987747757" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandIndex3" mocap="true" pos="0.30629581212997437 0.08194701373577118 0.864319422841072" quat="-0.10839780868552416 0.9385344271201643 0.02535056091864971 0.3267420897948587"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_49" mocap="true" pos="0.3094243258237839 0.07789172232151031 0.880972658842802" quat="0.14863474227796944 -0.7829736327352952 -0.6040364259125909 0.0"><geom name="bone_geom_49" type="capsule" size="0.003 0.017423066771273265" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandIndex4" mocap="true" pos="0.2888984978199005 0.08246224373579025 0.8506085664033889" quat="-0.1006128795792791 0.9812429084731837 0.06466849045156833 0.1511866044878581"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_50" mocap="true" pos="0.29759715497493744 0.08220462873578072 0.8574639946222304" quat="0.4365701770154651 -0.026632497808225995 -0.8992759257320193 0.0"><geom name="bone_geom_50" type="capsule" size="0.003 0.011078352668731669" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandIndexEnd" mocap="true" pos="0.26392385363578796 0.07991471141576767 0.8424313306808471" quat="-0.07614454737450728 0.9903003485398366 0.06848804723874734 0.09389683153564272"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_51" mocap="true" pos="0.27641117572784424 0.08118847757577896 0.846519948542118" quat="0.587488338793929 0.08211945213235006 -0.8050551828058945 0.0"><geom name="bone_geom_51" type="capsule" size="0.003 0.013201230597056097" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandMiddle1" mocap="true" pos="0.29153090715408325 0.03966061770915985 0.9445997938513755" quat="-0.09164326605426223 0.49853721723262706 -0.026838386695587427 0.8615926275337051"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_52" mocap="true" pos="0.2839038819074631 0.031131461262702942 0.9545298568904399" quat="0.41506185513796856 -0.67818634908203 0.606454394269029 0.0"><geom name="bone_geom_52" type="capsule" size="0.003 0.015150055305526515" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandMiddle2" mocap="true" pos="0.31986188888549805 0.05042354762554169 0.8948203116655349" quat="-0.11903820287296192 0.802266065215657 -0.034609391186946926 0.5839531290282051"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_53" mocap="true" pos="0.30569639801979065 0.04504208266735077 0.9197100527584552" quat="0.27004343609987164 -0.34194182910471366 0.9000846227593812 0.0"><geom name="bone_geom_53" type="capsule" size="0.003 0.02913967241125545" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandMiddle3" mocap="true" pos="0.3063727915287018 0.05873910337686539 0.855125480890274" quat="-0.11251867883179148 0.9654230034547795 -0.04218140953693022 0.23134109017591112"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_54" mocap="true" pos="0.3131173402070999 0.05458132550120354 0.8749728962779044" quat="0.18876978953580503 -0.5153297510558248 -0.8359433080271351 0.0"><geom name="bone_geom_54" type="capsule" size="0.003 0.02137044574424632" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandMiddle4" mocap="true" pos="0.28189757466316223 0.06241302192211151 0.8430945366621017" quat="-0.09844660418716243 0.9949441154295613 -0.01710886889502633 -0.010087611275059147"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_55" mocap="true" pos="0.294135183095932 0.06057606264948845 0.8491100087761878" quat="0.5304752729246844 -0.12583656229850618 -0.8383085019277662 0.0"><geom name="bone_geom_55" type="capsule" size="0.003 0.013759338075591496" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandMiddleEnd" mocap="true" pos="0.2591213583946228 0.0631437748670578 0.8436288774013518" quat="-0.11045254134260106 0.9935983354751893 0.002269116706740135 -0.023610060594275537"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_56" mocap="true" pos="0.2705094665288925 0.06277839839458466 0.8433617070317267" quat="0.7153467553508579 -0.022407820404999383 -0.698410272829443 0.0"><geom name="bone_geom_56" type="capsule" size="0.003 0.011397099931599378" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandRing1" mocap="true" pos="0.28863945603370667 0.027036579325795174 0.9406012386083602" quat="-0.05209884086826728 0.5068959200969544 -0.008294395686672448 0.8603914457788604"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_57" mocap="true" pos="0.2824581563472748 0.024819442071020603 0.9525305792689323" quat="0.24896065724950706 -0.3269926274563993 0.9116437970671736 0.0"><geom name="bone_geom_57" type="capsule" size="0.003 0.013617390793245594" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandRing2" mocap="true" pos="0.31560593843460083 0.03253774344921112 0.8917162507772445" quat="-0.13913480666008926 0.7686459626318048 -0.009008087661642 0.6242945971752165"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_58" mocap="true" pos="0.30212269723415375 0.029787161387503147 0.9161587446928023" quat="0.25358224160900755 -0.19334986511230834 0.9477931611916193 0.0"><geom name="bone_geom_58" type="capsule" size="0.003 0.028049937678356906" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandRing3" mocap="true" pos="0.3066903054714203 0.040126971900463104 0.8529866278171538" quat="-0.17723911887545465 0.9639770021718254 -0.044973173495099494 0.19316326692684843"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_59" mocap="true" pos="0.31114812195301056 0.03633235767483711 0.8723514392971992" quat="0.1462604897026319 -0.6412201610090622 -0.7532891704169512 0.0"><geom name="bone_geom_59" type="capsule" size="0.003 0.02023035216111069" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandRing4" mocap="true" pos="0.2828013598918915 0.04415060579776764 0.843743884563446" quat="-0.20931807102535643 0.9707946751638683 -0.07472757340659554 0.09032958313014167"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_60" mocap="true" pos="0.2947458326816559 0.04213878884911537 0.8483652561902999" quat="0.5672446148114588 -0.13678442127263143 -0.8121105645566439 0.0"><geom name="bone_geom_60" type="capsule" size="0.003 0.012964370920866058" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandRingEnd" mocap="true" pos="0.26496052742004395 0.047505997121334076 0.8411003589630126" quat="-0.2293885296452833 0.9682321275119493 -0.08803631593543317 0.04644412554215847"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_61" mocap="true" pos="0.2738809436559677 0.04582830145955086 0.8424221217632293" quat="0.6541789016593861 -0.1397966921253631 -0.7433080448202655 0.0"><geom name="bone_geom_61" type="capsule" size="0.003 0.009172543020108176" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandPinky1" mocap="true" pos="0.2878916561603546 0.014593537896871567 0.9365422964096068" quat="0.013184434318929308 0.5539851498018766 -0.007359294601235459 0.8323896114642797"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_62" mocap="true" pos="0.28208425641059875 0.0185979213565588 0.9505011081695556" quat="0.23183237215075403 0.5521982284111624 0.8008313603765327 0.0"><geom name="bone_geom_62" type="capsule" size="0.003 0.015639993749850544" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandPinky2" mocap="true" pos="0.3082418143749237 0.013865930959582329 0.887891212105751" quat="-0.023451378278791218 0.7388269232969091 -0.021069248265673853 0.6731574088175573"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_63" mocap="true" pos="0.29806673526763916 0.014229734428226948 0.9122167542576789" quat="0.1969044770076446 0.035032003135530794 0.9797966042453189 0.0"><geom name="bone_geom_63" type="capsule" size="0.003 0.026370373315304424" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandPinky3" mocap="true" pos="0.3054679334163666 0.01573965884745121 0.8581981152296065" quat="-0.09253136511664765 0.8905160490187024 -0.14044896105125187 0.42272118736750586"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_64" mocap="true" pos="0.30685487389564514 0.01480279490351677 0.8730446636676787" quat="0.056100647367865894 -0.5588700317689902 -0.8273554284317197 0.0"><geom name="bone_geom_64" type="capsule" size="0.003 0.01494059297573326" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandPinky4" mocap="true" pos="0.2957306504249573 0.02104082703590393 0.8464634954929351" quat="-0.10966128312158228 0.9571060229942251 -0.17225550367889164 0.20554927677965099"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_65" mocap="true" pos="0.3005992919206619 0.01839024294167757 0.8523308053612708" quat="0.36953595934160693 -0.44430620059606146 -0.8161097811357063 0.0"><geom name="bone_geom_65" type="capsule" size="0.003 0.008071839390456971" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightHandPinkyEnd" mocap="true" pos="0.2800126075744629 0.027922064065933228 0.8399335831403731" quat="-0.11065628549783224 0.9546238656580093 -0.19175847427379436 0.19919123760890742"><geom type="sphere" size="0.005" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_66" mocap="true" pos="0.2878716289997101 0.02448144555091858 0.8431985393166541" quat="0.5675906817433087 -0.3301834918313026 -0.7542013522397412 0.0"><geom name="bone_geom_66" type="capsule" size="0.003 0.009179434207040829" rgba="1 .45 .2 1"/></body>
+<body name="joint_LeftLeg" mocap="true" pos="-0.09945175796747208 0.03977227956056595 0.9128125548362731" quat="0.045938853966907056 0.7075591885672301 -0.08231247596658244 -0.7003386842596522"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_67" mocap="true" pos="-0.04972587898373604 0.019886139780282974 0.9564194917678832" quat="0.42929660705140543 -0.33536529392267955 -0.8385908077282423 0.0"><geom name="bone_geom_67" type="capsule" size="0.01 0.06906291729013143" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftShin" mocap="true" pos="-0.09721887856721878 -0.03362917900085449 0.5135903894901275" quat="-0.07075221757210991 -0.693654668854104 0.01961268681684105 0.7165561154587663"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_68" mocap="true" pos="-0.09833531826734543 0.003071550279855728 0.7132014721632003" quat="0.09083097633810167 0.9954058642793662 0.030280341737090866 0.0"><geom name="bone_geom_68" type="capsule" size="0.01 0.20296003127033735" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftFoot" mocap="true" pos="-0.10796894878149033 -0.08358500897884369 0.12852128744125357" quat="-0.29425324042380796 0.5950429074096856 0.4624181242754095 -0.5877996658583"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_69" mocap="true" pos="-0.10259391367435455 -0.05860709398984909 0.3210558384656905" quat="0.06591770957476584 0.9754943604306623 -0.20991809910627046 0.0"><geom name="bone_geom_69" type="capsule" size="0.01 0.19422239978380942" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftToeBase" mocap="true" pos="-0.12423866242170334 0.03928185999393463 0.06992896795272818" quat="0.3192341784049594 -0.5830803268550447 -0.40455300744912603 0.6280475586582533"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_70" mocap="true" pos="-0.11610380560159683 -0.02215157449245453 0.09922512769699088" quat="0.5350718344221742 -0.837495988738928 -0.11089905704871733 0.0"><geom name="bone_geom_70" type="capsule" size="0.01 0.0685456617448432" rgba=".15 .65 1 1"/></body>
+<body name="joint_LeftToeEnd" mocap="true" pos="-0.1316453367471695 0.09483662247657776 0.04099949598312369" quat="0.3180509761156742 -0.5838412881516498 -0.40345438795393557 0.6286473444483833"><geom type="sphere" size="0.017" rgba=".15 .65 1 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_71" mocap="true" pos="-0.12794199958443642 0.0670592412352562 0.05546423196792594" quat="0.5202536993207297 -0.8465215374934569 -0.1128599791901877 0.0"><geom name="bone_geom_71" type="capsule" size="0.01 0.03153610949176572" rgba=".15 .65 1 1"/></body>
+<body name="joint_RightLeg" mocap="true" pos="0.10892222821712494 0.0030751265585422516 0.9149088650941848" quat="0.6819854568882245 -0.15623731537108745 -0.7134480809746794 -0.03843921997312287"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_72" mocap="true" pos="0.05446111410856247 0.0015375632792711258 0.957467646896839" quat="0.4384113967888828 -0.02536437505566102 0.8984164377634999 0.0"><geom name="bone_geom_72" type="capsule" size="0.01 0.06913484620153255" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightShin" mocap="true" pos="0.11735812574625015 -0.06551128625869751 0.5186330318450927" quat="0.67832536887935 -0.19849739795819532 -0.7060566234803461 -0.04424388520521174"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_73" mocap="true" pos="0.11314017698168755 -0.03121807985007763 0.7167709484696387" quat="0.08621567703287782 0.9888250155479277 0.12162214296912796 0.0"><geom name="bone_geom_73" type="capsule" size="0.01 0.20112794212112906" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightFoot" mocap="true" pos="0.11772605776786804 -0.15110132098197937 0.13962134122848502" quat="0.5554687098820935 0.17337321236809075 -0.6344810797687945 -0.508753379340635"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_74" mocap="true" pos="0.1175420917570591 -0.10830630362033844 0.32912718653678885" quat="0.11082230744713559 0.9938310540669218 0.004272252839383584 0.0"><geom name="bone_geom_74" type="capsule" size="0.01 0.1942779265909822" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightToeBase" mocap="true" pos="0.16197344660758972 -0.043468959629535675 0.06718167066574088" quat="0.5493806655459909 0.22418888415761587 -0.6644254599376817 -0.4543776366977227"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_75" mocap="true" pos="0.13984975218772888 -0.09728514030575752 0.10340150594711295" quat="0.48556138411484145 -0.8085457891122941 0.3323911087337583 0.0"><geom name="bone_geom_75" type="capsule" size="0.01 0.0685384244432921" rgba="1 .45 .2 1"/></body>
+<body name="joint_RightToeEnd" mocap="true" pos="0.18084336817264557 0.007315952330827713 0.034940803050994784" quat="0.5501463571054512 0.22306780040346555 -0.6648032155391808 -0.45344947546063663"><geom type="sphere" size="0.017" rgba="1 .45 .2 1"/>
+<geom type="capsule" fromto="0 0 0  .045 0 0" size=".002" rgba="1 0 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 .045 0" size=".002" rgba="0 1 0 1" group="3"/>
+<geom type="capsule" fromto="0 0 0 0 0 .045" size=".002" rgba="0 0 1 1" group="3"/>
+</body>
+<body name="bone_76" mocap="true" pos="0.17140840739011765 -0.01807650364935398 0.05106123685836783" quat="0.4942693436623271 -0.8148756251151111 0.3027796748608949 0.0"><geom name="bone_geom_76" type="capsule" size="0.01 0.0315224315656518" rgba="1 .45 .2 1"/></body>
+</worldbody></mujoco>

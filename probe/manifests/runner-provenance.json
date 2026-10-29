@@ -1,0 +1,5 @@
+{
+  "runner_sha256": "d4c1e02e9ed8c2594214c5517aa90509495b0fd2aedd99b53ef8c7b93513aed9",
+  "upstream_commit": "20555befe2fbbe5b2015e1fff7ff214dc18ea9d6",
+  "purpose": "Exact custom runner source used for this CPU pilot"
+}

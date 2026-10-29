@@ -1,0 +1,79 @@
+[
+  {
+    "repository": "nvidia/GEM-X",
+    "revision": "4fce057963671fd95cd4154297944397e7b5a9a0",
+    "filename": "body_s240000.ckpt",
+    "sha256": "e244d27f2834eb6382c5f6b9cbf2a38681b685514a1b2e86f8f3d2592d614959",
+    "bytes": 3538753341
+  },
+  {
+    "repository": "nvidia/GEM-X",
+    "revision": "4fce057963671fd95cd4154297944397e7b5a9a0",
+    "filename": "vitpose.pth",
+    "sha256": "8e3eec71dbd6bb745eba8c6debe3e4b97bcfd1d01f300099f2eedf50b9a80c8e",
+    "bytes": 3388483384
+  },
+  {
+    "repository": "nvidia/GEM-X",
+    "revision": "4fce057963671fd95cd4154297944397e7b5a9a0",
+    "filename": "motion_native77_e774_s292175.ckpt",
+    "sha256": "c7790f4587e518bcea40cb8281c9be2233d37f6caa668835462542760dcf82aa",
+    "bytes": 187134331
+  },
+  {
+    "repository": "nvidia/GEM-X",
+    "revision": "4fce057963671fd95cd4154297944397e7b5a9a0",
+    "filename": "motion_stats_raw.npz",
+    "sha256": "b7719b634e0fc1f001005605d117d77448c8d4a110923149df58529c68112ed6",
+    "bytes": 21320
+  },
+  {
+    "repository": "nvidia/GEM-X",
+    "revision": "4fce057963671fd95cd4154297944397e7b5a9a0",
+    "filename": "body_video_native77.yaml",
+    "sha256": "796a306aca61e0c928888a23d74996740795bfa7cd1735bdc184d1e5274a02d7",
+    "bytes": 1286
+  },
+  {
+    "repository": "nvidia/GEM-X",
+    "revision": "4fce057963671fd95cd4154297944397e7b5a9a0",
+    "filename": "body_config.json",
+    "sha256": "61c29c72b93f88789ecb7beb21c526c78e92e24ffbce91d91e51984272b26368",
+    "bytes": 1086
+  },
+  {
+    "repository": "nvidia/GEM-X",
+    "revision": "4fce057963671fd95cd4154297944397e7b5a9a0",
+    "filename": "LICENSE",
+    "sha256": "d1a7d615ab8eff4de143b1456f46dabf232f54daf0fcf9a70442bb6f637a9e95",
+    "bytes": 11387
+  },
+  {
+    "repository": "nvidia/SOMA-X",
+    "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+    "filename": "SOMA_neutral.npz",
+    "sha256": "5829af4a5333abdba5ad449360b868faacee99d395971e62f35c0e7169432b63",
+    "bytes": 26608121
+  },
+  {
+    "repository": "nvidia/SOMA-X",
+    "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+    "filename": "SOMA_template_rig.usda",
+    "sha256": "a952cb7bdf4ccd801e355d53122d395b985b69d0d9181439edad5081bb171856",
+    "bytes": 28306038
+  },
+  {
+    "repository": "nvidia/SOMA-X",
+    "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+    "filename": "SOMA_procedural_transforms.json",
+    "sha256": "9853e19ab51625ffaa7d9e7ccf0e443272c2740837604e6bacd66604e8edf509",
+    "bytes": 20045
+  },
+  {
+    "repository": "nvidia/SOMA-X",
+    "revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+    "filename": "LICENSE",
+    "sha256": "d1a7d615ab8eff4de143b1456f46dabf232f54daf0fcf9a70442bb6f637a9e95",
+    "bytes": 11387
+  }
+]

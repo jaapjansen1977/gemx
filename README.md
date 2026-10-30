@@ -27,6 +27,9 @@ De MuJoCo-validatie en CPU-video-export zijn wel op Linux uitgevoerd.
 
 ## Eerdere proef
 
+- [SOMA-mesh met 18 voorlopige landmarks](landmarks/README.md):
+  [video-overlay](landmarks/results/mesh-landmarks.mp4), coördinatenexport en
+  voorlopige botlokale MyoFullBody-tegenpunten; anatomische controle nog nodig.
 - [Eerste rotatiegestuurde MyoFullBody-fit](myo_fit/README.md): 60 frames,
   harde modelgrenzen en 51 koppelingen; [preview](myo_fit/results/preview.mp4).
 

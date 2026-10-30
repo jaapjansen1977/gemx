@@ -1,0 +1,316 @@
+{
+  "status": "unreviewed_not_used_in_fit",
+  "method": "Independent neutral-pose heuristic seeds converted to fixed bone-local coordinates; no skin projection, no subject calibration, not ISB verified",
+  "landmarks": [
+    {
+      "name": "ASIS_l",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        0.07001392382799745,
+        0.08263116752695163,
+        1.098466633624445
+      ],
+      "local_position_m": [
+        0.01752289516988756,
+        0.09845277113857767,
+        -0.09500000000000001
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "PSIS_l",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        0.0699266185743666,
+        0.19218454410087288,
+        0.9960066411442321
+      ],
+      "local_position_m": [
+        -0.09211207305869737,
+        -0.003919948574816644,
+        -0.09499999999999999
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "acromion_l",
+      "joint": "LeftArm",
+      "body": "scapula_l",
+      "seed_m": [
+        0.16994597024223906,
+        0.22347223217595674,
+        1.4997624467978834
+      ],
+      "local_position_m": [
+        -0.03347723217246414,
+        -0.008437553202273315,
+        -0.033980970242934595
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "elbow_epicondyle_lateral_l",
+      "joint": "LeftForeArm",
+      "body": "humerus_l",
+      "seed_m": [
+        0.16766498890361284,
+        0.19347287142625427,
+        1.1837999778055002
+      ],
+      "local_position_m": [
+        0.006072128574132849,
+        -0.290400022194939,
+        -0.022699988902614345
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "knee_epicondyle_lateral_l",
+      "joint": "LeftShin",
+      "body": "femur_l",
+      "seed_m": [
+        0.09594487055816556,
+        0.15588514403674633,
+        0.5171122683377083
+      ],
+      "local_position_m": [
+        0.00010266675591605184,
+        -0.40435307572103496,
+        -0.04372964124582228
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "malleolus_lateral_l",
+      "joint": "LeftFoot",
+      "body": "tibia_l",
+      "seed_m": [
+        0.08574575299110776,
+        0.16309213628964433,
+        0.10641317535542985
+      ],
+      "local_position_m": [
+        0.00024780165663520787,
+        -0.41074035427036026,
+        -0.03506604271019787
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "elbow_epicondyle_medial_l",
+      "joint": "LeftForeArm",
+      "body": "humerus_l",
+      "seed_m": [
+        0.09766501109838441,
+        0.19341712857417723,
+        1.1838000221950362
+      ],
+      "local_position_m": [
+        0.00612787142586713,
+        -0.29039997780506077,
+        0.04729998890261434
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "knee_epicondyle_medial_l",
+      "joint": "LeftShin",
+      "body": "femur_l",
+      "seed_m": [
+        0.005944899094300453,
+        0.1558134746555044,
+        0.517112325409969
+      ],
+      "local_position_m": [
+        0.0001026667559160679,
+        -0.40435307572103496,
+        0.04627035875417772
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "malleolus_medial_l",
+      "joint": "LeftFoot",
+      "body": "tibia_l",
+      "seed_m": [
+        0.01574577518587933,
+        0.16303639343756726,
+        0.10641321974496595
+      ],
+      "local_position_m": [
+        0.0006490088453280739,
+        -0.4107841795357817,
+        0.03493279379540309
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "ASIS_r",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        -0.11998601592905112,
+        0.08247986549988534,
+        1.0984667541103288
+      ],
+      "local_position_m": [
+        0.017522895169887597,
+        0.09845277113857764,
+        0.095
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "PSIS_r",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        -0.12007332118268196,
+        0.1920332420738066,
+        0.9960067616301158
+      ],
+      "local_position_m": [
+        -0.09211207305869733,
+        -0.0039199485748166625,
+        0.09500000000000003
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "acromion_r",
+      "joint": "RightArm",
+      "body": "scapula_r",
+      "seed_m": [
+        -0.21998401390435263,
+        0.2234324158513801,
+        1.4997624785030308
+      ],
+      "local_position_m": [
+        -0.033437415849796794,
+        -0.00843752149521705,
+        0.03401901390365731
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "elbow_epicondyle_lateral_r",
+      "joint": "RightForeArm",
+      "body": "humerus_r",
+      "seed_m": [
+        -0.21766498890161556,
+        0.19341712857263324,
+        1.1838000221934923
+      ],
+      "local_position_m": [
+        0.006127871425867128,
+        -0.2903999778050609,
+        0.022699988902614366
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "knee_epicondyle_lateral_r",
+      "joint": "RightShin",
+      "body": "femur_r",
+      "seed_m": [
+        -0.1460343352095519,
+        0.15569244953175143,
+        0.5171124217855383
+      ],
+      "local_position_m": [
+        0.00010266675591606588,
+        -0.40435307572103496,
+        0.04372964124582233
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "malleolus_lateral_r",
+      "joint": "RightFoot",
+      "body": "tibia_r",
+      "seed_m": [
+        -0.13584722968952934,
+        0.1629156758786248,
+        0.10641331587561295
+      ],
+      "local_position_m": [
+        0.00024780165663524745,
+        -0.4107403542703605,
+        0.03506604271019789
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "elbow_epicondyle_medial_r",
+      "joint": "RightForeArm",
+      "body": "humerus_r",
+      "seed_m": [
+        -0.14766501109638713,
+        0.19347287142471029,
+        1.1837999778039563
+      ],
+      "local_position_m": [
+        0.006072128574132848,
+        -0.2904000221949391,
+        -0.04729998890261432
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "knee_epicondyle_medial_r",
+      "joint": "RightShin",
+      "body": "femur_r",
+      "seed_m": [
+        -0.05603436374568677,
+        0.15576411891299335,
+        0.5171123647132776
+      ],
+      "local_position_m": [
+        0.00010266675591604987,
+        -0.4043530757210349,
+        -0.04627035875417769
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    },
+    {
+      "name": "malleolus_medial_r",
+      "joint": "RightFoot",
+      "body": "tibia_r",
+      "seed_m": [
+        -0.0658472518843009,
+        0.16297141873070187,
+        0.10641327148607685
+      ],
+      "local_position_m": [
+        0.0006490088453280428,
+        -0.410784179535782,
+        -0.03493279379540309
+      ],
+      "status": "unreviewed_bone_fixed_heuristic",
+      "fit_weight": 0.0
+    }
+  ],
+  "mean_candidate_distance_m": 0.08345042619058762,
+  "max_candidate_distance_m": 0.18413890686884385,
+  "interpretation": "Candidate correspondence diagnostic only, NOT anatomical accuracy",
+  "model_commit": "93b0ca8f4ec90c9899ee7f05fee561e9911da91b"
+}

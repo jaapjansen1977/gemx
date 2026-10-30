@@ -1,0 +1,389 @@
+{
+  "status": "candidate_placement_requires_review",
+  "lod": "mid",
+  "correctives": false,
+  "units": "meters, seconds",
+  "camera_axes": "right-handed X right Y down Z forward",
+  "mujoco_axes": "right-handed Z up; same basis and constant display lift as mujoco_demo",
+  "method": "Heuristic neutral-pose seeds projected to closest mesh triangle; fixed topology and barycentric attachment over the entire clip. Shape parameters remain the saved Motion prediction per frame.",
+  "landmarks": [
+    {
+      "name": "ASIS_l",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        0.09503485262393951,
+        0.0631876289844513,
+        0.07746417820453644
+      ],
+      "id": 1,
+      "face_id": 7511,
+      "barycentric": [
+        0.1335339946985049,
+        0.17894938995945037,
+        0.6875166153420448
+      ],
+      "seed_to_surface_m": 0.015580689951531758,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "PSIS_l",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        0.09492351114749908,
+        0.057188160717487335,
+        -0.07241575419902802
+      ],
+      "id": 2,
+      "face_id": 6883,
+      "barycentric": [
+        0.8003972101889824,
+        0.17679909886431852,
+        0.022803690946699127
+      ],
+      "seed_to_surface_m": 0.010122421457496455,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "acromion_l",
+      "joint": "LeftArm",
+      "body": "scapula_l",
+      "seed_m": [
+        0.18508094549179077,
+        0.48128604888916016,
+        -0.012176701799035072
+      ],
+      "id": 3,
+      "face_id": 6040,
+      "barycentric": [
+        0.1152651427764736,
+        0.41884810716928844,
+        0.46588675005423796
+      ],
+      "seed_to_surface_m": 0.011404090372779717,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "elbow_epicondyle_lateral_l",
+      "joint": "LeftForeArm",
+      "body": "humerus_l",
+      "seed_m": [
+        0.4427548348903656,
+        0.4463179111480713,
+        -0.010784423910081387
+      ],
+      "id": 4,
+      "face_id": 7207,
+      "barycentric": [
+        0.0033302179857073178,
+        0.308014868218479,
+        0.6886549137958137
+      ],
+      "seed_to_surface_m": 0.02782117488886655,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "knee_epicondyle_lateral_l",
+      "joint": "LeftShin",
+      "body": "femur_l",
+      "seed_m": [
+        0.15097002685070038,
+        -0.49172428250312805,
+        0.023468442261219025
+      ],
+      "id": 5,
+      "face_id": 9639,
+      "barycentric": [
+        0.4782948241918249,
+        0.4331186191606148,
+        0.0885865566475603
+      ],
+      "seed_to_surface_m": 0.0018201786034708445,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "malleolus_lateral_l",
+      "joint": "LeftFoot",
+      "body": "tibia_l",
+      "seed_m": [
+        0.1409761905670166,
+        -0.8952791094779968,
+        0.024075964465737343
+      ],
+      "id": 6,
+      "face_id": 12784,
+      "barycentric": [
+        0.6673723316740576,
+        0.01547222634177954,
+        0.3171554419841628
+      ],
+      "seed_to_surface_m": 0.0019214598747700786,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "elbow_epicondyle_medial_l",
+      "joint": "LeftForeArm",
+      "body": "humerus_l",
+      "seed_m": [
+        0.372754842042923,
+        0.446291446685791,
+        -0.010731362737715244
+      ],
+      "id": 7,
+      "face_id": 7225,
+      "barycentric": [
+        0.4148844748789298,
+        0.5667442352890933,
+        0.018371289831976816
+      ],
+      "seed_to_surface_m": 0.035788983171597816,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "knee_epicondyle_medial_l",
+      "joint": "LeftShin",
+      "body": "femur_l",
+      "seed_m": [
+        0.06097005307674408,
+        -0.4917583167552948,
+        0.023536663502454758
+      ],
+      "id": 8,
+      "face_id": 9607,
+      "barycentric": [
+        0.8046424404317548,
+        0.1563927281128208,
+        0.038964831455424405
+      ],
+      "seed_to_surface_m": 0.005233492749377734,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "malleolus_medial_l",
+      "joint": "LeftFoot",
+      "body": "tibia_l",
+      "seed_m": [
+        0.07097620517015457,
+        -0.8953055739402771,
+        0.024129025638103485
+      ],
+      "id": 9,
+      "face_id": 13216,
+      "barycentric": [
+        0.5669306976660393,
+        0.03331314098056558,
+        0.3997561613533951
+      ],
+      "seed_to_surface_m": 0.005223173942827336,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "ASIS_r",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        -0.09496507048606873,
+        0.06311576813459396,
+        0.07760820537805557
+      ],
+      "id": 10,
+      "face_id": 25568,
+      "barycentric": [
+        0.6844062112271161,
+        0.18528964752174917,
+        0.13030414125113482
+      ],
+      "seed_to_surface_m": 0.015530263679210345,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "PSIS_r",
+      "joint": "Hips",
+      "body": "pelvis",
+      "seed_m": [
+        -0.09507641196250916,
+        0.057116299867630005,
+        -0.07227172702550888
+      ],
+      "id": 11,
+      "face_id": 24933,
+      "barycentric": [
+        0.17487859950017418,
+        0.8009330335518755,
+        0.024188366947950325
+      ],
+      "seed_to_surface_m": 0.010152192805631993,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "acromion_r",
+      "joint": "RightArm",
+      "body": "scapula_r",
+      "seed_m": [
+        -0.1848100870847702,
+        0.4812178611755371,
+        -0.011903857812285423
+      ],
+      "id": 12,
+      "face_id": 24099,
+      "barycentric": [
+        0.44317510178730224,
+        0.41638640851328623,
+        0.14043848969941153
+      ],
+      "seed_to_surface_m": 0.011506732752647093,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "elbow_epicondyle_lateral_r",
+      "joint": "RightForeArm",
+      "body": "humerus_r",
+      "seed_m": [
+        -0.4381798803806305,
+        0.4462420344352722,
+        -0.01049644686281681
+      ],
+      "id": 13,
+      "face_id": 25265,
+      "barycentric": [
+        0.3155027129155782,
+        0.0034217561902920184,
+        0.6810755308941298
+      ],
+      "seed_to_surface_m": 0.027967995578690504,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "knee_epicondyle_lateral_r",
+      "joint": "RightShin",
+      "body": "femur_r",
+      "seed_m": [
+        -0.1510598510503769,
+        -0.4881674349308014,
+        0.0236973874270916
+      ],
+      "id": 14,
+      "face_id": 27688,
+      "barycentric": [
+        0.0870612031220177,
+        0.4313682344305465,
+        0.4815705624474358
+      ],
+      "seed_to_surface_m": 0.001765315736656116,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "malleolus_lateral_r",
+      "joint": "RightFoot",
+      "body": "tibia_r",
+      "seed_m": [
+        -0.14105376601219177,
+        -0.8918260931968689,
+        0.02428971603512764
+      ],
+      "id": 15,
+      "face_id": 30838,
+      "barycentric": [
+        0.6585711540094382,
+        0.31933631387746914,
+        0.022092532113092617
+      ],
+      "seed_to_surface_m": 0.0018908416153860974,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "elbow_epicondyle_medial_r",
+      "joint": "RightForeArm",
+      "body": "humerus_r",
+      "seed_m": [
+        -0.36817988753318787,
+        0.4462684988975525,
+        -0.010549508035182953
+      ],
+      "id": 16,
+      "face_id": 25279,
+      "barycentric": [
+        0.4475467820581006,
+        0.5524532179418994,
+        0.0
+      ],
+      "seed_to_surface_m": 0.03567560150918032,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "knee_epicondyle_medial_r",
+      "joint": "RightShin",
+      "body": "femur_r",
+      "seed_m": [
+        -0.06105987727642059,
+        -0.48813340067863464,
+        0.023629166185855865
+      ],
+      "id": 17,
+      "face_id": 27657,
+      "barycentric": [
+        0.1646058738022147,
+        0.801513952711348,
+        0.033880173486437334
+      ],
+      "seed_to_surface_m": 0.0052191692854221755,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    },
+    {
+      "name": "malleolus_medial_r",
+      "joint": "RightFoot",
+      "body": "tibia_r",
+      "seed_m": [
+        -0.07105378061532974,
+        -0.8917996287345886,
+        0.024236654862761497
+      ],
+      "id": 18,
+      "face_id": 31271,
+      "barycentric": [
+        0.40128150770877524,
+        0.023322143737930557,
+        0.5753963485532942
+      ],
+      "seed_to_surface_m": 0.005299736462953559,
+      "status": "unreviewed_heuristic",
+      "fit_weight": 0.0,
+      "review_note": "No anatomical validation; anterior sign and placement require inspection"
+    }
+  ]
+}

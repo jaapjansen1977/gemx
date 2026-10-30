@@ -1,0 +1,29 @@
+{
+  "frames": 60,
+  "vertices": 18056,
+  "triangles": 36108,
+  "landmarks": 18,
+  "wall_s": 10.654418631005683,
+  "peak_process_rss_mib": 1260.15234375,
+  "max_mid_mesh_vs_mid_fk_difference_m": 0.0,
+  "max_mid_vs_previous_xlo_joint_difference_m": 0.0010215193033218384,
+  "raw_sha256": "a8f9941a98febb35827ad2a665b917b5e21279121b7ef3adc43f9c6a6426091d",
+  "soma_revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+  "gem_commit": "20555befe2fbbe5b2015e1fff7ff214dc18ea9d6",
+  "source_sha256": {
+    "geometry.py": "c3b4ab55b16a12d69a3c05d8bfbadbd7565f15bb00d90c2f190e32b8ed04e26c",
+    "render.py": "1578c8aed9e3965f085a3ee384f65d6797dbc86f58ae72e893a3b0292c0b1b75",
+    "model_anchors.py": "2843d4508e3173ec55f040022fa0391e9a72662c4c4b561dfb038b18d6a538c9",
+    "__init__.py": "c35d8d8bed99d7532e4e4357c1f19a63f98253b04a55773ac1774015655362be",
+    "build.py": "272bc4698d545fee84a854ef4aa94b2b9ba779a5e8822dde16c0948f6f01b07a",
+    "test_geometry.py": "00229bb4d456165c8fb07f06998477f9b526a300c62ed2f3a235ee7fdf157d1d",
+    "validate.py": "c73dd62b9390b150e4f89db625a111af8f69a0582f8dcbc5af7289f9a94b1473"
+  },
+  "limitations": [
+    "Unreviewed anatomical candidates, not ISB validated",
+    "No fit objective enabled; weights zero",
+    "No person-specific landmark calibration",
+    "No photometric or silhouette optimization; mesh comes from saved temporal Body Motion",
+    "CPU Linux only; no new video inference or network downloads"
+  ]
+}

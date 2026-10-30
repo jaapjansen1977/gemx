@@ -1,0 +1,46 @@
+{
+  "frame-030.jpg": {
+    "bytes": 233878,
+    "sha256": "a6ea7f0b7c94a73b751d0547d03acda2b564b52f9bc43a63357f58a2da39d282"
+  },
+  "landmarks.csv": {
+    "bytes": 431268,
+    "sha256": "ff08e202cdc334892709edbac532b425f1393fbd2a9258a6f68ef6a1dfb3be68"
+  },
+  "surface.npz": {
+    "bytes": 12147813,
+    "sha256": "8176c9a5535c3e8871d85c808c21ed70062598f5f63e1213e9bc32acce13d250"
+  },
+  "report.json": {
+    "bytes": 1451,
+    "sha256": "5d58c9a3ac86b31a0e92a5cd598341a63085848ce664bff1958ee90c8f0cf15a"
+  },
+  "mesh-landmarks.mp4": {
+    "bytes": 677995,
+    "sha256": "fa84dbcf05d076684c8f1e4853610eb29280d4bf93896d9405f101ad61bccf7f"
+  },
+  "model-anchors.json": {
+    "bytes": 7924,
+    "sha256": "93684d37332ea1e6298b729fc76c603f19176d4d295faed9473238491496e9b9"
+  },
+  "validation.json": {
+    "bytes": 366,
+    "sha256": "5ed055d6293fdc73bf29f14a0b62150c50522a087f8b4170e8d4d71c28d6e311"
+  },
+  "model-anchors.npz": {
+    "bytes": 59708,
+    "sha256": "0a458edb80140bf7faf4d66663ee8cedfb0be688684ecd8900ffb29f45a0a401"
+  },
+  "frame-059.jpg": {
+    "bytes": 232465,
+    "sha256": "cd75d94284a65d38959de359828c2607009358e9415421c879ebbf7ae976bfc6"
+  },
+  "frame-000.jpg": {
+    "bytes": 233014,
+    "sha256": "a78c89f3fc494416beafbcf7eabc52b134269f93088d42e3dc588996d2a883a2"
+  },
+  "attachments.json": {
+    "bytes": 10945,
+    "sha256": "f7eb34892a93b80308497a7d8f43c6176edebe70a77a771d61bb83e17fa79ab0"
+  }
+}

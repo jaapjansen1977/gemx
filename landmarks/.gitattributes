@@ -1,0 +1,2 @@
+# csv.writer emits standard CRLF records, including on Linux.
+results/landmarks.csv whitespace=cr-at-eol

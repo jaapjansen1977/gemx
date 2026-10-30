@@ -1,0 +1,12 @@
+{
+  "status": "technical_checks_passed_anatomy_unvalidated",
+  "frames": 60,
+  "landmarks": 18,
+  "max_attachment_reconstruction_error_m": 0.0,
+  "barycentric_valid": true,
+  "finite_arrays": true,
+  "world_to_mujoco_basis_and_lift_verified": true,
+  "time_alignment_verified": true,
+  "model_anchor_names_and_times_verified": true,
+  "landmark_fit_enabled": false
+}

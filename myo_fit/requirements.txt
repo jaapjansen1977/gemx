@@ -1,0 +1,4 @@
+mujoco==3.4.0
+numpy>=1.26,<3
+scipy==1.18.1
+myo-sim @ git+https://github.com/MyoHub/myo_sim.git@93b0ca8f4ec90c9899ee7f05fee561e9911da91b

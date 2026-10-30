@@ -1,0 +1,7 @@
+{
+  "mean_absolute_origin_joint_distance_cm": 9.266651428375178,
+  "max_absolute_origin_joint_distance_cm": 18.489995576300885,
+  "mean_reference_relative_displacement_error_cm": 1.4100491512028321,
+  "max_reference_relative_displacement_error_cm": 20.457422885332036,
+  "scope": "coarse model body-origin vs GEM-X joint comparison, not equal anatomical landmarks; not optimized; no ground truth"
+}

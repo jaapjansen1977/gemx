@@ -1,0 +1,2615 @@
+{
+  "mujoco": "3.4.0",
+  "nq": 129,
+  "nv": 128,
+  "njnt": 123,
+  "nu": 416,
+  "nbody": 104,
+  "nsite": 2042,
+  "joints": [
+    {
+      "name": "root",
+      "type": 0,
+      "qadr": 0,
+      "dadr": 0,
+      "limited": false,
+      "range": [
+        0.0,
+        0.0
+      ],
+      "q0": -0.025
+    },
+    {
+      "name": "flex_extension",
+      "type": 3,
+      "qadr": 7,
+      "dadr": 6,
+      "limited": true,
+      "range": [
+        -1.35,
+        0.7538
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "lat_bending",
+      "type": 3,
+      "qadr": 8,
+      "dadr": 7,
+      "limited": true,
+      "range": [
+        -0.4363,
+        0.4363
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "axial_rotation",
+      "type": 3,
+      "qadr": 9,
+      "dadr": 8,
+      "limited": true,
+      "range": [
+        -0.7854,
+        0.7854
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "Abs_t1",
+      "type": 2,
+      "qadr": 10,
+      "dadr": 9,
+      "limited": true,
+      "range": [
+        -0.05,
+        0.015
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "Abs_t2",
+      "type": 2,
+      "qadr": 11,
+      "dadr": 10,
+      "limited": true,
+      "range": [
+        -0.03,
+        0.03
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "Abs_r3",
+      "type": 3,
+      "qadr": 12,
+      "dadr": 11,
+      "limited": true,
+      "range": [
+        -0.7,
+        0.7
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L4_L5_FE",
+      "type": 3,
+      "qadr": 13,
+      "dadr": 12,
+      "limited": true,
+      "range": [
+        -0.18607,
+        0.083953
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L4_L5_LB",
+      "type": 3,
+      "qadr": 14,
+      "dadr": 13,
+      "limited": true,
+      "range": [
+        -0.0889703,
+        0.089703
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L4_L5_AR",
+      "type": 3,
+      "qadr": 15,
+      "dadr": 14,
+      "limited": true,
+      "range": [
+        -0.3168812,
+        0.3168812
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L3_L4_FE",
+      "type": 3,
+      "qadr": 16,
+      "dadr": 15,
+      "limited": true,
+      "range": [
+        -0.249288,
+        0.0925752
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L3_L4_LB",
+      "type": 3,
+      "qadr": 17,
+      "dadr": 16,
+      "limited": true,
+      "range": [
+        -0.1568935,
+        0.1568935
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L3_L4_AR",
+      "type": 3,
+      "qadr": 18,
+      "dadr": 17,
+      "limited": true,
+      "range": [
+        -0.02968812,
+        0.02968812
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L2_L3_FE",
+      "type": 3,
+      "qadr": 19,
+      "dadr": 18,
+      "limited": true,
+      "range": [
+        -0.282282,
+        0.1048278
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L2_L3_LB",
+      "type": 3,
+      "qadr": 20,
+      "dadr": 19,
+      "limited": true,
+      "range": [
+        -0.159075,
+        0.159075
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L2_L3_AR",
+      "type": 3,
+      "qadr": 21,
+      "dadr": 20,
+      "limited": true,
+      "range": [
+        -0.10442594,
+        0.10442594
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L1_L2_FE",
+      "type": 3,
+      "qadr": 22,
+      "dadr": 21,
+      "limited": true,
+      "range": [
+        -0.31161,
+        0.115719
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L1_L2_LB",
+      "type": 3,
+      "qadr": 23,
+      "dadr": 22,
+      "limited": true,
+      "range": [
+        -0.0820244,
+        0.0820244
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "L1_L2_AR",
+      "type": 3,
+      "qadr": 24,
+      "dadr": 23,
+      "limited": true,
+      "range": [
+        -0.08269806,
+        0.08269806
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "sternoclavicular_r2_r",
+      "type": 3,
+      "qadr": 25,
+      "dadr": 24,
+      "limited": true,
+      "range": [
+        -0.75,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "sternoclavicular_r3_r",
+      "type": 3,
+      "qadr": 26,
+      "dadr": 25,
+      "limited": true,
+      "range": [
+        0.0,
+        0.318
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrotscap_r3_r",
+      "type": 3,
+      "qadr": 27,
+      "dadr": 26,
+      "limited": true,
+      "range": [
+        -0.318,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrotscap_r2_r",
+      "type": 3,
+      "qadr": 28,
+      "dadr": 27,
+      "limited": true,
+      "range": [
+        0.0,
+        0.75
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "acromioclavicular_r2_r",
+      "type": 3,
+      "qadr": 29,
+      "dadr": 28,
+      "limited": true,
+      "range": [
+        -0.152,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "acromioclavicular_r3_r",
+      "type": 3,
+      "qadr": 30,
+      "dadr": 29,
+      "limited": true,
+      "range": [
+        0.0,
+        1.228
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "acromioclavicular_r1_r",
+      "type": 3,
+      "qadr": 31,
+      "dadr": 30,
+      "limited": true,
+      "range": [
+        0.0,
+        0.552
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrothum_r1_r",
+      "type": 3,
+      "qadr": 32,
+      "dadr": 31,
+      "limited": true,
+      "range": [
+        -0.552,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrothum_r3_r",
+      "type": 3,
+      "qadr": 33,
+      "dadr": 32,
+      "limited": true,
+      "range": [
+        -1.228,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrothum_r2_r",
+      "type": 3,
+      "qadr": 34,
+      "dadr": 33,
+      "limited": true,
+      "range": [
+        0.0,
+        0.152
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "elv_angle_r",
+      "type": 3,
+      "qadr": 35,
+      "dadr": 34,
+      "limited": true,
+      "range": [
+        -1.658,
+        2.269
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "shoulder_elv_r",
+      "type": 3,
+      "qadr": 36,
+      "dadr": 35,
+      "limited": true,
+      "range": [
+        0.0,
+        3.142
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "shoulder1_r2_r",
+      "type": 3,
+      "qadr": 37,
+      "dadr": 36,
+      "limited": true,
+      "range": [
+        -2.242,
+        1.658
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "shoulder_rot_r",
+      "type": 3,
+      "qadr": 38,
+      "dadr": 37,
+      "limited": true,
+      "range": [
+        -1.571,
+        2.094
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "elbow_flexion_r",
+      "type": 3,
+      "qadr": 39,
+      "dadr": 38,
+      "limited": true,
+      "range": [
+        0.0,
+        2.269
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pro_sup_r",
+      "type": 3,
+      "qadr": 40,
+      "dadr": 39,
+      "limited": true,
+      "range": [
+        -1.5708,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "deviation_r",
+      "type": 3,
+      "qadr": 41,
+      "dadr": 40,
+      "limited": true,
+      "range": [
+        -0.174533,
+        0.436332
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "flexion_r",
+      "type": 3,
+      "qadr": 42,
+      "dadr": 41,
+      "limited": true,
+      "range": [
+        -0.785398,
+        0.785398
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "cmc_flexion",
+      "type": 3,
+      "qadr": 43,
+      "dadr": 42,
+      "limited": true,
+      "range": [
+        -0.78,
+        0.7
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "cmc_abduction",
+      "type": 3,
+      "qadr": 44,
+      "dadr": 43,
+      "limited": true,
+      "range": [
+        -0.5,
+        0.78
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mp_flexion_r",
+      "type": 3,
+      "qadr": 45,
+      "dadr": 44,
+      "limited": true,
+      "range": [
+        -0.785398,
+        0.698132
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "ip_flexion_r",
+      "type": 3,
+      "qadr": 46,
+      "dadr": 45,
+      "limited": true,
+      "range": [
+        -1.309,
+        0.436332
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp2_flexion_r",
+      "type": 3,
+      "qadr": 47,
+      "dadr": 46,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp2_abduction_r",
+      "type": 3,
+      "qadr": 48,
+      "dadr": 47,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm2_flexion_r",
+      "type": 3,
+      "qadr": 49,
+      "dadr": 48,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md2_flexion_r",
+      "type": 3,
+      "qadr": 50,
+      "dadr": 49,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp3_flexion_r",
+      "type": 3,
+      "qadr": 51,
+      "dadr": 50,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp3_abduction_r",
+      "type": 3,
+      "qadr": 52,
+      "dadr": 51,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm3_flexion_r",
+      "type": 3,
+      "qadr": 53,
+      "dadr": 52,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md3_flexion",
+      "type": 3,
+      "qadr": 54,
+      "dadr": 53,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp4_flexion_r",
+      "type": 3,
+      "qadr": 55,
+      "dadr": 54,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp4_abduction_r",
+      "type": 3,
+      "qadr": 56,
+      "dadr": 55,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm4_flexion",
+      "type": 3,
+      "qadr": 57,
+      "dadr": 56,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md4_flexion_r",
+      "type": 3,
+      "qadr": 58,
+      "dadr": 57,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp5_flexion_r",
+      "type": 3,
+      "qadr": 59,
+      "dadr": 58,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp5_abduction_r",
+      "type": 3,
+      "qadr": 60,
+      "dadr": 59,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm5_flexion_r",
+      "type": 3,
+      "qadr": 61,
+      "dadr": 60,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md5_flexion_r",
+      "type": 3,
+      "qadr": 62,
+      "dadr": 61,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "sternoclavicular_r2_l",
+      "type": 3,
+      "qadr": 63,
+      "dadr": 62,
+      "limited": true,
+      "range": [
+        -0.75,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "sternoclavicular_r3_l",
+      "type": 3,
+      "qadr": 64,
+      "dadr": 63,
+      "limited": true,
+      "range": [
+        0.0,
+        0.318
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrotscap_r3_l",
+      "type": 3,
+      "qadr": 65,
+      "dadr": 64,
+      "limited": true,
+      "range": [
+        -0.318,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrotscap_r2_l",
+      "type": 3,
+      "qadr": 66,
+      "dadr": 65,
+      "limited": true,
+      "range": [
+        0.0,
+        0.75
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "acromioclavicular_r2_l",
+      "type": 3,
+      "qadr": 67,
+      "dadr": 66,
+      "limited": true,
+      "range": [
+        -0.152,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "acromioclavicular_r3_l",
+      "type": 3,
+      "qadr": 68,
+      "dadr": 67,
+      "limited": true,
+      "range": [
+        0.0,
+        1.228
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "acromioclavicular_r1_l",
+      "type": 3,
+      "qadr": 69,
+      "dadr": 68,
+      "limited": true,
+      "range": [
+        0.0,
+        0.552
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrothum_r1_l",
+      "type": 3,
+      "qadr": 70,
+      "dadr": 69,
+      "limited": true,
+      "range": [
+        -0.552,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrothum_r3_l",
+      "type": 3,
+      "qadr": 71,
+      "dadr": 70,
+      "limited": true,
+      "range": [
+        -1.228,
+        -0.0
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "unrothum_r2_l",
+      "type": 3,
+      "qadr": 72,
+      "dadr": 71,
+      "limited": true,
+      "range": [
+        0.0,
+        0.152
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "elv_angle_l",
+      "type": 3,
+      "qadr": 73,
+      "dadr": 72,
+      "limited": true,
+      "range": [
+        -1.658,
+        2.269
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "shoulder_elv_l",
+      "type": 3,
+      "qadr": 74,
+      "dadr": 73,
+      "limited": true,
+      "range": [
+        0.0,
+        3.142
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "shoulder1_r2_l",
+      "type": 3,
+      "qadr": 75,
+      "dadr": 74,
+      "limited": true,
+      "range": [
+        -2.242,
+        1.658
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "shoulder_rot_l",
+      "type": 3,
+      "qadr": 76,
+      "dadr": 75,
+      "limited": true,
+      "range": [
+        -1.571,
+        2.094
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "elbow_flexion_l",
+      "type": 3,
+      "qadr": 77,
+      "dadr": 76,
+      "limited": true,
+      "range": [
+        0.0,
+        2.269
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pro_sup_l",
+      "type": 3,
+      "qadr": 78,
+      "dadr": 77,
+      "limited": true,
+      "range": [
+        -1.5708,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "deviation_l",
+      "type": 3,
+      "qadr": 79,
+      "dadr": 78,
+      "limited": true,
+      "range": [
+        -0.174533,
+        0.436332
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "flexion_l",
+      "type": 3,
+      "qadr": 80,
+      "dadr": 79,
+      "limited": true,
+      "range": [
+        -0.785398,
+        0.785398
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "cmc_flexion_l",
+      "type": 3,
+      "qadr": 81,
+      "dadr": 80,
+      "limited": true,
+      "range": [
+        -0.78,
+        0.7
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "cmc_abduction_l",
+      "type": 3,
+      "qadr": 82,
+      "dadr": 81,
+      "limited": true,
+      "range": [
+        -0.5,
+        0.78
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mp_flexion_l",
+      "type": 3,
+      "qadr": 83,
+      "dadr": 82,
+      "limited": true,
+      "range": [
+        -0.785398,
+        0.698132
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "ip_flexion_l",
+      "type": 3,
+      "qadr": 84,
+      "dadr": 83,
+      "limited": true,
+      "range": [
+        -1.309,
+        0.436332
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp2_flexion_l",
+      "type": 3,
+      "qadr": 85,
+      "dadr": 84,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp2_abduction_l",
+      "type": 3,
+      "qadr": 86,
+      "dadr": 85,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm2_flexion_l",
+      "type": 3,
+      "qadr": 87,
+      "dadr": 86,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md2_flexion_l",
+      "type": 3,
+      "qadr": 88,
+      "dadr": 87,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp3_flexion_l",
+      "type": 3,
+      "qadr": 89,
+      "dadr": 88,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp3_abduction_l",
+      "type": 3,
+      "qadr": 90,
+      "dadr": 89,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm3_flexion_l",
+      "type": 3,
+      "qadr": 91,
+      "dadr": 90,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md3_flexion_l",
+      "type": 3,
+      "qadr": 92,
+      "dadr": 91,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp4_flexion_l",
+      "type": 3,
+      "qadr": 93,
+      "dadr": 92,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp4_abduction_l",
+      "type": 3,
+      "qadr": 94,
+      "dadr": 93,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm4_flexion_l",
+      "type": 3,
+      "qadr": 95,
+      "dadr": 94,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md4_flexion_l",
+      "type": 3,
+      "qadr": 96,
+      "dadr": 95,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp5_flexion_l",
+      "type": 3,
+      "qadr": 97,
+      "dadr": 96,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mcp5_abduction_l",
+      "type": 3,
+      "qadr": 98,
+      "dadr": 97,
+      "limited": true,
+      "range": [
+        -0.261799,
+        0.261799
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "pm5_flexion_l",
+      "type": 3,
+      "qadr": 99,
+      "dadr": 98,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "md5_flexion_l",
+      "type": 3,
+      "qadr": 100,
+      "dadr": 99,
+      "limited": true,
+      "range": [
+        0.0,
+        1.5708
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "hip_flexion_r",
+      "type": 3,
+      "qadr": 101,
+      "dadr": 100,
+      "limited": true,
+      "range": [
+        -0.523599,
+        2.0944
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "hip_adduction_r",
+      "type": 3,
+      "qadr": 102,
+      "dadr": 101,
+      "limited": true,
+      "range": [
+        -0.872665,
+        0.523599
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "hip_rotation_r",
+      "type": 3,
+      "qadr": 103,
+      "dadr": 102,
+      "limited": true,
+      "range": [
+        -0.698132,
+        0.698132
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_translation2_r",
+      "type": 2,
+      "qadr": 104,
+      "dadr": 103,
+      "limited": true,
+      "range": [
+        7.69254e-11,
+        0.006792
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_translation1_r",
+      "type": 2,
+      "qadr": 105,
+      "dadr": 104,
+      "limited": true,
+      "range": [
+        9.53733e-08,
+        0.00159883
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_r",
+      "type": 3,
+      "qadr": 106,
+      "dadr": 105,
+      "limited": true,
+      "range": [
+        0.0,
+        2.0944
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_rotation2_r",
+      "type": 3,
+      "qadr": 107,
+      "dadr": 106,
+      "limited": true,
+      "range": [
+        -0.00167821,
+        0.0335354
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_rotation3_r",
+      "type": 3,
+      "qadr": 108,
+      "dadr": 107,
+      "limited": true,
+      "range": [
+        -0.262788,
+        0.262788
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "ankle_angle_r",
+      "type": 3,
+      "qadr": 109,
+      "dadr": 108,
+      "limited": true,
+      "range": [
+        -0.698132,
+        0.523599
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "subtalar_angle_r",
+      "type": 3,
+      "qadr": 110,
+      "dadr": 109,
+      "limited": true,
+      "range": [
+        -0.349066,
+        0.349066
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mtp_angle_r",
+      "type": 3,
+      "qadr": 111,
+      "dadr": 110,
+      "limited": true,
+      "range": [
+        -0.523599,
+        0.523599
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_beta_translation2_r",
+      "type": 2,
+      "qadr": 112,
+      "dadr": 111,
+      "limited": true,
+      "range": [
+        -0.0408267,
+        -0.0108281
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_beta_translation1_r",
+      "type": 2,
+      "qadr": 113,
+      "dadr": 112,
+      "limited": true,
+      "range": [
+        -0.0227731,
+        0.0524192
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_beta_rotation1_r",
+      "type": 3,
+      "qadr": 114,
+      "dadr": 113,
+      "limited": true,
+      "range": [
+        -1.79241,
+        0.010506
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "hip_flexion_l",
+      "type": 3,
+      "qadr": 115,
+      "dadr": 114,
+      "limited": true,
+      "range": [
+        -0.523599,
+        2.0944
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "hip_adduction_l",
+      "type": 3,
+      "qadr": 116,
+      "dadr": 115,
+      "limited": true,
+      "range": [
+        -0.872665,
+        0.523599
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "hip_rotation_l",
+      "type": 3,
+      "qadr": 117,
+      "dadr": 116,
+      "limited": true,
+      "range": [
+        -0.698132,
+        0.698132
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_translation2_l",
+      "type": 2,
+      "qadr": 118,
+      "dadr": 117,
+      "limited": true,
+      "range": [
+        7.69254e-11,
+        0.006792
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_translation1_l",
+      "type": 2,
+      "qadr": 119,
+      "dadr": 118,
+      "limited": true,
+      "range": [
+        9.53733e-08,
+        0.00159883
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_l",
+      "type": 3,
+      "qadr": 120,
+      "dadr": 119,
+      "limited": true,
+      "range": [
+        0.0,
+        2.0944
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_rotation2_l",
+      "type": 3,
+      "qadr": 121,
+      "dadr": 120,
+      "limited": true,
+      "range": [
+        -0.00167821,
+        0.0335354
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_rotation3_l",
+      "type": 3,
+      "qadr": 122,
+      "dadr": 121,
+      "limited": true,
+      "range": [
+        -0.262788,
+        0.262788
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "ankle_angle_l",
+      "type": 3,
+      "qadr": 123,
+      "dadr": 122,
+      "limited": true,
+      "range": [
+        -0.698132,
+        0.523599
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "subtalar_angle_l",
+      "type": 3,
+      "qadr": 124,
+      "dadr": 123,
+      "limited": true,
+      "range": [
+        -0.349066,
+        0.349066
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "mtp_angle_l",
+      "type": 3,
+      "qadr": 125,
+      "dadr": 124,
+      "limited": true,
+      "range": [
+        -0.523599,
+        0.523599
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_beta_translation2_l",
+      "type": 2,
+      "qadr": 126,
+      "dadr": 125,
+      "limited": true,
+      "range": [
+        -0.0408267,
+        -0.0108281
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_beta_translation1_l",
+      "type": 2,
+      "qadr": 127,
+      "dadr": 126,
+      "limited": true,
+      "range": [
+        -0.0227731,
+        0.0524192
+      ],
+      "q0": 0.0
+    },
+    {
+      "name": "knee_angle_beta_rotation1_l",
+      "type": 3,
+      "qadr": 128,
+      "dadr": 127,
+      "limited": true,
+      "range": [
+        -1.79241,
+        0.010506
+      ],
+      "q0": 0.0
+    }
+  ],
+  "equalities": [
+    {
+      "name": "Abs_r3_con",
+      "type": 2,
+      "active": true,
+      "object1": 6,
+      "object2": 1,
+      "data": [
+        0.0,
+        0.6429,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L4_L5_FE_con",
+      "type": 2,
+      "active": true,
+      "object1": 7,
+      "object2": 1,
+      "data": [
+        0.0,
+        0.185,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L4_L5_AR_con",
+      "type": 2,
+      "active": true,
+      "object1": 9,
+      "object2": 3,
+      "data": [
+        0.0,
+        0.03778,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L4_L5_LB_con",
+      "type": 2,
+      "active": true,
+      "object1": 8,
+      "object2": 2,
+      "data": [
+        0.0,
+        0.1811,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L3_L4_FE_con",
+      "type": 2,
+      "active": true,
+      "object1": 10,
+      "object2": 1,
+      "data": [
+        0.0,
+        0.204,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L3_L4_AR_con",
+      "type": 2,
+      "active": true,
+      "object1": 12,
+      "object2": 3,
+      "data": [
+        0.0,
+        0.03778,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L3_L4_LB_con",
+      "type": 2,
+      "active": true,
+      "object1": 11,
+      "object2": 2,
+      "data": [
+        0.0,
+        0.2453,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L2_L3_FE_con",
+      "type": 2,
+      "active": true,
+      "object1": 13,
+      "object2": 1,
+      "data": [
+        0.0,
+        0.231,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L2_L3_AR_con",
+      "type": 2,
+      "active": true,
+      "object1": 15,
+      "object2": 3,
+      "data": [
+        0.0,
+        0.03111,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L2_L3_LB_con",
+      "type": 2,
+      "active": true,
+      "object1": 14,
+      "object2": 2,
+      "data": [
+        0.0,
+        0.2501,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L1_L2_FE_con",
+      "type": 2,
+      "active": true,
+      "object1": 16,
+      "object2": 1,
+      "data": [
+        0.0,
+        0.255,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L1_L2_AR_con",
+      "type": 2,
+      "active": true,
+      "object1": 18,
+      "object2": 3,
+      "data": [
+        0.0,
+        0.02889,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "L1_L2_LB_con",
+      "type": 2,
+      "active": true,
+      "object1": 17,
+      "object2": 2,
+      "data": [
+        0.0,
+        0.188,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Abs_t1_locked",
+      "type": 2,
+      "active": true,
+      "object1": 4,
+      "object2": -1,
+      "data": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Abs_t2_locked",
+      "type": 2,
+      "active": true,
+      "object1": 5,
+      "object2": -1,
+      "data": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "sternoclavicular_r2_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 19,
+      "object2": 30,
+      "data": [
+        0.0,
+        -0.242,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "sternoclavicular_r3_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 20,
+      "object2": 30,
+      "data": [
+        0.0,
+        0.1025,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrotscap_r2_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 22,
+      "object2": 30,
+      "data": [
+        0.0,
+        0.242,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrotscap_r3_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 21,
+      "object2": 30,
+      "data": [
+        0.0,
+        -0.1025,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r1_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 25,
+      "object2": 30,
+      "data": [
+        0.0,
+        0.178,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r2_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 23,
+      "object2": 30,
+      "data": [
+        0.0,
+        -0.049,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r3_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 24,
+      "object2": 30,
+      "data": [
+        0.0,
+        0.396,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrothum_r1_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 26,
+      "object2": 30,
+      "data": [
+        0.0,
+        -0.178,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrothum_r2_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 28,
+      "object2": 30,
+      "data": [
+        0.0,
+        0.049,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrothum_r3_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 27,
+      "object2": 30,
+      "data": [
+        0.0,
+        -0.396,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "shoulder1_r2_con_r",
+      "type": 2,
+      "active": true,
+      "object1": 31,
+      "object2": 29,
+      "data": [
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "sternoclavicular_r2_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 57,
+      "object2": 68,
+      "data": [
+        0.0,
+        -0.242,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "sternoclavicular_r3_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 58,
+      "object2": 68,
+      "data": [
+        0.0,
+        0.1025,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrotscap_r2_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 60,
+      "object2": 68,
+      "data": [
+        0.0,
+        0.242,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrotscap_r3_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 59,
+      "object2": 68,
+      "data": [
+        0.0,
+        -0.1025,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r1_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 63,
+      "object2": 68,
+      "data": [
+        0.0,
+        0.178,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r2_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 61,
+      "object2": 68,
+      "data": [
+        0.0,
+        -0.049,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r3_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 62,
+      "object2": 68,
+      "data": [
+        0.0,
+        0.396,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrothum_r1_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 64,
+      "object2": 68,
+      "data": [
+        0.0,
+        -0.178,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrothum_r2_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 66,
+      "object2": 68,
+      "data": [
+        0.0,
+        0.049,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "unrothum_r3_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 65,
+      "object2": 68,
+      "data": [
+        0.0,
+        -0.396,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "shoulder1_r2_con_l",
+      "type": 2,
+      "active": true,
+      "object1": 69,
+      "object2": 67,
+      "data": [
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_translation2_constraint_r",
+      "type": 2,
+      "active": true,
+      "object1": 98,
+      "object2": 100,
+      "data": [
+        7.69254e-11,
+        0.00587971,
+        -0.00125622,
+        -2.61846e-06,
+        6.24355e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_translation1_constraint_r",
+      "type": 2,
+      "active": true,
+      "object1": 99,
+      "object2": 100,
+      "data": [
+        9.53733e-08,
+        0.00312879,
+        -0.00230804,
+        0.000561561,
+        5.68366e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_rotation2_constraint_r",
+      "type": 2,
+      "active": true,
+      "object1": 101,
+      "object2": 100,
+      "data": [
+        -1.47325e-08,
+        0.0791,
+        -0.0328478,
+        -0.0252183,
+        0.0108321,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_rotation3_constraint_r",
+      "type": 2,
+      "active": true,
+      "object1": 102,
+      "object2": 100,
+      "data": [
+        1.08939e-08,
+        0.369499,
+        -0.169478,
+        0.0251643,
+        3.50498e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation2_constraint_r",
+      "type": 2,
+      "active": true,
+      "object1": 106,
+      "object2": 100,
+      "data": [
+        -0.0108281,
+        -0.0487847,
+        0.00927644,
+        0.0131673,
+        -0.00349673,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation1_constraint_r",
+      "type": 2,
+      "active": true,
+      "object1": 107,
+      "object2": 100,
+      "data": [
+        0.0524192,
+        -0.0150188,
+        -0.0340522,
+        0.0133393,
+        -0.000879151,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_beta_rotation1_constraint_r",
+      "type": 2,
+      "active": true,
+      "object1": 108,
+      "object2": 100,
+      "data": [
+        0.010506,
+        0.0247615,
+        -1.31647,
+        0.716337,
+        -0.138302,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_translation2_constraint_l",
+      "type": 2,
+      "active": true,
+      "object1": 112,
+      "object2": 114,
+      "data": [
+        7.69254e-11,
+        0.00587971,
+        -0.00125622,
+        -2.61846e-06,
+        6.24355e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_translation1_constraint_l",
+      "type": 2,
+      "active": true,
+      "object1": 113,
+      "object2": 114,
+      "data": [
+        9.53733e-08,
+        0.00312879,
+        -0.00230804,
+        0.000561561,
+        5.68366e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_rotation2_constraint_l",
+      "type": 2,
+      "active": true,
+      "object1": 115,
+      "object2": 114,
+      "data": [
+        -1.47325e-08,
+        0.0791,
+        -0.0328478,
+        -0.0252183,
+        0.0108321,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_rotation3_constraint_l",
+      "type": 2,
+      "active": true,
+      "object1": 116,
+      "object2": 114,
+      "data": [
+        1.08939e-08,
+        0.369499,
+        -0.169478,
+        0.0251643,
+        3.50498e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation2_constraint_l",
+      "type": 2,
+      "active": true,
+      "object1": 120,
+      "object2": 114,
+      "data": [
+        -0.0108281,
+        -0.0487847,
+        0.00927644,
+        0.0131673,
+        -0.00349673,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation1_constraint_l",
+      "type": 2,
+      "active": true,
+      "object1": 121,
+      "object2": 114,
+      "data": [
+        0.0524192,
+        -0.0150188,
+        -0.0340522,
+        0.0133393,
+        -0.000879151,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "knee_angle_beta_rotation1_constraint_l",
+      "type": 2,
+      "active": true,
+      "object1": 122,
+      "object2": 114,
+      "data": [
+        0.010506,
+        0.0247615,
+        -1.31647,
+        0.716337,
+        -0.138302,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "bodies": [
+    "world",
+    "Full Body",
+    "sacrum",
+    "lumbar5",
+    "Abdomen",
+    "lumbar4",
+    "lumbar3",
+    "lumbar2",
+    "lumbar1",
+    "torso",
+    "head_attach",
+    "neck",
+    "head",
+    "Arm_attachment",
+    "chest_r",
+    "cervical_spine",
+    "myoarm_r_root",
+    "clavicle_r",
+    "clavphant_r",
+    "scapula_r",
+    "scapphant_r",
+    "humphant_r",
+    "humphant1_r",
+    "humerus_r",
+    "ulna_r",
+    "radius_r",
+    "lunate_r",
+    "scaphoid_r",
+    "pisiform_r",
+    "triquetrum_r",
+    "capitate_r",
+    "trapezium_r",
+    "firstmc_r",
+    "proximal_thumb_r",
+    "distal_thumb_r",
+    "trapezoid_r",
+    "hamate_r",
+    "secondmc_r",
+    "2proxph_r",
+    "midph2_r",
+    "distph2_r",
+    "thirdmc_r",
+    "3proxph_r",
+    "midph3_r",
+    "distph3_r",
+    "fourthmc_r",
+    "4proxph_r",
+    "midph4_r",
+    "distph4_r",
+    "fifthmc_r",
+    "5proxph_r",
+    "midph5_r",
+    "distph5_r",
+    "myoarm_l_root",
+    "clavicle_l",
+    "clavphant_l",
+    "scapula_l",
+    "scapphant_l",
+    "humphant_l",
+    "humphant1_l",
+    "humerus_l",
+    "ulna_l",
+    "radius_l",
+    "lunate_l",
+    "scaphoid_l",
+    "pisiform_l",
+    "triquetrum_l",
+    "capitate_l",
+    "trapezium_l",
+    "firstmc_l",
+    "proximal_thumb_l",
+    "distal_thumb_l",
+    "trapezoid_l",
+    "hamate_l",
+    "secondmc_l",
+    "2proxph_l",
+    "midph2_l",
+    "distph2_l",
+    "thirdmc_l",
+    "3proxph_l",
+    "midph3_l",
+    "distph3_l",
+    "fourthmc_l",
+    "4proxph_l",
+    "midph4_l",
+    "distph4_l",
+    "fifthmc_l",
+    "5proxph_l",
+    "midph5_l",
+    "distph5_l",
+    "myolegs_root",
+    "pelvis",
+    "femur_r",
+    "tibia_r",
+    "talus_r",
+    "calcn_r",
+    "toes_r",
+    "patella_r",
+    "femur_l",
+    "tibia_l",
+    "talus_l",
+    "calcn_l",
+    "toes_l",
+    "patella_l"
+  ]
+}

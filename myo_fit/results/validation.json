@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "frames": 60,
+  "joint_ranges_checked": 122,
+  "active_joint_couplings_checked": 51,
+  "max_range_violation": 0.0,
+  "max_coupling_error": 2.7755575615628914e-17,
+  "max_mujoco_equality_residual": 2.7755575615628914e-17,
+  "max_recomputed_angle_difference_rad": 0.0,
+  "scope": "range/coupling feasibility and saved numerical fit; not anatomical/clinical accuracy or contact feasibility"
+}

@@ -27,6 +27,9 @@ De MuJoCo-validatie en CPU-video-export zijn wel op Linux uitgevoerd.
 
 ## Eerdere proef
 
+- [Eerste rotatiegestuurde MyoFullBody-fit](myo_fit/README.md): 60 frames,
+  harde modelgrenzen en 51 koppelingen; [preview](myo_fit/results/preview.mp4).
+
 - [Resultaten en downloads](RESULTATEN.md)
 - [Exacte GEM-X-proefcode en installatie](probe/README.md)
 - [Licentiecontrole](probe/LICENSE-REVIEW.md)

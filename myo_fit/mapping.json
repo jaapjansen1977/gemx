@@ -1,0 +1,26 @@
+{
+  "description": "Provisional mapping for relative rotation fitting. Constant local-frame offsets are bootstrapped at input frame 0; no anatomical landmark calibration.",
+  "segments": [
+    {"source": "Hips", "body": "pelvis", "weight": 2.0},
+    {"source": "Spine1", "body": "lumbar4", "group": ["lumbar5", "lumbar4"], "weight": 0.7},
+    {"source": "Spine2", "body": "lumbar1", "group": ["lumbar3", "lumbar2", "lumbar1"], "weight": 0.7},
+    {"source": "Chest", "body": "torso", "weight": 1.0},
+    {"source": "LeftShoulder", "body": "clavicle_l", "weight": 0.4},
+    {"source": "RightShoulder", "body": "clavicle_r", "weight": 0.4},
+    {"source": "LeftArm", "body": "humerus_l", "weight": 1.0},
+    {"source": "RightArm", "body": "humerus_r", "weight": 1.0},
+    {"source": "LeftForeArm", "body": "radius_l", "weight": 1.0},
+    {"source": "RightForeArm", "body": "radius_r", "weight": 1.0},
+    {"source": "LeftHand", "body": "capitate_l", "weight": 0.6},
+    {"source": "RightHand", "body": "capitate_r", "weight": 0.6},
+    {"source": "LeftLeg", "body": "femur_l", "weight": 1.0},
+    {"source": "RightLeg", "body": "femur_r", "weight": 1.0},
+    {"source": "LeftShin", "body": "tibia_l", "weight": 1.0},
+    {"source": "RightShin", "body": "tibia_r", "weight": 1.0},
+    {"source": "LeftFoot", "body": "calcn_l", "weight": 0.7},
+    {"source": "RightFoot", "body": "calcn_r", "weight": 0.7},
+    {"source": "LeftToeBase", "body": "toes_l", "weight": 0.3},
+    {"source": "RightToeBase", "body": "toes_r", "weight": 0.3}
+  ],
+  "excluded": ["Independent neck/head motion (no corresponding movable head joints in this full-body variant)", "Finger articulation (held at feasible model reference)", "Individual ISB landmarks", "Muscle activation and dynamics"]
+}

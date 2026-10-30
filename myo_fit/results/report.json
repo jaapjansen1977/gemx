@@ -1,0 +1,1949 @@
+{
+  "status": "completed",
+  "frames": [
+    {
+      "frame": 0,
+      "time_s": 0.0,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 1,
+      "cost": 6.534532834500754e-20,
+      "mean_orientation_error_deg": 4.1845119097786635e-09,
+      "max_mujoco_equality_residual": 6.613633252161577e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 1,
+      "time_s": 0.03333333333333333,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 4,
+      "cost": 4.40227154405591e-05,
+      "mean_orientation_error_deg": 0.1175070022256774,
+      "max_mujoco_equality_residual": 2.710505431213761e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.734723475976807e-18
+    },
+    {
+      "frame": 2,
+      "time_s": 0.06666666666666667,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.00012692323219146514,
+      "mean_orientation_error_deg": 0.18188070606521664,
+      "max_mujoco_equality_residual": 4.824699667560495e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 3,
+      "time_s": 0.1,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.00036744351853315875,
+      "mean_orientation_error_deg": 0.32311428263731806,
+      "max_mujoco_equality_residual": 2.927345865710862e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.734723475976807e-18
+    },
+    {
+      "frame": 4,
+      "time_s": 0.13333333333333333,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.0005827357100732561,
+      "mean_orientation_error_deg": 0.378581193723336,
+      "max_mujoco_equality_residual": 6.5052130349130266e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 5,
+      "time_s": 0.16666666666666666,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 4,
+      "cost": 0.0008174004832038728,
+      "mean_orientation_error_deg": 0.46742865562108893,
+      "max_mujoco_equality_residual": 4.9873299934333204e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 6,
+      "time_s": 0.2,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.0013418822935383904,
+      "mean_orientation_error_deg": 0.5718192000070286,
+      "max_mujoco_equality_residual": 6.288372600415926e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 7,
+      "time_s": 0.23333333333333334,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.001163591952171993,
+      "mean_orientation_error_deg": 0.5718964245058247,
+      "max_mujoco_equality_residual": 1.8973538018496328e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.734723475976807e-18
+    },
+    {
+      "frame": 8,
+      "time_s": 0.26666666666666666,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.0013887041210672152,
+      "mean_orientation_error_deg": 0.5942451929402922,
+      "max_mujoco_equality_residual": 1.0028870095490916e-17,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 9,
+      "time_s": 0.3,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.001241925742116693,
+      "mean_orientation_error_deg": 0.5442784506586966,
+      "max_mujoco_equality_residual": 1.951563910473908e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.734723475976807e-18
+    },
+    {
+      "frame": 10,
+      "time_s": 0.3333333333333333,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.0012851662489532915,
+      "mean_orientation_error_deg": 0.5763302186637944,
+      "max_mujoco_equality_residual": 4.336808689942018e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 11,
+      "time_s": 0.36666666666666664,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.0013794569901933156,
+      "mean_orientation_error_deg": 0.6255130826992482,
+      "max_mujoco_equality_residual": 6.071532165918825e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 12,
+      "time_s": 0.4,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.001330247742159634,
+      "mean_orientation_error_deg": 0.6223555604772165,
+      "max_mujoco_equality_residual": 4.716279450311944e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 13,
+      "time_s": 0.43333333333333335,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 4,
+      "cost": 0.0011578910397031165,
+      "mean_orientation_error_deg": 0.5972372660059011,
+      "max_mujoco_equality_residual": 3.848917712323541e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 14,
+      "time_s": 0.4666666666666667,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.0010003821213189577,
+      "mean_orientation_error_deg": 0.4876000904118259,
+      "max_mujoco_equality_residual": 2.8731357570865868e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.734723475976807e-18
+    },
+    {
+      "frame": 15,
+      "time_s": 0.5,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.0009105592052374549,
+      "mean_orientation_error_deg": 0.4907394401612737,
+      "max_mujoco_equality_residual": 5.583641188300348e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 16,
+      "time_s": 0.5333333333333333,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.0009737947297730559,
+      "mean_orientation_error_deg": 0.5163148634770209,
+      "max_mujoco_equality_residual": 4.7704895589362195e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 17,
+      "time_s": 0.5666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.0010029958628506948,
+      "mean_orientation_error_deg": 0.5175159589761205,
+      "max_mujoco_equality_residual": 7.589415207398531e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 18,
+      "time_s": 0.6,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.0009574075177091589,
+      "mean_orientation_error_deg": 0.5014528010313769,
+      "max_mujoco_equality_residual": 9.432558900623889e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 19,
+      "time_s": 0.6333333333333333,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.0010144665567578864,
+      "mean_orientation_error_deg": 0.5614569357015784,
+      "max_mujoco_equality_residual": 5.854691731421724e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 20,
+      "time_s": 0.6666666666666666,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.001125656817739691,
+      "mean_orientation_error_deg": 0.5921098966228833,
+      "max_mujoco_equality_residual": 5.421010862427522e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 21,
+      "time_s": 0.7,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 4,
+      "cost": 0.0008898932927723917,
+      "mean_orientation_error_deg": 0.5415172950949819,
+      "max_mujoco_equality_residual": 3.3610267347050637e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 3.469446951953614e-18
+    },
+    {
+      "frame": 22,
+      "time_s": 0.7333333333333333,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.0013415732434237946,
+      "mean_orientation_error_deg": 0.6818268246440491,
+      "max_mujoco_equality_residual": 6.938893903907228e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 23,
+      "time_s": 0.7666666666666667,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.0013175554026336684,
+      "mean_orientation_error_deg": 0.6589978162158802,
+      "max_mujoco_equality_residual": 2.168404344971009e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 3.469446951953614e-18
+    },
+    {
+      "frame": 24,
+      "time_s": 0.8,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.0014793073182519146,
+      "mean_orientation_error_deg": 0.6860497173091922,
+      "max_mujoco_equality_residual": 8.239936510889834e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 25,
+      "time_s": 0.8333333333333334,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.0016601172603106272,
+      "mean_orientation_error_deg": 0.7409658649122475,
+      "max_mujoco_equality_residual": 3.0357660829594124e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 3.469446951953614e-18
+    },
+    {
+      "frame": 26,
+      "time_s": 0.8666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 21,
+      "cost": 0.0019024565402666442,
+      "mean_orientation_error_deg": 0.7636973110298302,
+      "max_mujoco_equality_residual": 6.7220534694101275e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 27,
+      "time_s": 0.9,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 10,
+      "cost": 0.0018566527106906525,
+      "mean_orientation_error_deg": 0.7498222641286747,
+      "max_mujoco_equality_residual": 9.215718466126788e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 28,
+      "time_s": 0.9333333333333333,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.001801095809642459,
+      "mean_orientation_error_deg": 0.7995786957087849,
+      "max_mujoco_equality_residual": 2.3852447794681098e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 3.469446951953614e-18
+    },
+    {
+      "frame": 29,
+      "time_s": 0.9666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.00222686455453279,
+      "mean_orientation_error_deg": 0.8549580614600034,
+      "max_mujoco_equality_residual": 4.9873299934333204e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 30,
+      "time_s": 1.0,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.0026249666258629217,
+      "mean_orientation_error_deg": 0.9520483174844465,
+      "max_mujoco_equality_residual": 1.0842021724855044e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.734723475976807e-18
+    },
+    {
+      "frame": 31,
+      "time_s": 1.0333333333333334,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.005498534222838199,
+      "mean_orientation_error_deg": 1.2345237232769795,
+      "max_mujoco_equality_residual": 6.938893903907228e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 32,
+      "time_s": 1.0666666666666667,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.008090485735698302,
+      "mean_orientation_error_deg": 1.3689972781423303,
+      "max_mujoco_equality_residual": 5.637851296924623e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 33,
+      "time_s": 1.1,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.011245498662841417,
+      "mean_orientation_error_deg": 1.638936875677495,
+      "max_mujoco_equality_residual": 3.903127820947816e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 34,
+      "time_s": 1.1333333333333333,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.016640068590910977,
+      "mean_orientation_error_deg": 1.9492617687623508,
+      "max_mujoco_equality_residual": 3.686287386450715e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 35,
+      "time_s": 1.1666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.022592159623024227,
+      "mean_orientation_error_deg": 2.266217306745493,
+      "max_mujoco_equality_residual": 8.456776945386935e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 36,
+      "time_s": 1.2,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.029631905848473333,
+      "mean_orientation_error_deg": 2.4939155528646144,
+      "max_mujoco_equality_residual": 7.589415207398531e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 37,
+      "time_s": 1.2333333333333334,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 10,
+      "cost": 0.03191847215159138,
+      "mean_orientation_error_deg": 2.5291364797390377,
+      "max_mujoco_equality_residual": 5.637851296924623e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 38,
+      "time_s": 1.2666666666666666,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 8,
+      "cost": 0.04886047258602991,
+      "mean_orientation_error_deg": 3.063774826599981,
+      "max_mujoco_equality_residual": 4.553649124439119e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 39,
+      "time_s": 1.3,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.06345184730488194,
+      "mean_orientation_error_deg": 3.305415454802874,
+      "max_mujoco_equality_residual": 6.938893903907228e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 40,
+      "time_s": 1.3333333333333333,
+      "optimizer_success": true,
+      "status": 1,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 11,
+      "cost": 0.07455279290530265,
+      "mean_orientation_error_deg": 3.62825416558137,
+      "max_mujoco_equality_residual": 3.469446951953614e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 41,
+      "time_s": 1.3666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.08209118868193903,
+      "mean_orientation_error_deg": 3.866351021741545,
+      "max_mujoco_equality_residual": 4.87890977618477e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 42,
+      "time_s": 1.4,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.08695256265123996,
+      "mean_orientation_error_deg": 4.08804508061884,
+      "max_mujoco_equality_residual": 2.8189256484623115e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 3.469446951953614e-18
+    },
+    {
+      "frame": 43,
+      "time_s": 1.4333333333333333,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.08692844665154617,
+      "mean_orientation_error_deg": 4.070847630925659,
+      "max_mujoco_equality_residual": 4.9873299934333204e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 44,
+      "time_s": 1.4666666666666666,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.09352049569300065,
+      "mean_orientation_error_deg": 4.283844968924798,
+      "max_mujoco_equality_residual": 2.6020852139652106e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 3.469446951953614e-18
+    },
+    {
+      "frame": 45,
+      "time_s": 1.5,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.0984507614160487,
+      "mean_orientation_error_deg": 4.391639278100831,
+      "max_mujoco_equality_residual": 3.469446951953614e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 46,
+      "time_s": 1.5333333333333334,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.09825444532652548,
+      "mean_orientation_error_deg": 4.449258559023659,
+      "max_mujoco_equality_residual": 1.3877787807814457e-17,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 47,
+      "time_s": 1.5666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.09477601727374121,
+      "mean_orientation_error_deg": 4.394256718140044,
+      "max_mujoco_equality_residual": 1.3877787807814457e-17,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 48,
+      "time_s": 1.6,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.09236613628395568,
+      "mean_orientation_error_deg": 4.390879838922832,
+      "max_mujoco_equality_residual": 1.3877787807814457e-17,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.3877787807814457e-17
+    },
+    {
+      "frame": 49,
+      "time_s": 1.6333333333333333,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.09301029037292408,
+      "mean_orientation_error_deg": 4.532921570187069,
+      "max_mujoco_equality_residual": 1.3877787807814457e-17,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 2.7755575615628914e-17
+    },
+    {
+      "frame": 50,
+      "time_s": 1.6666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.08307414221072962,
+      "mean_orientation_error_deg": 4.276144580409975,
+      "max_mujoco_equality_residual": 3.686287386450715e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.3877787807814457e-17
+    },
+    {
+      "frame": 51,
+      "time_s": 1.7,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 5,
+      "cost": 0.08116554760430697,
+      "mean_orientation_error_deg": 4.301889123000048,
+      "max_mujoco_equality_residual": 3.469446951953614e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.3877787807814457e-17
+    },
+    {
+      "frame": 52,
+      "time_s": 1.7333333333333334,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.0876629220969914,
+      "mean_orientation_error_deg": 4.4859043440341875,
+      "max_mujoco_equality_residual": 6.938893903907228e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 53,
+      "time_s": 1.7666666666666666,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 6,
+      "cost": 0.08865266036303213,
+      "mean_orientation_error_deg": 4.3624780653589985,
+      "max_mujoco_equality_residual": 1.734723475976807e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 54,
+      "time_s": 1.8,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.08711279694749965,
+      "mean_orientation_error_deg": 4.1820766300770345,
+      "max_mujoco_equality_residual": 3.469446951953614e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 55,
+      "time_s": 1.8333333333333333,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.08656028326605686,
+      "mean_orientation_error_deg": 4.091878689667541,
+      "max_mujoco_equality_residual": 5.204170427930421e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 56,
+      "time_s": 1.8666666666666667,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.08480717163351906,
+      "mean_orientation_error_deg": 4.0707170533771215,
+      "max_mujoco_equality_residual": 6.938893903907228e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 6.938893903907228e-18
+    },
+    {
+      "frame": 57,
+      "time_s": 1.9,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.08139992284286483,
+      "mean_orientation_error_deg": 3.95348273149551,
+      "max_mujoco_equality_residual": 4.7704895589362195e-18,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.3877787807814457e-17
+    },
+    {
+      "frame": 58,
+      "time_s": 1.9333333333333333,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 7,
+      "cost": 0.0771547520668556,
+      "mean_orientation_error_deg": 4.012440970144583,
+      "max_mujoco_equality_residual": 1.3877787807814457e-17,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 1.3877787807814457e-17
+    },
+    {
+      "frame": 59,
+      "time_s": 1.9666666666666666,
+      "optimizer_success": true,
+      "status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 9,
+      "cost": 0.07269245299972193,
+      "mean_orientation_error_deg": 4.129315415567817,
+      "max_mujoco_equality_residual": 2.7755575615628914e-17,
+      "max_range_violation": 0.0,
+      "max_joint_coupling_error": 2.7755575615628914e-17
+    }
+  ],
+  "wall_s": 6.629472343003727,
+  "model_commit": "93b0ca8f4ec90c9899ee7f05fee561e9911da91b",
+  "mujoco": "3.4.0",
+  "packages": {
+    "myo-sim": "0.2.3",
+    "mujoco": "3.4.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "nq": 129,
+  "nv": 128,
+  "njnt": 123,
+  "nu": 416,
+  "active_joint_couplings": 51,
+  "optimized_scalar_coordinates": [
+    "flex_extension",
+    "lat_bending",
+    "axial_rotation",
+    "elv_angle_r",
+    "shoulder_elv_r",
+    "shoulder_rot_r",
+    "elbow_flexion_r",
+    "pro_sup_r",
+    "deviation_r",
+    "flexion_r",
+    "elv_angle_l",
+    "shoulder_elv_l",
+    "shoulder_rot_l",
+    "elbow_flexion_l",
+    "pro_sup_l",
+    "deviation_l",
+    "flexion_l",
+    "hip_flexion_r",
+    "hip_adduction_r",
+    "hip_rotation_r",
+    "knee_angle_r",
+    "ankle_angle_r",
+    "subtalar_angle_r",
+    "mtp_angle_r",
+    "hip_flexion_l",
+    "hip_adduction_l",
+    "hip_rotation_l",
+    "knee_angle_l",
+    "ankle_angle_l",
+    "subtalar_angle_l",
+    "mtp_angle_l"
+  ],
+  "root_translation": "Prescribed to exported Hips position; not optimized",
+  "rotation_reference": "Frame 0 bootstraps constant segment-local offsets against a feasible stock-model pose; initial yaw aligned using hips. Not anatomical calibration.",
+  "mapping": {
+    "description": "Provisional mapping for relative rotation fitting. Constant local-frame offsets are bootstrapped at input frame 0; no anatomical landmark calibration.",
+    "segments": [
+      {
+        "source": "Hips",
+        "body": "pelvis",
+        "weight": 2.0
+      },
+      {
+        "source": "Spine1",
+        "body": "lumbar4",
+        "group": [
+          "lumbar5",
+          "lumbar4"
+        ],
+        "weight": 0.7
+      },
+      {
+        "source": "Spine2",
+        "body": "lumbar1",
+        "group": [
+          "lumbar3",
+          "lumbar2",
+          "lumbar1"
+        ],
+        "weight": 0.7
+      },
+      {
+        "source": "Chest",
+        "body": "torso",
+        "weight": 1.0
+      },
+      {
+        "source": "LeftShoulder",
+        "body": "clavicle_l",
+        "weight": 0.4
+      },
+      {
+        "source": "RightShoulder",
+        "body": "clavicle_r",
+        "weight": 0.4
+      },
+      {
+        "source": "LeftArm",
+        "body": "humerus_l",
+        "weight": 1.0
+      },
+      {
+        "source": "RightArm",
+        "body": "humerus_r",
+        "weight": 1.0
+      },
+      {
+        "source": "LeftForeArm",
+        "body": "radius_l",
+        "weight": 1.0
+      },
+      {
+        "source": "RightForeArm",
+        "body": "radius_r",
+        "weight": 1.0
+      },
+      {
+        "source": "LeftHand",
+        "body": "capitate_l",
+        "weight": 0.6
+      },
+      {
+        "source": "RightHand",
+        "body": "capitate_r",
+        "weight": 0.6
+      },
+      {
+        "source": "LeftLeg",
+        "body": "femur_l",
+        "weight": 1.0
+      },
+      {
+        "source": "RightLeg",
+        "body": "femur_r",
+        "weight": 1.0
+      },
+      {
+        "source": "LeftShin",
+        "body": "tibia_l",
+        "weight": 1.0
+      },
+      {
+        "source": "RightShin",
+        "body": "tibia_r",
+        "weight": 1.0
+      },
+      {
+        "source": "LeftFoot",
+        "body": "calcn_l",
+        "weight": 0.7
+      },
+      {
+        "source": "RightFoot",
+        "body": "calcn_r",
+        "weight": 0.7
+      },
+      {
+        "source": "LeftToeBase",
+        "body": "toes_l",
+        "weight": 0.3
+      },
+      {
+        "source": "RightToeBase",
+        "body": "toes_r",
+        "weight": 0.3
+      }
+    ],
+    "excluded": [
+      "Independent neck/head motion (no corresponding movable head joints in this full-body variant)",
+      "Finger articulation (held at feasible model reference)",
+      "Individual ISB landmarks",
+      "Muscle activation and dynamics"
+    ]
+  },
+  "propagated_bound_intervals": [
+    {
+      "joint": "flex_extension",
+      "feasible_components": [
+        [
+          -1.005783783783784,
+          0.45380000000000004
+        ]
+      ],
+      "chosen": [
+        -1.005783783783784,
+        0.45380000000000004
+      ]
+    },
+    {
+      "joint": "lat_bending",
+      "feasible_components": [
+        [
+          -0.4363,
+          0.4363
+        ]
+      ],
+      "chosen": [
+        -0.4363,
+        0.4363
+      ]
+    },
+    {
+      "joint": "axial_rotation",
+      "feasible_components": [
+        [
+          -0.7854,
+          0.7854
+        ]
+      ],
+      "chosen": [
+        -0.7854,
+        0.7854
+      ]
+    },
+    {
+      "joint": "elv_angle_r",
+      "feasible_components": [
+        [
+          -1.658,
+          2.242
+        ]
+      ],
+      "chosen": [
+        -1.658,
+        2.242
+      ]
+    },
+    {
+      "joint": "shoulder_elv_r",
+      "feasible_components": [
+        [
+          0.0,
+          3.0991735537190084
+        ]
+      ],
+      "chosen": [
+        0.0,
+        3.0991735537190084
+      ]
+    },
+    {
+      "joint": "shoulder_rot_r",
+      "feasible_components": [
+        [
+          -1.571,
+          2.094
+        ]
+      ],
+      "chosen": [
+        -1.571,
+        2.094
+      ]
+    },
+    {
+      "joint": "elbow_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          2.269
+        ]
+      ],
+      "chosen": [
+        0.0,
+        2.269
+      ]
+    },
+    {
+      "joint": "pro_sup_r",
+      "feasible_components": [
+        [
+          -1.5708,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        -1.5708,
+        1.5708
+      ]
+    },
+    {
+      "joint": "deviation_r",
+      "feasible_components": [
+        [
+          -0.174533,
+          0.436332
+        ]
+      ],
+      "chosen": [
+        -0.174533,
+        0.436332
+      ]
+    },
+    {
+      "joint": "flexion_r",
+      "feasible_components": [
+        [
+          -0.785398,
+          0.785398
+        ]
+      ],
+      "chosen": [
+        -0.785398,
+        0.785398
+      ]
+    },
+    {
+      "joint": "cmc_flexion",
+      "feasible_components": [
+        [
+          -0.78,
+          0.7
+        ]
+      ],
+      "chosen": [
+        -0.78,
+        0.7
+      ]
+    },
+    {
+      "joint": "cmc_abduction",
+      "feasible_components": [
+        [
+          -0.5,
+          0.78
+        ]
+      ],
+      "chosen": [
+        -0.5,
+        0.78
+      ]
+    },
+    {
+      "joint": "mp_flexion_r",
+      "feasible_components": [
+        [
+          -0.785398,
+          0.698132
+        ]
+      ],
+      "chosen": [
+        -0.785398,
+        0.698132
+      ]
+    },
+    {
+      "joint": "ip_flexion_r",
+      "feasible_components": [
+        [
+          -1.309,
+          0.436332
+        ]
+      ],
+      "chosen": [
+        -1.309,
+        0.436332
+      ]
+    },
+    {
+      "joint": "mcp2_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp2_abduction_r",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm2_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md2_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp3_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp3_abduction_r",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm3_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md3_flexion",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp4_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp4_abduction_r",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm4_flexion",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md4_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp5_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp5_abduction_r",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm5_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md5_flexion_r",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "elv_angle_l",
+      "feasible_components": [
+        [
+          -1.658,
+          2.242
+        ]
+      ],
+      "chosen": [
+        -1.658,
+        2.242
+      ]
+    },
+    {
+      "joint": "shoulder_elv_l",
+      "feasible_components": [
+        [
+          0.0,
+          3.0991735537190084
+        ]
+      ],
+      "chosen": [
+        0.0,
+        3.0991735537190084
+      ]
+    },
+    {
+      "joint": "shoulder_rot_l",
+      "feasible_components": [
+        [
+          -1.571,
+          2.094
+        ]
+      ],
+      "chosen": [
+        -1.571,
+        2.094
+      ]
+    },
+    {
+      "joint": "elbow_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          2.269
+        ]
+      ],
+      "chosen": [
+        0.0,
+        2.269
+      ]
+    },
+    {
+      "joint": "pro_sup_l",
+      "feasible_components": [
+        [
+          -1.5708,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        -1.5708,
+        1.5708
+      ]
+    },
+    {
+      "joint": "deviation_l",
+      "feasible_components": [
+        [
+          -0.174533,
+          0.436332
+        ]
+      ],
+      "chosen": [
+        -0.174533,
+        0.436332
+      ]
+    },
+    {
+      "joint": "flexion_l",
+      "feasible_components": [
+        [
+          -0.785398,
+          0.785398
+        ]
+      ],
+      "chosen": [
+        -0.785398,
+        0.785398
+      ]
+    },
+    {
+      "joint": "cmc_flexion_l",
+      "feasible_components": [
+        [
+          -0.78,
+          0.7
+        ]
+      ],
+      "chosen": [
+        -0.78,
+        0.7
+      ]
+    },
+    {
+      "joint": "cmc_abduction_l",
+      "feasible_components": [
+        [
+          -0.5,
+          0.78
+        ]
+      ],
+      "chosen": [
+        -0.5,
+        0.78
+      ]
+    },
+    {
+      "joint": "mp_flexion_l",
+      "feasible_components": [
+        [
+          -0.785398,
+          0.698132
+        ]
+      ],
+      "chosen": [
+        -0.785398,
+        0.698132
+      ]
+    },
+    {
+      "joint": "ip_flexion_l",
+      "feasible_components": [
+        [
+          -1.309,
+          0.436332
+        ]
+      ],
+      "chosen": [
+        -1.309,
+        0.436332
+      ]
+    },
+    {
+      "joint": "mcp2_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp2_abduction_l",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm2_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md2_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp3_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp3_abduction_l",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm3_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md3_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp4_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp4_abduction_l",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm4_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md4_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp5_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "mcp5_abduction_l",
+      "feasible_components": [
+        [
+          -0.261799,
+          0.261799
+        ]
+      ],
+      "chosen": [
+        -0.261799,
+        0.261799
+      ]
+    },
+    {
+      "joint": "pm5_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "md5_flexion_l",
+      "feasible_components": [
+        [
+          0.0,
+          1.5708
+        ]
+      ],
+      "chosen": [
+        0.0,
+        1.5708
+      ]
+    },
+    {
+      "joint": "hip_flexion_r",
+      "feasible_components": [
+        [
+          -0.523599,
+          2.0944
+        ]
+      ],
+      "chosen": [
+        -0.523599,
+        2.0944
+      ]
+    },
+    {
+      "joint": "hip_adduction_r",
+      "feasible_components": [
+        [
+          -0.872665,
+          0.523599
+        ]
+      ],
+      "chosen": [
+        -0.872665,
+        0.523599
+      ]
+    },
+    {
+      "joint": "hip_rotation_r",
+      "feasible_components": [
+        [
+          -0.698132,
+          0.698132
+        ]
+      ],
+      "chosen": [
+        -0.698132,
+        0.698132
+      ]
+    },
+    {
+      "joint": "knee_angle_r",
+      "feasible_components": [
+        [
+          0.019004823223985216,
+          0.7341875695531396
+        ],
+        [
+          0.8726658963742913,
+          1.0472481418954451
+        ],
+        [
+          1.1234979055841616,
+          1.8100396703643424
+        ],
+        [
+          1.9204172947530274,
+          2.0069925134814
+        ],
+        [
+          2.0943529048924407,
+          2.0943793353869147
+        ]
+      ],
+      "chosen": [
+        0.019004823223985216,
+        0.7341875695531396
+      ]
+    },
+    {
+      "joint": "ankle_angle_r",
+      "feasible_components": [
+        [
+          -0.698132,
+          0.523599
+        ]
+      ],
+      "chosen": [
+        -0.698132,
+        0.523599
+      ]
+    },
+    {
+      "joint": "subtalar_angle_r",
+      "feasible_components": [
+        [
+          -0.349066,
+          0.349066
+        ]
+      ],
+      "chosen": [
+        -0.349066,
+        0.349066
+      ]
+    },
+    {
+      "joint": "mtp_angle_r",
+      "feasible_components": [
+        [
+          -0.523599,
+          0.523599
+        ]
+      ],
+      "chosen": [
+        -0.523599,
+        0.523599
+      ]
+    },
+    {
+      "joint": "hip_flexion_l",
+      "feasible_components": [
+        [
+          -0.523599,
+          2.0944
+        ]
+      ],
+      "chosen": [
+        -0.523599,
+        2.0944
+      ]
+    },
+    {
+      "joint": "hip_adduction_l",
+      "feasible_components": [
+        [
+          -0.872665,
+          0.523599
+        ]
+      ],
+      "chosen": [
+        -0.872665,
+        0.523599
+      ]
+    },
+    {
+      "joint": "hip_rotation_l",
+      "feasible_components": [
+        [
+          -0.698132,
+          0.698132
+        ]
+      ],
+      "chosen": [
+        -0.698132,
+        0.698132
+      ]
+    },
+    {
+      "joint": "knee_angle_l",
+      "feasible_components": [
+        [
+          0.019004823223985216,
+          0.7341875695531396
+        ],
+        [
+          0.8726658963742913,
+          1.0472481418954451
+        ],
+        [
+          1.1234979055841616,
+          1.8100396703643424
+        ],
+        [
+          1.9204172947530274,
+          2.0069925134814
+        ],
+        [
+          2.0943529048924407,
+          2.0943793353869147
+        ]
+      ],
+      "chosen": [
+        0.019004823223985216,
+        0.7341875695531396
+      ]
+    },
+    {
+      "joint": "ankle_angle_l",
+      "feasible_components": [
+        [
+          -0.698132,
+          0.523599
+        ]
+      ],
+      "chosen": [
+        -0.698132,
+        0.523599
+      ]
+    },
+    {
+      "joint": "subtalar_angle_l",
+      "feasible_components": [
+        [
+          -0.349066,
+          0.349066
+        ]
+      ],
+      "chosen": [
+        -0.349066,
+        0.349066
+      ]
+    },
+    {
+      "joint": "mtp_angle_l",
+      "feasible_components": [
+        [
+          -0.523599,
+          0.523599
+        ]
+      ],
+      "chosen": [
+        -0.523599,
+        0.523599
+      ]
+    }
+  ],
+  "input_sha256": "aa4d4a147d9c19511c5698a5ab1e4e2a9a5780ce9914703c992e1bffcb69df67",
+  "mapping_sha256": "3c9b39ce52d6069bbfdceba8559ac514b79b3b691fa927ec7c93e3d2e5f7c793",
+  "metrics_exclude_reference_frame": true,
+  "mean_orientation_error_deg": 2.052231272754431,
+  "static_reference_mean_error_deg": 15.224922054938386,
+  "per_segment_mean_deg": {
+    "Hips": 0.2150811167322687,
+    "Spine1": 2.114609564403985,
+    "Spine2": 2.198198982252641,
+    "Chest": 1.4214243653830647,
+    "LeftShoulder": 8.197731184072426,
+    "RightShoulder": 7.853328681372722,
+    "LeftArm": 2.857453614582112,
+    "RightArm": 2.166307914559077,
+    "LeftForeArm": 3.169604394817893,
+    "RightForeArm": 2.4209368641204447,
+    "LeftHand": 0.8895143099586205,
+    "RightHand": 0.5876797234543658,
+    "LeftLeg": 0.5690768793985211,
+    "RightLeg": 0.8005699979134986,
+    "LeftShin": 0.7597849704447293,
+    "RightShin": 1.0900924899828557,
+    "LeftFoot": 0.8480980535071672,
+    "RightFoot": 0.9289627778102602,
+    "LeftToeBase": 0.8544676214596777,
+    "RightToeBase": 1.1017019488622908
+  },
+  "max_range_violation": 0.0,
+  "max_joint_coupling_error": 2.7755575615628914e-17,
+  "max_mujoco_equality_residual": 2.7755575615628914e-17,
+  "limitations": [
+    "Relative reference-frame alignment, not subject/anatomical calibration",
+    "Fixed stock body lengths",
+    "No ISB landmark fit",
+    "Finger coordinates frozen; no independent neck/head fit",
+    "No muscle control, dynamics, collision/contact feasibility guarantee",
+    "No ground-truth accuracy validation; Windows not tested"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "provisional_computed_anatomical_calibration_incomplete",
+  "frames": 60,
+  "wall_s": 0.037436711994814686,
+  "reference": "Wu et al. (2005), ISB recommendation Part II, J Biomech 38:981-992, doi:10.1016/j.jbiomech.2004.05.042",
+  "interpretation": "ISB-style intrinsic YXY decomposition with explicit proxy axes; NOT validated ISB anatomical calibration",
+  "axes": "Right-handed columns X anterior, Y superior, Z right",
+  "sequence": "R_template=Ry(plane) Rx(-elevation) Ry(axial); intrinsic YXY, negative middle branch",
+  "sides": "Right template; left reflected with S R_left S, S=diag(1,1,-1). Bilateral standardized signs, not an unlabelled native left Euler sequence.",
+  "signs": "Plane 0=coronal abduction, +90=forward flexion; elevation positive arm raising; axial positive internal rotation in the right-template/left-mirrored construction",
+  "threshold_deg": 20.0,
+  "threshold_note": "Conditioning threshold chosen for inspection, NOT a statistical confidence bound",
+  "thorax": {
+    "method": "Neutral Hips->Chest superior, hip-center right direction orthogonalized; anterior cross product checked against eye/head direction. Missing IJ/C7/PX/T8.",
+    "constant_chest_local_offset": [
+      [
+        0.036461725353119714,
+        0.9993349776287181,
+        -0.0003808832929144704
+      ],
+      [
+        0.9993347745316784,
+        -0.0364614295436745,
+        0.0007566818030535106
+      ],
+      [
+        0.0007422910433775373,
+        -0.00040821984373020563,
+        -0.9999996411802186
+      ]
+    ]
+  },
+  "humerus": {
+    "left": {
+      "source_joint": "LeftArm",
+      "constant_local_offset": [
+        [
+          5.544311021115188e-09,
+          -0.9999999999999714,
+          2.410944640446137e-07
+        ],
+        [
+          0.9991998213139899,
+          1.518280049348377e-08,
+          0.039996463419796596
+        ],
+        [
+          -0.03999646341979909,
+          2.4067979256022605e-07,
+          0.999199821313961
+        ]
+      ],
+      "neutral_anatomical_frame": [
+        [
+          2.0433871376497504e-08,
+          -0.9999999999999707,
+          2.416823282293533e-07
+        ],
+        [
+          0.03999645543082688,
+          -2.4067165683301627e-07,
+          -0.9991998216337472
+        ],
+        [
+          0.9991998216337759,
+          3.0083957104127034e-08,
+          0.03999645543082079
+        ]
+      ],
+      "long_axis": "GH proxy (Arm) minus elbow-center proxy (ForeArm)",
+      "transverse_axis": "Thorax anterior projected perpendicular to neutral humerus long axis; assumed twist, NOT epicondylar calibration",
+      "max_dynamic_long_axis_discrepancy_deg": 0.021964867789313156
+    },
+    "right": {
+      "source_joint": "RightArm",
+      "constant_local_offset": [
+        [
+          -1.3637291283461502e-07,
+          0.9999999999999619,
+          -2.3958141516894345e-07
+        ],
+        [
+          -0.9991998213143685,
+          -1.2668138083091804e-07,
+          0.03999646341013919
+        ],
+        [
+          0.03999646341010721,
+          2.448441414453755e-07,
+          0.9991998213143475
+        ]
+      ],
+      "neutral_anatomical_frame": [
+        [
+          -1.512643586432837e-07,
+          0.9999999999999599,
+          -2.390407606081059e-07
+        ],
+        [
+          0.03999645543274463,
+          2.4489952354184464e-07,
+          0.9991998216336693
+        ],
+        [
+          0.9991998216336879,
+          1.4158253704762895e-07,
+          -0.03999645543278007
+        ]
+      ],
+      "long_axis": "GH proxy (Arm) minus elbow-center proxy (ForeArm)",
+      "transverse_axis": "Thorax anterior projected perpendicular to neutral humerus long axis; assumed twist, NOT epicondylar calibration",
+      "max_dynamic_long_axis_discrepancy_deg": 0.016560960665152533
+    }
+  },
+  "summary": {
+    "left": {
+      "elevation_all_frames": {
+        "min_deg": 19.29774752061043,
+        "max_deg": 122.55540527996848,
+        "excursion_deg": 103.25765775935805
+      },
+      "valid_plane_axial_frames": 33,
+      "total_frames": 60,
+      "longest_valid_interval_frames": [
+        27,
+        59
+      ],
+      "longest_valid_interval_times_s": [
+        0.9,
+        1.9333333333333333
+      ],
+      "plane_longest_valid_interval": {
+        "min_deg": -16.033409657571884,
+        "max_deg": 28.8110059673961,
+        "excursion_deg": 44.84441562496798
+      },
+      "axial_longest_valid_interval": {
+        "min_deg": -58.36069295670228,
+        "max_deg": 4.729735264035337,
+        "excursion_deg": 63.09042822073762
+      },
+      "interpretation": "Clip excursion under unvalidated proxy calibration; not clinical maximum ROM. Plane/axial statistics use one contiguous valid interval only."
+    },
+    "right": {
+      "elevation_all_frames": {
+        "min_deg": 17.917759399051064,
+        "max_deg": 110.75713393477797,
+        "excursion_deg": 92.8393745357269
+      },
+      "valid_plane_axial_frames": 27,
+      "total_frames": 60,
+      "longest_valid_interval_frames": [
+        33,
+        60
+      ],
+      "longest_valid_interval_times_s": [
+        1.1,
+        1.9666666666666666
+      ],
+      "plane_longest_valid_interval": {
+        "min_deg": -42.012461556694916,
+        "max_deg": 44.539410298041666,
+        "excursion_deg": 86.55187185473659
+      },
+      "axial_longest_valid_interval": {
+        "min_deg": -51.25304868856524,
+        "max_deg": 34.50855507810752,
+        "excursion_deg": 85.76160376667275
+      },
+      "interpretation": "Clip excursion under unvalidated proxy calibration; not clinical maximum ROM. Plane/axial statistics use one contiguous valid interval only."
+    }
+  },
+  "limitations": [
+    "No verified IJ/C7/PX/T8 thorax landmarks",
+    "No verified medial/lateral epicondyles or functional GH center",
+    "Humerus axial zero is assumed from neutral model anterior, not measured",
+    "No glenohumeral or scapular kinematics",
+    "No frame-zero angle subtraction; no smoothing or forced motion fit",
+    "Plane and axial unstable near arm down/up, separated from elevation",
+    "Proxy calibration and video accuracy unvalidated; axes consistency is not anatomy accuracy"
+  ],
+  "input_sha256": {
+    "reports/jaap-cpu-pilot-01/kinematics.npz": "96ada449ab6a127229113b4a8d0a7463052b5ddaf701282b29071e4fef82f058",
+    "outputs/shoulder-neutral-final.npz": "49d86e6fcc0d539ea4c16590392e592a1aaea5e2dc5fc151cd90c1ef110ebe9c"
+  }
+}

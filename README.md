@@ -27,6 +27,9 @@ De MuJoCo-validatie en CPU-video-export zijn wel op Linux uitgevoerd.
 
 ## Eerdere proef
 
+- [Eerste humerothoracale schouderanalyse](shoulder/README.md):
+  [controlevideo](shoulder/results/shoulder-check.mp4), drie hoekverlopen en
+  uitslagen voor beide kanten; anatomische kalibratie nog voorlopig.
 - [SOMA-mesh met 18 voorlopige landmarks](landmarks/README.md):
   [video-overlay](landmarks/results/mesh-landmarks.mp4), coördinatenexport en
   voorlopige botlokale MyoFullBody-tegenpunten; anatomische controle nog nodig.

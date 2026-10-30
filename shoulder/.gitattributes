@@ -1,0 +1,2 @@
+# Matplotlib's generated SVG path records contain intentional end spaces.
+results/angles.svg -whitespace

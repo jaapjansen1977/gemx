@@ -1,0 +1,29 @@
+{
+  "status": "numerical_checks_passed_anatomical_calibration_unvalidated",
+  "checks": {
+    "left": {
+      "max_matrix_reconstruction_error": 2.1649348980190553e-15,
+      "max_humerus_determinant_error": 1.9984014443252818e-15,
+      "max_humerus_orthogonality_error": 1.5543122344752192e-15,
+      "max_elevation_vs_joint_line_difference_deg": 3.058462335303602e-05,
+      "threshold_sensitivity_valid_frames": {
+        "10": 60,
+        "20": 33,
+        "30": 26
+      }
+    },
+    "right": {
+      "max_matrix_reconstruction_error": 2.0539125955565396e-15,
+      "max_humerus_determinant_error": 8.881784197001252e-16,
+      "max_humerus_orthogonality_error": 1.1102230246251565e-15,
+      "max_elevation_vs_joint_line_difference_deg": 2.2409188879635167e-05,
+      "threshold_sensitivity_valid_frames": {
+        "10": 60,
+        "20": 27,
+        "30": 17
+      }
+    }
+  },
+  "reference_offset_removed": false,
+  "clinical_accuracy_validated": false
+}

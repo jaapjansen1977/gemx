@@ -1,0 +1,39 @@
+{
+  "gem_commit": "20555befe2fbbe5b2015e1fff7ff214dc18ea9d6",
+  "soma_revision": "d281db2d01553f7230c56e764cec00fe27ef23f7",
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "py-soma-x": "0.3.3",
+    "torch": "2.10.0+cpu",
+    "opencv-python": "4.14.0",
+    "matplotlib": "3.10.8"
+  },
+  "source_sha256": {
+    "render.py": "df948e9d339c42181d9638e6a619d53f7045847e6734062bfd67d2dc7f302465",
+    "calibrate.py": "49f67860897ea9a51c2613f0479e7342e515826ffd958202775141ccc8bc987e",
+    "analyze.py": "77e806171bbd7015d824d9e119322590dd5e254f4850789ae05aebc45bc8b79e",
+    "__init__.py": "533215fbf08f83668deb2050b4ab9f2ed9da8aaf51887212fe598ba3c196d789",
+    "test_angles.py": "52fe71d947a2d164198c6b52bec064d4dd51c3fec7dc224a88f806f745d8eea8",
+    "angles.py": "5d8f1384acf1468722f8d15312d9af376db86f24d09b4714d3ce7c7d52a2d9ed",
+    "plot.py": "661db408cf29bd6f662d7c1885d4e4b03a89d0435383d862bf4253dd90109d5c",
+    "validate.py": "338fbf1faee883c93db291bafaa523efb3d0350d1d65fcd36a39ce3f4e7720bd"
+  },
+  "output_sha256": {
+    "report.json": "cf7a645d6c85e8430b897136703bf5f73d13fc571e98e2be3a1565eee91ff643",
+    "plot-layout.json": "335780c1ef7bd7301e53c1fcb060b763ebeb0e46e0a12aad7a721359dfac30d5",
+    "check-000.jpg": "e697750808cffc8bd0dcc77bd1b1c8096050c467b7243fd4f4a3f14751f7e872",
+    "check-059.jpg": "57ba9db79d79ca3efcb809f7bf8a841d6db0cd8768da3ef167f5eef7b4438543",
+    "shoulder-check.mp4": "a709ddec9d4656d41da688d1255b4b02d4e8d87270d46da03e5a50d46451d878",
+    "neutral.json": "1ef947251ecb17a227f9ab70526728d3670dce67b44e30a05872436695012654",
+    "validation.json": "b4e67fca7ed2589223d6387332e37055b8e4f23f033d7c9c743b317250641e0d",
+    "angles.csv": "34355afba741cdac5e5a55d5af9566f870cfc2dcf29578e392b4445d926ba6c3",
+    "shoulder.npz": "1df55015d49495962ec5dbf5166ee0ed911a4b154f02bdc0aff92afc266c12dc",
+    "angles.png": "d606dbdb2b883e3bdb2c5f7679e41a11574941f6a7304e913c7baccde6dfb381",
+    "check-030.jpg": "0a9d6a33999bda21111066b4d49a1e1e571a0b30e52ddb844496b2e4cb353330",
+    "angles.svg": "bb9f3f22e2f45f596e2db9281001fde646e9418a33c149723392a2cbffefa058",
+    "neutral.npz": "49d86e6fcc0d539ea4c16590392e592a1aaea5e2dc5fc151cd90c1ef110ebe9c"
+  },
+  "analysis": "Saved temporal Body Motion, no new video inference, no MuJoCo constraints used",
+  "clinical_accuracy_validated": false
+}

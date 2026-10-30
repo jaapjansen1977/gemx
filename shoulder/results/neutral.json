@@ -1,0 +1,12 @@
+{
+  "status": "model_neutral_proxy_not_anatomical_calibration",
+  "shape": "Saved frame-0 identity and scales, zero pose/global orientation/translation. NOT a subject neutral-pose observation.",
+  "soma_lod": "mid",
+  "soma_version": "0.3.3",
+  "raw_sha256": "a8f9941a98febb35827ad2a665b917b5e21279121b7ef3adc43f9c6a6426091d",
+  "asset_sha256": {
+    "SOMA_procedural_transforms.json": "9853e19ab51625ffaa7d9e7ccf0e443272c2740837604e6bacd66604e8edf509",
+    "SOMA_template_rig.usda": "a952cb7bdf4ccd801e355d53122d395b985b69d0d9181439edad5081bb171856",
+    "SOMA_neutral.npz": "5829af4a5333abdba5ad449360b868faacee99d395971e62f35c0e7169432b63"
+  }
+}

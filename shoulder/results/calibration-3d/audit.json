@@ -1,0 +1,83 @@
+{
+  "status": "visualization_of_unvalidated_calibration",
+  "landmarks_recomputed_from_exact_triangles": true,
+  "max_frame0_landmark_barycentric_error_m": 0.0,
+  "coordinate_transform": "(p - Chest) @ thorax @ DISPLAY.T, DISPLAY maps [anterior,superior,right] to [right,anterior,superior]. Separate thorax basis per pose; full mesh unmodified.",
+  "units": "meters and degrees",
+  "interactive_traces": 66,
+  "pose_trace_ranges": [
+    [
+      0,
+      33
+    ],
+    [
+      33,
+      66
+    ]
+  ],
+  "vertices_per_pose": 18056,
+  "triangles_per_pose": 36108,
+  "poses": {
+    "start": {
+      "left": {
+        "direct_elevation_deg": 19.624484028956186,
+        "frame_elevation_deg": 19.62449558794802,
+        "axis_vs_joint_line_difference_deg": 1.1558991833027221e-05,
+        "candidate_epicondylar_line_to_long_axis_deg": 45.42944540942329,
+        "candidate_separation_mm": 91.00157032516687,
+        "candidate_numeric_geometry_pass": true,
+        "anatomical_landmarks_verified": false,
+        "saved_baseline_elevation_deg": 19.62449558794802
+      },
+      "right": {
+        "direct_elevation_deg": 18.327974341965305,
+        "frame_elevation_deg": 18.327966543569218,
+        "axis_vs_joint_line_difference_deg": 7.79839608711086e-06,
+        "candidate_epicondylar_line_to_long_axis_deg": 50.788518461110016,
+        "candidate_separation_mm": 88.07578952092753,
+        "candidate_numeric_geometry_pass": true,
+        "anatomical_landmarks_verified": false,
+        "saved_baseline_elevation_deg": 18.327966543569218
+      }
+    },
+    "reference": {
+      "left": {
+        "direct_elevation_deg": 89.97662459093866,
+        "frame_elevation_deg": 89.97662459093866,
+        "axis_vs_joint_line_difference_deg": 0.0,
+        "candidate_epicondylar_line_to_long_axis_deg": 40.3258169737959,
+        "candidate_separation_mm": 92.46652204172231,
+        "candidate_numeric_geometry_pass": true,
+        "anatomical_landmarks_verified": false,
+        "saved_baseline_elevation_deg": null
+      },
+      "right": {
+        "direct_elevation_deg": 90.02337556040904,
+        "frame_elevation_deg": 90.02337556040904,
+        "axis_vs_joint_line_difference_deg": 0.0,
+        "candidate_epicondylar_line_to_long_axis_deg": 40.46178285930133,
+        "candidate_separation_mm": 92.51469949158195,
+        "candidate_numeric_geometry_pass": true,
+        "anatomical_landmarks_verified": false,
+        "saved_baseline_elevation_deg": null
+      }
+    }
+  },
+  "limitations": [
+    "No measured anatomical zero pose or gravity alignment.",
+    "No IJ/C7/PX/T8 landmarks.",
+    "Mesh candidates anatomically unverified.",
+    "XLO predicted joint centers and MID mesh; existing discrepancy up to ~1.02 mm.",
+    "Shared GEM-X source; no independent ground truth.",
+    "No glenohumeral/scapular measurement."
+  ],
+  "input_sha256": {
+    "baseline": "1df55015d49495962ec5dbf5166ee0ed911a4b154f02bdc0aff92afc266c12dc",
+    "neutral": "49d86e6fcc0d539ea4c16590392e592a1aaea5e2dc5fc151cd90c1ef110ebe9c",
+    "calibration": "cf7a645d6c85e8430b897136703bf5f73d13fc571e98e2be3a1565eee91ff643",
+    "surface": "8176c9a5535c3e8871d85c808c21ed70062598f5f63e1213e9bc32acce13d250",
+    "topology": "aa4d4a147d9c19511c5698a5ab1e4e2a9a5780ce9914703c992e1bffcb69df67",
+    "attachments": "f7eb34892a93b80308497a7d8f43c6176edebe70a77a771d61bb83e17fa79ab0"
+  },
+  "script_sha256": "86b86e41f35b0218df60772199ae3a5f960adf3259ccd8d6fc463e0f61fd3c13"
+}

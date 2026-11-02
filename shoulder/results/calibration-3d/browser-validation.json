@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "javascript_errors": [],
+  "external_requests": 0,
+  "checks": [
+    "WebGL canvas created",
+    "21 visible + 12 optional start traces",
+    "pose selector switches all 66 traces",
+    "mesh axis legend toggles both sides",
+    "four camera buttons",
+    "whole-body and shoulder zoom",
+    "mouse rotation",
+    "equal spatial scale in overview and shoulder zoom"
+  ],
+  "browser": "154.0.8037.57"
+}

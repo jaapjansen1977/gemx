@@ -27,6 +27,10 @@ De MuJoCo-validatie en CPU-video-export zijn wel op Linux uitgevoerd.
 
 ## Eerdere proef
 
+- [Draaibare 3D-kalibratiecontrole](shoulder/results/calibration-3d/README.md):
+  beginhouding en modelreferentie, gewrichtscentra, borstkas-/bovenarmassen en
+  kandidaat-mesh-landmarks; met vaste aanzichten en uitleg bij de beginhoek.
+
 - [Eerste humerothoracale schouderanalyse](shoulder/README.md):
   [controlevideo](shoulder/results/shoulder-check.mp4), drie hoekverlopen en
   uitslagen voor beide kanten; anatomische kalibratie nog voorlopig.

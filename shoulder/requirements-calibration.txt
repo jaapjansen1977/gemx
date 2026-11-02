@@ -1,0 +1,5 @@
+# Tested Linux Python 3.12 versions for visualization, no GEM-X inference needed.
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+plotly==7.1.0

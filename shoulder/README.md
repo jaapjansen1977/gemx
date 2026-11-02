@@ -182,3 +182,10 @@ De bestaande mesh-landmarks zijn niet anatomisch gevalideerd, en IJ/C7/PX/T8
 ontbreken. De schouderposities komen uit de eerdere XLO-export, de mesh uit MID;
 het bestaande mesh-rapport documenteert een verschil tot circa 1,02 mm.
 Deze vergelijking is daarom nog geen ISB-validatie of nauwkeurigheidsmeting.
+
+## Controleerbare 3D-kalibratievisualisatie
+
+[Bekijk de 3D-kalibratiecontrole](results/calibration-3d/README.md): beginhouding
+en model-T-pose, geschatte gewrichtscentra, de volledige mesh, borstkas- en
+bovenarmassen, kandidaat-landmarks en de geometrische elevatiehoek. Met een
+zelfstandige draaibare HTML-viewer, vaste aanzichten en auditrapport.

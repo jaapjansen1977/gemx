@@ -1,0 +1,43 @@
+{
+  "status": "diagnostic_direction_comparison_not_accuracy_validation",
+  "frames": 60,
+  "sides": {
+    "left": {
+      "frame0_direction_gap_deg": 19.219962737270027,
+      "mean_direction_gap_deg": 18.044832793511123,
+      "direction_gap_range_deg": [
+        14.33128267439827,
+        19.72363515639782
+      ],
+      "frame0_gem_elevation_in_shared_gem_thorax_deg": 19.62447433378919,
+      "frame0_myo_body_origin_line_elevation_in_shared_gem_thorax_deg": 1.8749474083257733
+    },
+    "right": {
+      "frame0_direction_gap_deg": 21.259858896104376,
+      "mean_direction_gap_deg": 21.03910950006315,
+      "direction_gap_range_deg": [
+        17.12839624733412,
+        22.900602594732856
+      ],
+      "frame0_gem_elevation_in_shared_gem_thorax_deg": 18.327958007658488,
+      "frame0_myo_body_origin_line_elevation_in_shared_gem_thorax_deg": 4.892219656276644
+    }
+  },
+  "max_frame0_qpos_difference_from_chosen_reference": 1.000000013351432e-10,
+  "definitions": {
+    "gem": "Arm to ForeArm predicted centers",
+    "myo": "humerus body origin to ulna body origin; model-origin proxy, not independently validated anatomical landmarks",
+    "shared_elevation_reference": "Negative superior axis of the SAME GEM-X proxy thorax for both lines; not MyoSim shoulder coordinates or validated ISB angles"
+  },
+  "explanation": "The existing rotation fit maps source frame 0 to a chosen feasible stock-model reference using constant segment offsets. Its initial near-neutral appearance is imposed, not independently recovered. Absolute body/joint positions were not fit objectives.",
+  "limitations": [
+    "No ground truth; neither appearance nor this direction gap establishes better accuracy.",
+    "Stock body lengths and unequal body-origin/joint-center definitions.",
+    "Fit follows reference-aligned segment rotations, not absolute source orientation."
+  ],
+  "input_sha256": {
+    "myo_fit/results/fit.npz": "328bd60d5c8140dc44bbebb711f8d48329839c9feddf897e022921a67efde574",
+    "mujoco_demo/data/motion.npz": "aa4d4a147d9c19511c5698a5ab1e4e2a9a5780ce9914703c992e1bffcb69df67",
+    "shoulder/results/report.json": "cf7a645d6c85e8430b897136703bf5f73d13fc571e98e2be3a1565eee91ff643"
+  }
+}

@@ -113,3 +113,9 @@ fitdoel gebruikt en vormen geen ISB-marker- of nauwkeurigheidsvalidatie.
 De MyoSim-licentie is opgenomen in `MYOSIM_LICENSE`. Bron en onderzoekscitaten:
 [MyoHub/myo_sim](https://github.com/MyoHub/myo_sim/tree/93b0ca8f4ec90c9899ee7f05fee561e9911da91b)
 (MyoSuite; MuscleMimic). MuJoCo en SciPy behouden hun eigen pakketlicenties.
+
+## Controle bovenarmrichting wit model versus blauwe invoerlijnen
+
+[3D-richtingcontrole en verklaring van het verschil](results/arm-direction-audit/README.md).
+In frame 0 verschillen de bovenarmlijnen circa 19° links en 21° rechts. De
+modelbeginhouding komt uit de gekozen referentie, niet uit een absolute pose-fit.

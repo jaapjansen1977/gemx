@@ -1,15 +1,18 @@
 # Controleerbare 3D-kalibratievisualisatie
 
-[Bekijk alle vaste aanzichten](start-views.png) · [Modelreferentie](reference-views.png) · [Download de draaibare viewer](https://github.com/jaapjansen1977/gemx/raw/refs/heads/main/shoulder/results/calibration-3d/calibration.html)
+[Bekijk alle vaste aanzichten](start-views.png) · [Modelreferentie](reference-views.png) · [Download de viewer als ZIP](https://github.com/jaapjansen1977/gemx/raw/refs/heads/main/shoulder/results/calibration-3d/kalibratieviewer.zip)
 
 De drie ruimterichtingen gebruiken dezelfde lengteschaal, ook bij het wisselen
 tussen schouderzoom en het hele lichaam.
 
-De viewer is één zelfstandig HTML-bestand van circa 7 MB. Download het bestand
-en open het met een desktopbrowser zoals Chrome, Edge of Firefox. Op GitHub zelf
-wordt HTML niet als interactieve pagina uitgevoerd. Gebruik daar de downloadknop
-(**Download raw file**). Een browser met WebGL is nodig; een server of
-internetverbinding is na het downloaden niet nodig.
+**Openen:** download de ZIP, pak deze volledig uit en open daarna
+`kalibratieviewer/calibration.html` vanuit de uitgepakte map in Chrome, Edge of
+Firefox. Gebruik zo nodig **Openen met → je browser**. Open niet de HTML-link op
+GitHub: GitHub toont HTML als broncode. De ZIP bevat ook `START-HIER.txt`.
+
+De viewer is één zelfstandig HTML-bestand van circa 7 MB. WebGL is nodig; een
+server of internetverbinding is na het downloaden niet nodig. De ZIP is
+gecontroleerd op integriteit en bevat exact het in Chromium geteste HTML-bestand.
 
 ![3D-weergave van de beginhouding](interactive-preview.png)
 
@@ -110,3 +113,10 @@ De browsercontrole en het voorbeeldbeeld kunnen met de optionele afhankelijkheid
   --report outputs/nieuwe-kalibratievisualisatie/browser-validation.json \
   --screenshot outputs/nieuwe-kalibratievisualisatie/interactive-preview.png
 ```
+
+## Verschil met het witte MyoFullBody-model
+
+[De richtingcontrole wit/blauw](../../../myo_fit/results/arm-direction-audit/README.md)
+bevestigt circa 19° links en 21° rechts verschil in de beginhouding. De huidige
+MyoFullBody-fit koppelt frame 0 aan een vooraf gekozen modelreferentie; zijn
+rechtere beginhouding is daardoor geen onafhankelijk bewijs van nauwkeurigheid.

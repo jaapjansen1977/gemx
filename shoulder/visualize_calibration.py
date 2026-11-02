@@ -4,6 +4,7 @@ import hashlib
 import html
 import json
 from pathlib import Path
+from zipfile import ZipFile, ZIP_DEFLATED
 
 import numpy as np
 from scipy.spatial.transform import Rotation
@@ -238,6 +239,25 @@ def static_views(pose, target):
     fig.tight_layout(rect=(0,.065,1,.93));fig.savefig(target,dpi=160);plt.close(fig)
 
 
+
+def package_viewer(directory):
+    """A binary ZIP avoids GitHub serving raw HTML as text in the browser."""
+    instructions = ("3D-kalibratieviewer openen\n\n"
+        "1. Pak dit ZIP-bestand volledig uit in een map op je computer.\n"
+        "2. Open calibration.html uit die map met Chrome, Edge of Firefox.\n"
+        "   Gebruik zo nodig rechtermuisknop > Openen met > je browser.\n"
+        "3. Je ziet een draaibare 3D-weergave; internet is niet nodig.\n\n"
+        "GitHub zelf toont HTML als broncode. Open daarom het uitgepakte\n"
+        "bestand op je computer, niet de GitHub-link naar de HTML.\n\n"
+        "Kies beginhouding of model-T-pose, draai met de muis en gebruik de\n"
+        "legenda om mesh en assen aan/uit te zetten. De groene stippellijn\n"
+        "is borstkas-neerwaarts, geen gemeten zwaartekracht. Anatomische\n"
+        "kalibratie en mesh-landmarks zijn nog niet gevalideerd.\n")
+    with ZipFile(directory/'kalibratieviewer.zip','w',compression=ZIP_DEFLATED) as archive:
+        archive.write(directory/'calibration.html','kalibratieviewer/calibration.html')
+        archive.writestr('kalibratieviewer/START-HIER.txt',instructions.encode('utf-8'))
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root',type=Path,default=Path('.'))
@@ -256,6 +276,7 @@ def main():
         input_sha256={key:hashlib.sha256(path.read_bytes()).hexdigest() for key,path in files.items()},
         script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest())
     (args.output/'audit.json').write_text(json.dumps(report,indent=2,allow_nan=False))
+    package_viewer(args.output)
     print(json.dumps(report,indent=2))
 
 

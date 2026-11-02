@@ -1,0 +1,204 @@
+{
+  "status": "diagnostic_only_unreviewed_mesh_landmarks",
+  "interpretation": "Differences between model-derived definitions, NOT accuracy improvement or clinical ROM.",
+  "methods": [
+    "baseline_saved_segment_frames",
+    "mesh_neutral_calibration_with_saved_segment_motion",
+    "mesh_frame_by_frame"
+  ],
+  "thorax": "Identical saved proxy thorax for all methods; IJ/C7/PX/T8 unavailable.",
+  "humerus": "Saved Arm joint GH proxy to epicondyle midpoint; rightward epicondylar axis projected perpendicular to long axis. Acromion is not substituted for GH.",
+  "sequence": "Existing bilateral YXY convention: Ry(plane) Rx(-elevation) Ry(axial); left mirrored.",
+  "threshold_deg": 20.0,
+  "quality_rule": "Epicondylar line must be at least 20 degrees from long axis; geometry screen only. No anatomical validation.",
+  "limitations": [
+    "All mesh landmarks unreviewed; anatomical placement must be checked.",
+    "Shared GEM-X source, no independent ground truth.",
+    "Saved joint positions use XLO and mesh uses MID; existing report documents up to ~1.02 mm difference.",
+    "No glenohumeral/scapular kinematics.",
+    "No frame-zero subtraction, smoothing, or fit."
+  ],
+  "sides": {
+    "left": {
+      "neutral_epicondylar_axis_to_long_axis_deg": 40.3258169737959,
+      "neutral_marker_separation_mm": 92.46652204172231,
+      "neutral_geometry_accepted": true,
+      "dynamic_geometry_accepted_frames": 60,
+      "total_frames": 60,
+      "dynamic_axis_angle_range_deg": [
+        45.30820244804551,
+        68.2829157815914
+      ],
+      "comparisons": {
+        "mesh_fixed": {
+          "common_accepted_frames": 33,
+          "mean_absolute_difference_deg": [
+            1.6801866095743336,
+            2.7838392750772756,
+            154.08184763735048
+          ],
+          "angle_order": [
+            "plane",
+            "elevation",
+            "axial"
+          ],
+          "note": "No accepted comparison means no interpretable ROM comparison from these candidates."
+        },
+        "mesh_dynamic": {
+          "common_accepted_frames": 33,
+          "mean_absolute_difference_deg": [
+            3.7203658661406593,
+            4.479481711981679,
+            130.8392036779024
+          ],
+          "angle_order": [
+            "plane",
+            "elevation",
+            "axial"
+          ],
+          "note": "No accepted comparison means no interpretable ROM comparison from these candidates."
+        }
+      },
+      "shared_contiguous_interval": {
+        "frames_start_end_exclusive": [
+          27,
+          59
+        ],
+        "times_s": [
+          0.9,
+          1.9333333333333333
+        ],
+        "excursions_deg": {
+          "baseline": [
+            44.84441562496798,
+            102.23070925169863,
+            63.09042822073762
+          ],
+          "mesh_fixed": [
+            38.20050026508497,
+            103.01842929654964,
+            58.05428849688718
+          ],
+          "mesh_dynamic": [
+            32.8017472924367,
+            106.2596367206582,
+            91.0525492393233
+          ]
+        },
+        "angle_order": [
+          "plane",
+          "elevation",
+          "axial"
+        ],
+        "interpretation": "Same contiguous interval for all three methods; numerical geometry screens only. Not anatomically validated ROM."
+      },
+      "starting_posture_audit": {
+        "baseline_frame0_elevation_deg": 19.62449558794802,
+        "direct_joint_line_frame0_elevation_deg": 19.624488112990786,
+        "frame0_downward_arm_unit_vector_in_thorax_xyz": [
+          -0.14145932912798131,
+          -0.9419139953523524,
+          -0.3046099887070682
+        ],
+        "first_half_second_baseline_elevation_mean_deg": 19.575830285393696,
+        "first_half_second_baseline_elevation_std_deg": 0.17389132090199297,
+        "max_direct_joint_line_vs_baseline_elevation_difference_deg": 3.058462335303602e-05,
+        "interpretation": "Nonzero elevation exists in predicted shoulder-elbow geometry relative to the proxy thorax, not just Euler decomposition. Stationarity does not impose anatomical zero; no first-frame subtraction was applied. This does not establish the true anatomical angle."
+      }
+    },
+    "right": {
+      "neutral_epicondylar_axis_to_long_axis_deg": 40.46178285930133,
+      "neutral_marker_separation_mm": 92.51469949158195,
+      "neutral_geometry_accepted": true,
+      "dynamic_geometry_accepted_frames": 60,
+      "total_frames": 60,
+      "dynamic_axis_angle_range_deg": [
+        49.97360200379678,
+        77.24948526632102
+      ],
+      "comparisons": {
+        "mesh_fixed": {
+          "common_accepted_frames": 27,
+          "mean_absolute_difference_deg": [
+            2.872441411233152,
+            2.407178111229491,
+            152.6577236732193
+          ],
+          "angle_order": [
+            "plane",
+            "elevation",
+            "axial"
+          ],
+          "note": "No accepted comparison means no interpretable ROM comparison from these candidates."
+        },
+        "mesh_dynamic": {
+          "common_accepted_frames": 23,
+          "mean_absolute_difference_deg": [
+            4.06794358865273,
+            4.026534682856063,
+            137.7305258032403
+          ],
+          "angle_order": [
+            "plane",
+            "elevation",
+            "axial"
+          ],
+          "note": "No accepted comparison means no interpretable ROM comparison from these candidates."
+        }
+      },
+      "shared_contiguous_interval": {
+        "frames_start_end_exclusive": [
+          37,
+          60
+        ],
+        "times_s": [
+          1.2333333333333334,
+          1.9666666666666666
+        ],
+        "excursions_deg": {
+          "baseline": [
+            83.69117210742385,
+            89.73335655793608,
+            82.87728673366601
+          ],
+          "mesh_fixed": [
+            75.5375947132864,
+            91.67376540882194,
+            75.79485495186081
+          ],
+          "mesh_dynamic": [
+            71.74491236079655,
+            96.29097715053436,
+            96.83374160835571
+          ]
+        },
+        "angle_order": [
+          "plane",
+          "elevation",
+          "axial"
+        ],
+        "interpretation": "Same contiguous interval for all three methods; numerical geometry screens only. Not anatomically validated ROM."
+      },
+      "starting_posture_audit": {
+        "baseline_frame0_elevation_deg": 18.327966543569218,
+        "direct_joint_line_frame0_elevation_deg": 18.327972724112914,
+        "frame0_downward_arm_unit_vector_in_thorax_xyz": [
+          -0.1876899079286398,
+          -0.9492720683140934,
+          0.25229951643256254
+        ],
+        "first_half_second_baseline_elevation_mean_deg": 18.476402304555563,
+        "first_half_second_baseline_elevation_std_deg": 0.42545738133722316,
+        "max_direct_joint_line_vs_baseline_elevation_difference_deg": 2.2409188879635167e-05,
+        "interpretation": "Nonzero elevation exists in predicted shoulder-elbow geometry relative to the proxy thorax, not just Euler decomposition. Stationarity does not impose anatomical zero; no first-frame subtraction was applied. This does not establish the true anatomical angle."
+      }
+    }
+  },
+  "code_sha256": "00d62104b0222b2228504759fec36f85aeeab1b7d604914866aa2316e1fc3746",
+  "input_sha256": {
+    "shoulder/results/shoulder.npz": "1df55015d49495962ec5dbf5166ee0ed911a4b154f02bdc0aff92afc266c12dc",
+    "shoulder/results/report.json": "cf7a645d6c85e8430b897136703bf5f73d13fc571e98e2be3a1565eee91ff643",
+    "shoulder/results/neutral.npz": "49d86e6fcc0d539ea4c16590392e592a1aaea5e2dc5fc151cd90c1ef110ebe9c",
+    "landmarks/results/surface.npz": "8176c9a5535c3e8871d85c808c21ed70062598f5f63e1213e9bc32acce13d250"
+  }
+}

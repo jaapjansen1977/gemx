@@ -138,3 +138,47 @@ anatomische verbetering zijn controleerbare borstkaslandmarks en een onderbouwde
 epicondylaire/ functionele bovenarmkalibratie nodig; meer decimalen lossen dit niet op.
 Zie de [bestaande licentiecontrole](../probe/LICENSE-REVIEW.md) en
 [SOMA-licentie](../landmarks/SOMA_LICENSE). Er zijn geen modelgewichten toegevoegd.
+
+## Bestaande assen vergelijken met mesh-kalibratie
+
+[Bekijk de vergelijkingsgrafiek](results/mesh-comparison/comparison.png) ·
+[Resultaten en verklaring van de niet-nul beginwaarden](results/mesh-comparison/README.md)
+
+`compare_mesh.py` vergelijkt de opgeslagen schouderanalyse met twee varianten:
+vaste bovenarmkalibratie op de neutrale mesh, en bovenarmassen uit de mesh-punten
+per frame. Alle drie gebruiken exact dezelfde opgeslagen borstkasassen en de
+bestaande bilaterale YXY-ontbinding. Er wordt geen nieuwe inferentie uitgevoerd.
+
+De bovenarm-Y loopt van het midden van de kandidaat-epicondylen naar het
+opgeslagen `Arm`-gewricht (GH-proxy). De kandidaat-epicondylaire lijn bepaalt,
+na projectie loodrecht op Y, de Z-as; X = Y kruis Z. Voor links en rechts is
+de richting expliciet gestandaardiseerd. Het acromion wordt niet als GH-centrum
+gebruikt. De vaste variant transporteert het neutrale mesh-frame met de bestaande
+segmentbeweging; de dynamische variant bouwt het frame telkens opnieuw op.
+
+Vanuit de repositoryroot, met NumPy, Matplotlib en SciPy voor de bestaande tests:
+
+```bash
+export XDG_CACHE_HOME=/workspace/.cache
+export MPLCONFIGDIR=/workspace/.cache/matplotlib
+.venv-mujoco/bin/python -m unittest shoulder.test_compare_mesh shoulder.test_angles landmarks.test_geometry -v
+.venv-mujoco/bin/python -m shoulder.compare_mesh --output outputs/nieuwe-mesh-vergelijking
+```
+
+De uitvoermap moet nieuw zijn. Uitvoer: `comparison.png/svg`, `comparison.csv`,
+`comparison.npz` en `report.json` met invoerhashes, script-hash, geometrische
+controles en uitslagen over één gezamenlijk aaneengesloten tijdvenster per kant.
+Vlak- en axiale hoeken worden alleen binnen geldige intervallen ontward.
+Verschillen in absolute circulaire hoeken worden op −180 tot +180 graden gebracht.
+Elevatieverschillen worden rechtstreeks afgetrokken. De rapportage vermeldt de
+hoekvolgorde: elevatievlak, elevatie, axiale rotatie.
+
+De geometrische controle vraagt minimaal 20° tussen de epicondylaire lijn en de
+lengteas, en de YXY-controle sluit elevaties buiten 20–160° uit. Dit zijn numerieke
+inspectiegrenzen: **slagen betekent geen anatomische goedkeuring**. De bestaande
+baseline-maskers blijven eveneens van toepassing. Gestreepte grafieklijnen zijn
+ruwe diagnostiek; stippen voldoen aan de gecombineerde numerieke controles.
+De bestaande mesh-landmarks zijn niet anatomisch gevalideerd, en IJ/C7/PX/T8
+ontbreken. De schouderposities komen uit de eerdere XLO-export, de mesh uit MID;
+het bestaande mesh-rapport documenteert een verschil tot circa 1,02 mm.
+Deze vergelijking is daarom nog geen ISB-validatie of nauwkeurigheidsmeting.

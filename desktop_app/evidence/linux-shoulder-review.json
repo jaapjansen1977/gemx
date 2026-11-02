@@ -1,0 +1,59 @@
+{
+  "status": "experimental_reference_calibration_not_validated_ISB",
+  "calibration": "Mean orientation in selected initial interval assumed anatomical neutral; no gravity measurement.",
+  "neutral_seconds": 0.5,
+  "reference_frames": 16,
+  "axial_method": "Swing-twist about calibrated humerus Y; auxiliary measure, not ISB YXY axial rotation.",
+  "limitations": [
+    "Initial neutral pose assumed, not independently measured.",
+    "No verified anatomical landmarks or gravity.",
+    "Swing-twist differs from ISB YXY axial angles.",
+    "No scapular/glenohumeral separation."
+  ],
+  "sides": {
+    "left": {
+      "reference_rotation": [
+        [
+          0.9742509191040054,
+          0.1333730016355538,
+          0.18178775827795404
+        ],
+        [
+          -0.06776783452939864,
+          0.9422123974936368,
+          -0.32809041225322255
+        ],
+        [
+          -0.21504108265212332,
+          0.30732302296446334,
+          0.9269896937548913
+        ]
+      ],
+      "raw_frame0_elevation_deg": 19.62449558794802,
+      "calibrated_frame0_elevation_deg": 0.29315418683078376,
+      "yxy_valid_frames": 24
+    },
+    "right": {
+      "reference_rotation": [
+        [
+          0.957763510174371,
+          0.212271664954169,
+          -0.19398401696030043
+        ],
+        [
+          -0.15423064493667388,
+          0.9485585809087691,
+          0.27649507544757734
+        ],
+        [
+          0.2426972738637308,
+          -0.2348986139634052,
+          0.9412335918448651
+        ]
+      ],
+      "raw_frame0_elevation_deg": 18.327966543569218,
+      "calibrated_frame0_elevation_deg": 1.7499229738062962,
+      "yxy_valid_frames": 17
+    }
+  }
+}

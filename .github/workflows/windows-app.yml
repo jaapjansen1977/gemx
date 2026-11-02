@@ -1,0 +1,43 @@
+name: Windows desktop prototype
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['desktop_app/**', '.github/workflows/windows-app.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-2025
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Build Windows application and run numerical tests
+        shell: pwsh
+        run: ./desktop_app/build_windows.ps1
+      - name: Test frozen executable on included motion
+        shell: pwsh
+        run: |
+          $output = Join-Path $env:RUNNER_TEMP 'gemx-desktop-smoke'
+          $process = Start-Process -FilePath dist/GEMXDesktop/GEMXDesktop.exe -ArgumentList '--self-test', $output -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw "Frozen self-test failed: $($process.ExitCode)" }
+          $result = Get-Content "$output/desktop-self-test.json" | ConvertFrom-Json
+          if ($result.status -ne 'passed' -or $result.frames -ne 60) { throw 'Frozen MuJoCo validation failed' }
+          if (-not (Test-Path "$output/angles.csv")) { throw 'Frozen angle export missing' }
+      - name: Smoke test executable startup
+        shell: pwsh
+        run: |
+          $process = Start-Process -FilePath dist/GEMXDesktop/GEMXDesktop.exe -PassThru
+          Start-Sleep -Seconds 8
+          $process.Refresh()
+          if ($process.HasExited) { throw "Application exited unexpectedly: $($process.ExitCode)" }
+          Stop-Process -Id $process.Id
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GEMXDesktop-Windows
+          path: dist/GEMXDesktop-Windows.zip
+          if-no-files-found: error

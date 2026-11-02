@@ -49,3 +49,9 @@ gesamplede piek-RAM op de Linux-cloud-CPU. Dit is geen laptopbenchmark.
 MuJoCo-afspelen gebruikt alleen de opgeslagen beweging en is veel lichter.
 
 De repository bevat persoonlijke bewegingsdata en video: houd hem privé.
+
+## Windows-app in ontwikkeling
+
+[Desktop-app, status en Windows-build](desktop_app/README.md): proefclip,
+MuJoCo-afspelen, schouderhoekexport en aansluiting op een lokale GEM-X-videomotor.
+De Windows-EXE en nieuwe Windows-videoanalyse zijn nog niet bevestigd.

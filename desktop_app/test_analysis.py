@@ -18,8 +18,9 @@ class AnalysisTests(unittest.TestCase):
                 arrays[side+'_angles_deg']=np.zeros((len(relative),3))
             np.savez(p/'source.npz',**arrays)
             analyze(p/'source.npz',p/'result',neutral_seconds=.15)
-            result=np.load(p/'result/shoulder-review.npz')
-            return {k:result[k].copy() for k in result.files},json.loads((p/'result/report.json').read_text())
+            with np.load(p/'result/shoulder-review.npz',allow_pickle=False) as result:
+                arrays={k:result[k].copy() for k in result.files}
+            return arrays,json.loads((p/'result/report.json').read_text())
 
     def test_neutral_offset_removed_as_rotation_not_scalar_subtraction(self):
         offset=Rotation.from_euler('xyz',[15,20,-10],degrees=True).as_matrix()

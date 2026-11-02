@@ -8,7 +8,8 @@ from shoulder.angles import decompose, unwrap_runs
 
 
 def analyze(shoulder_path, output, neutral_seconds=.5):
-    data=np.load(shoulder_path,allow_pickle=False)
+    with np.load(shoulder_path,allow_pickle=False) as source:
+        data={name:source[name].copy() for name in source.files}
     times=data['times_s']; initial=times<=times[0]+neutral_seconds
     if len(times)<2 or not np.isfinite(times).all() or not np.all(np.diff(times)>0):raise ValueError('Expected increasing frame times')
     if not np.isfinite(neutral_seconds) or not 0<neutral_seconds<times[-1]-times[0]:raise ValueError('Neutral interval must be positive and shorter than the motion')

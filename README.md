@@ -55,3 +55,9 @@ De repository bevat persoonlijke bewegingsdata en video: houd hem privé.
 [Desktop-app, status en Windows-build](desktop_app/README.md): proefclip,
 MuJoCo-afspelen, schouderhoekexport en aansluiting op een lokale GEM-X-videomotor.
 De Windows-EXE en nieuwe Windows-videoanalyse zijn nog niet bevestigd.
+
+## Browserinterface
+
+[Lokale browserinterface op je privécomputer](browser_app/README.md): 3D-afspelen,
+schoudergrafieken, voortgang en downloads. Met een eigen Windows-build; nog niet
+online gehost. Eigen videoanalyse vraagt de apart ingestelde GEM-X-videomotor.

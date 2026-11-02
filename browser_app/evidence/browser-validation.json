@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "real demo analysis",
+    "60-frame MuJoCo validation",
+    "3D frame coordinates update",
+    "play/pause",
+    "download ZIP integrity and CSV",
+    "mobile layout without overflow",
+    "video disabled when engine absent"
+  ],
+  "javascript_errors": [],
+  "external_requests": [],
+  "browser": "154.0.8037.57"
+}

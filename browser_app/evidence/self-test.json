@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "frames": 60,
+  "joints": 77,
+  "template": true,
+  "javascript": true,
+  "angle_export": true,
+  "zip_download": true
+}

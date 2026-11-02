@@ -1,0 +1,34 @@
+name: Windows browser interface
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['browser_app/**', '.github/workflows/browser-app.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-2025
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Build browser application and test API
+        shell: pwsh
+        run: ./browser_app/build_windows.ps1
+      - name: Test frozen server on real included motion
+        shell: pwsh
+        run: |
+          $output = Join-Path $env:RUNNER_TEMP 'gemx-browser-smoke'
+          $process = Start-Process -FilePath dist/GEMXBrowser/GEMXBrowser.exe -ArgumentList '--self-test', $output -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw "Frozen self-test failed: $($process.ExitCode)" }
+          $result = Get-Content "$output/browser-self-test.json" | ConvertFrom-Json
+          if ($result.status -ne 'passed' -or $result.frames -ne 60) { throw 'Frozen browser test failed' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GEMXBrowser-Windows
+          path: dist/GEMXBrowser-Windows.zip
+          if-no-files-found: error

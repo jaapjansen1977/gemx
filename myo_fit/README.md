@@ -119,3 +119,15 @@ De MyoSim-licentie is opgenomen in `MYOSIM_LICENSE`. Bron en onderzoekscitaten:
 [3D-richtingcontrole en verklaring van het verschil](results/arm-direction-audit/README.md).
 In frame 0 verschillen de bovenarmlijnen circa 19° links en 21° rechts. De
 modelbeginhouding komt uit de gekozen referentie, niet uit een absolute pose-fit.
+
+## Rechtstreekse export voor de apps
+
+De desktop- en browser-app gebruiken nu [de modelcoördinatenexport](results/model-coordinates/report.json)
+uit de opgeslagen MyoFullBody-qpos. [Alle 122 modelcoördinaten als CSV](results/model-coordinates/angles.csv)
+en [alle 129 ruwe qpos-waarden](results/model-coordinates/qpos.csv) zijn beschikbaar.
+Er wordt geen extra beginstandcorrectie toegepast. De bronhash en modelcommit
+staan in het rapport; 31 coördinaten zijn geoptimaliseerd, 51 gekoppeld en 40 vast.
+
+```bash
+python -m myo_fit.export_results --fit myo_fit/results/fit.npz --fit-report myo_fit/results/report.json --output outputs/nieuwe-model-export
+```

@@ -20,7 +20,7 @@ class BrowserTests(unittest.TestCase):
         self.directory.cleanup()
 
     def test_demo_runs_real_exports_and_mujoco_validation(self):
-        response=self.client.post('/api/jobs/demo',json={'neutral_seconds':.5},headers=self.headers)
+        response=self.client.post('/api/jobs/demo',json={},headers=self.headers)
         self.assertEqual(response.status_code,202)
         key=response.json['id'];deadline=time.monotonic()+30
         while time.monotonic()<deadline:
@@ -31,8 +31,16 @@ class BrowserTests(unittest.TestCase):
         data=self.client.get('/api/jobs/'+key+'/data').json
         self.assertEqual(len(data['positions']),60)
         self.assertEqual(data['validation']['status'],'passed')
-        self.assertEqual(data['validation']['joints'],77)
-        self.assertIn(None,data['angles']['left']['axial'])
+        self.assertEqual(data['validation']['joints'],123)
+        self.assertEqual(data['source'],'mujoco_myofullbody_fit')
+        self.assertEqual(len(data['coordinates']),122)
+        self.assertNotIn('angles',data)
+        self.assertFalse(data['report']['zero_correction_applied'])
+        import numpy as np
+        with np.load(Path(__file__).resolve().parents[1]/'myo_fit/results/fit.npz',allow_pickle=False) as original:
+            coordinate=next(c for c in data['coordinates'] if c['name']=='knee_angle_l')
+            index=data['coordinates'].index(coordinate)
+            np.testing.assert_allclose([row[index] for row in data['values']],np.rad2deg(original['qpos'][:,coordinate['qpos_address']]),atol=0,rtol=0)
         for name in ('csv','report','zip'):
             response=self.client.get(f'/api/jobs/{key}/files/{name}')
             self.assertEqual(response.status_code,200)
@@ -44,7 +52,7 @@ class BrowserTests(unittest.TestCase):
         self.assertEqual(self.client.post('/api/jobs/demo',json={}).status_code,403)
         self.assertEqual(self.client.post('/api/jobs/demo',json={},headers={**self.headers,'Origin':'https://unrelated.example'}).status_code,403)
 
-    def test_invalid_neutral_period_creates_no_job(self):
+    def test_extra_zero_correction_is_rejected(self):
         for value in (-1,2,99,'not-a-number'):
             response=self.client.post('/api/jobs/demo',json={'neutral_seconds':value},headers=self.headers)
             self.assertEqual(response.status_code,400)

@@ -19,9 +19,10 @@ import numpy as np
 from flask import Flask, abort, jsonify, render_template, request, send_file, session
 
 ROOT = Path(__file__).resolve().parents[1]
-FILES = {'csv': 'review/angles.csv', 'plot': 'review/angles.png',
-         'report': 'review/report.json', 'arrays': 'review/shoulder-review.npz',
-         'motion': 'motion/motion.npz', 'validation': 'mujoco-validation.json', 'zip': 'resultaten.zip', 'log': 'engine.log'}
+FILES = {'csv': 'review/angles.csv', 'qpos': 'review/qpos.csv', 'plot': 'review/angles.png',
+         'report': 'review/report.json', 'arrays': 'review/model-coordinates.npz',
+         'motion': 'fit/fit.npz', 'video': 'fit/preview.mp4', 'validation': 'review/validation.json',
+         'zip': 'resultaten.zip', 'log': 'engine.log'}
 
 
 @dataclass
@@ -66,11 +67,12 @@ class Jobs:
         job.status = 'running'
         try:
             if job.kind == 'demo':
-                from desktop_app.analysis import analyze
-                self.update(job, 'Bestaande proefclip analyseren en beginhouding kalibreren')
-                analyze(ROOT/'shoulder/results/shoulder.npz', job.directory/'review', settings['neutral_seconds'])
-                (job.directory/'motion').mkdir()
-                shutil.copyfile(ROOT/'mujoco_demo/data/motion.npz', job.directory/'motion/motion.npz')
+                from myo_fit.export_results import export
+                self.update(job, 'Opgeslagen MyoFullBody-modelfit opnieuw controleren en modelcoordinaten exporteren')
+                (job.directory/'fit').mkdir()
+                for filename in ('fit.npz','report.json','preview.mp4'):
+                    shutil.copyfile(ROOT/'myo_fit/results'/filename, job.directory/'fit'/filename)
+                export(job.directory/'fit/fit.npz',job.directory/'review',job.directory/'fit/report.json')
             else:
                 self.update(job, 'Video lokaal verwerken met de ingestelde GEM-X-motor')
                 req = {**settings, 'output': str(job.directory), 'config': str(self.engine['config']),
@@ -113,11 +115,9 @@ class Jobs:
             job.process = None
 
     def finish(self, job):
-        from mujoco_demo.__main__ import load_motion, validate
-        from mujoco_demo.skeleton import Skeleton
-        self.update(job, 'Beweging controleren in MuJoCo')
-        check = validate(Skeleton(load_motion(job.directory/'motion/motion.npz')))
-        (job.directory/'mujoco-validation.json').write_text(json.dumps(check, indent=2), encoding='utf-8')
+        report=json.loads((job.directory/'review/report.json').read_text(encoding='utf-8'))
+        if report.get('source')!='mujoco_myofullbody_fit' or report['validation']['status']!='passed':
+            raise ValueError('Resultaat is geen gecontroleerde MyoFullBody-modelfit')
         with ZipFile(job.directory/'resultaten.zip', 'w', ZIP_DEFLATED) as archive:
             for key, name in FILES.items():
                 path = job.directory/name
@@ -195,9 +195,8 @@ def create_app(directory=None, engine=None):
             values = request.get_json(silent=True) or {} if kind == 'demo' else request.form
             if not hasattr(values, 'get'): raise ValueError('Ongeldige analyse-instellingen.')
             duration = 2.0 if kind == 'demo' else number(values.get('duration'), 2, 0, 60)
-            neutral = number(values.get('neutral_seconds'), .5, 0, min(duration, 1.9 if kind == 'demo' else duration))
-            if neutral >= duration: raise ValueError('De neutrale beginperiode moet korter zijn dan de geselecteerde beweging.')
-            settings = dict(neutral_seconds=neutral, duration=duration)
+            if 'neutral_seconds' in values: raise ValueError('Extra nulcorrectie is niet beschikbaar voor de MuJoCo-modelfit.')
+            settings = dict(duration=duration)
             if kind == 'video':
                 settings['start'] = number(values.get('start'), 0, -1e-12, 1e9)
                 upload = request.files.get('video')
@@ -238,20 +237,14 @@ def create_app(directory=None, engine=None):
     def data(key):
         job = find(key)
         if job.status != 'completed': return jsonify(error='De analyse is nog niet voltooid.'), 409
-        with np.load(job.directory/'motion/motion.npz', allow_pickle=False) as source:
-            motion = {name: source[name].copy() for name in ('names', 'parents', 'positions_m', 'clip_times_s')}
-        with np.load(job.directory/'review/shoulder-review.npz', allow_pickle=False) as source:
-            angles = {}
-            for side in ('left', 'right'):
-                valid = source[side+'_valid']
-                values = source[side+'_angles_deg']
-                angles[side] = {'elevation': json_values(values[:, 1]),
-                    'axial': json_values(np.where(valid, values[:, 2], np.nan)),
-                    'twist': json_values(source[side+'_twist_deg'])}
-        return jsonify(times=motion['clip_times_s'].tolist(), names=motion['names'].tolist(),
-                       parents=motion['parents'].tolist(), positions=motion['positions_m'].tolist(), angles=angles,
-                       report=json.loads((job.directory/'review/report.json').read_text(encoding='utf-8')),
-                       validation=json.loads((job.directory/'mujoco-validation.json').read_text(encoding='utf-8')))
+        with np.load(job.directory/'review/model-coordinates.npz', allow_pickle=False) as source:
+            values={name:source[name].copy() for name in source.files}
+        report=json.loads((job.directory/'review/report.json').read_text(encoding='utf-8'))
+        parents=values['body_parents'].copy();parents[parents==0]=-1
+        return jsonify(source=report['source'],times=values['times_s'].tolist(),names=values['body_names'].tolist(),
+                       parents=parents.tolist(),positions=values['body_positions_m'].tolist(),
+                       coordinates=report['coordinates'],values=json_values(values['values']),
+                       report=report,validation=report['validation'])
 
     @app.get('/api/jobs/<key>/files/<name>')
     def download(key, name):
@@ -260,7 +253,7 @@ def create_app(directory=None, engine=None):
         if name != 'log' and job.status != 'completed': abort(409)
         path = job.directory/FILES[name]
         if not path.is_file(): abort(404)
-        return send_file(path, as_attachment=name != 'plot', download_name=path.name)
+        return send_file(path, as_attachment=name not in ('plot','video'), download_name=path.name)
 
     return app
 
@@ -276,7 +269,7 @@ def self_test(directory):
         if client.get('/static/app.js').status_code != 200:
             raise RuntimeError('Browser JavaScript missing')
         with client.session_transaction() as values: token = values['csrf']
-        response = client.post('/api/jobs/demo', json={'neutral_seconds': .5}, headers={'X-GEMX-Token': token})
+        response = client.post('/api/jobs/demo', json={}, headers={'X-GEMX-Token': token})
         if response.status_code != 202: raise RuntimeError(response.get_data(as_text=True))
         key = response.json['id']
         deadline = time.monotonic() + 60
@@ -291,7 +284,7 @@ def self_test(directory):
             raise RuntimeError('MuJoCo validation failed')
         with client.get('/api/jobs/'+key+'/files/zip') as download:
             if download.status_code != 200 or not download.data: raise RuntimeError('Download failed')
-        result = dict(status='passed', frames=check['frames'], joints=check['joints'],
+        result = dict(status='passed', source=data['source'],frames=check['frames'], joints=check['joints'],scalar_coordinates=check['scalar_coordinates'],
                       template=True, javascript=True, angle_export=True, zip_download=True)
         (Path(directory)/'browser-self-test.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
         print(json.dumps(result, indent=2))

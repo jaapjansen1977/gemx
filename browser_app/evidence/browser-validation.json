@@ -1,9 +1,9 @@
 {
   "status": "passed",
   "checks": [
-    "real demo analysis",
+    "actual MyoFullBody qpos source",
     "60-frame MuJoCo validation",
-    "3D frame coordinates update",
+    "fitted model body coordinates update",
     "play/pause",
     "download ZIP integrity and CSV",
     "mobile layout without overflow",

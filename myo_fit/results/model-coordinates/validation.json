@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "source": "mujoco_myofullbody_fit",
+  "frames": 60,
+  "joints": 123,
+  "scalar_coordinates": 122,
+  "max_saved_body_position_error_m": 0.0,
+  "max_range_violation": 0.0,
+  "max_coupling_error": 2.7755575615628914e-17,
+  "max_mujoco_equality_residual": 2.7755575615628914e-17
+}

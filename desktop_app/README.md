@@ -1,116 +1,68 @@
-# GEM-X Windows-app: eerste onderzoeksversie
+# Windows-app: resultaten uit de MuJoCo-modelfit
 
-Deze versie brengt lokale videoanalyse, een MuJoCo-afspeelvenster en
-schouderhoekexport samen. De broncode en Windows-build zijn toegevoegd;
-**een geslaagde Windows-build en nieuwe Windows-videoanalyse zijn nog niet
-bevestigd vanuit deze ontwikkelomgeving**. Dit is geen afgeronde installatie
-voor willekeurige Windows-computers.
+De app gebruikt de **witte MyoFullBody-modelfit** als bron voor grafieken en CSV.
+De metingen komen rechtstreeks uit de opgeslagen MuJoCo-`qpos`. Er wordt geen
+GEM-X-hoekberekening of extra nulstandcorrectie gebruikt voor deze resultaten.
 
-![Appvenster, getest op Linux](preview.png)
+## Download en starten
 
-## Wat werkt en wat nog gecontroleerd moet worden
+Open [de Windows desktop-build](https://github.com/jaapjansen1977/gemx/actions/workflows/windows-app.yml)
+en gebruik een geslaagde build met de MyoFullBody-aanpassing. Eerdere EXE's
+gebruiken nog de vorige gegevensbron. De nieuwe Windows-build is nog niet
+vanuit de ontwikkelomgeving bevestigd.
 
-| Onderdeel | Stand |
-|---|---|
-| Appvenster en proefclip-knop | Op Linux daadwerkelijk geopend en bediend |
-| CSV-/PNG-/NPZ-export op bestaande beweging | Uitgevoerd |
-| Nulreferentie en aanvullende draaiingsmaat | Getest met bekende synthetische rotaties |
-| MuJoCo-model van de bestaande 60 frames | Gevalideerd |
-| Windows EXE | PyInstaller-build en Windows-runner ingericht; uitkomst nog onbevestigd |
-| Nieuwe video via GEM-X-CPU-motor | Adapter aangesloten; niet end-to-end uitgevoerd op Windows |
-| Witte MyoFullBody-fit, voetcontactoptimalisatie | Niet onderdeel van deze eerste appversie |
-| Klinisch/anatomisch gevalideerde ISB-hoeken | Niet aangetoond |
+Download het artefact **GEMXDesktop-Windows**, pak beide ZIP-lagen uit en open
+`GEMXDesktop.exe`. Laat `_internal` naast de EXE staan. Begin met **Bestaande
+proefclip**: de opgeslagen witte modelfit wordt opnieuw in MuJoCo gecontroleerd.
+**MuJoCo openen** speelt dezelfde fit af in het witte model. **Hoekgrafiek** toont
+een overzicht; **Resultatenmap** bevat alle 122 coördinaten en de ruwe `qpos`.
+Voor interactief kiezen tussen coördinaten is er de
+[browserinterface](../browser_app/README.md), met dezelfde gegevensbron.
 
-## Windows-programma verkrijgen
+## Welke waarden?
 
-Open [de Windows-build op GitHub Actions](https://github.com/jaapjansen1977/gemx/actions/workflows/windows-app.yml).
-Na een geslaagde run staat onder **Artifacts** het bestand `GEMXDesktop-Windows`.
-Download dat, pak beide ZIP-lagen volledig uit en open
-`GEMXDesktop/GEMXDesktop.exe`. Laat de bijbehorende `_internal`-map staan: de EXE
-gebruikt die voor Python, MuJoCo en de numerieke bibliotheken. Het programma vraagt
-voor de bestaande proefclip geen apart geïnstalleerde Python of modelgewichten.
+- `review/angles.csv`: alle 122 scalar-modelcoördinaten, in graden of meters.
+- `review/qpos.csv`: alle 129 configuratiewaarden, inclusief roottranslatie en
+  quaternion in oorspronkelijke MuJoCo-eenheden.
+- `review/model-coordinates.npz`: exacte qpos, modelwaarden en opnieuw berekende
+  body-posities/rotaties.
+- `review/report.json`: bronhash, modelcommit, qpos-index, eenheid en rol per
+  coördinaat; geen extra nulcorrectie.
 
-De workflow voert de numerieke tests uit, bouwt de EXE op Windows en laat die
-zelf de proefbeweging analyseren en in MuJoCo valideren. Pas daarna wordt het
-artefact aangeboden. De simpele venster-startcontrole komt daar aanvullend bij.
-Een GitHub-account met toegang tot deze privé-repository kan nodig zijn voor
-downloads. GitHub Actions moet voor de repository beschikbaar zijn.
+De verdeling is 31 geoptimaliseerde, 51 door modelkoppelingen bepaalde en
+40 vaste coördinaten. De laatste zijn geen onafhankelijk gemeten vingerbeweging.
+De modelwaarden zijn niet automatisch anatomische ISB-hoeken. De bestaande
+beginreferentie, kniegrenzen en overige beperkingen van de fit blijven gelden;
+spierkrachten en voetcontact worden niet geoptimaliseerd.
 
-## Gebruik
+## Eigen video
 
-1. Begin met **Bestaande proefclip**. De app schrijft een nieuwe resultatenmap.
-2. Kies **MuJoCo openen** voor de kinematische skeletweergave; dit is geen
-   fysische simulatie met spierkrachten of geoptimaliseerd voetcontact.
-3. **Hoekgrafiek** opent de grafiek; **Resultatenmap** geeft toegang tot CSV,
-   NPZ en het rapport met de gebruikte referentie.
-4. Voor eigen video's installeer je eerst de aparte videomotor, stel je diens
-   Python, releaseconfiguratie en SOMA-assetsmap in en kies je een video.
-   Start met twee seconden: de eerdere CPU-proef duurde circa twaalf minuten
-   voor twee seconden beeld. De upstream-pipeline verwerkt maximaal 60 seconden
-   per selectie; langere volledige video's zijn hier nog niet ondersteund.
+Kies de Python-omgeving van de videomotor, de officiële GEM-X-releaseconfiguratie
+en de SOMA-assetsmap. De motor draait GEM-X, fit daarna MyoFullBody aan de
+segmentrotaties en exporteert de **nieuwe modelfit**. Zonder geldige fit wordt
+geen alternatief resultaat als modelfit aangeboden. De extra rendering vraagt
+FFmpeg en ffprobe op PATH.
 
-De instellingen worden lokaal bewaard. De app uploadt geen videobeelden.
-Het analyselogboek blijft in de resultatenmap. Afsluiten tijdens analyse stopt
-de aangestuurde videomotor; onvoltooide resultaten worden niet als voltooid getoond.
+De motor vereist MuJoCo 3.4.0 en MyoSim op commit
+`93b0ca8f4ec90c9899ee7f05fee561e9911da91b`. Het installatiescript
+`setup_engine_windows.ps1` bereidt die dependencies voor, maar downloadt geen
+GEM-X-/detectorgewichten. Daarvoor blijft [probe/README.md](../probe/README.md)
+van toepassing. Nieuwe video-inferentie op Windows is nog niet end-to-end getest.
+De eerdere CPU-proef duurde circa 12 minuten voor 2 s video; start kort.
 
-## Eigen video: videomotor
+## Python en bouwen
 
-De zware GEM-X-inferentie draait in een aparte Python-omgeving. De app bundelt
-geen detector- of GEM-X-gewichten en geen FFmpeg-binary. Dit voorkomt ook dat
-het lichte afspeelprogramma al de volledige inferentiestack moet laden.
-
-Het meegeleverde `setup_engine_windows.ps1` is een eerste installatiescript voor
-Python 3.12, de CPU-versie van PyTorch en GEM-X op de vastgelegde upstreamcommit.
-Het vraagt een al geïnstalleerde Python 3.12 (64-bit), Git en internet voor
-pakketten. De Windows-compatibiliteit van deze volledige stack moet nog worden
-getest. Het script downloadt geen modelgewichten.
-
-Gebruik de officiële lokale modelbestanden en releaseconfiguratie uit
-[de bestaande installatiebeschrijving](../probe/README.md), inclusief de
-vastgelegde modelrevisies. FFmpeg en ffprobe moeten op PATH beschikbaar zijn.
-De eerder vastgelegde [modelvoorwaarden en distributievragen](../probe/LICENSE-REVIEW.md)
-blijven van toepassing; de build bevat die gewichten niet. Modelbestanden en
-video's worden niet stilzwijgend vervangen door een andere pose-pipeline.
-
-## Betekenis van de hoeken
-
-De eerste instelbare periode (standaard 0,5 seconde) wordt als neutrale
-beginhouding aangenomen. De gemiddelde segmentoriëntatie wordt als één vaste
-lokale correctie toegepast; er wordt geen scalar van elke elevatie afgetrokken.
-De houding ten opzichte van zwaartekracht en anatomische landmarks is hiermee
-niet onafhankelijk gemeten.
-
-De grafiek toont:
-
-- Gekalibreerde armheffing tegenover de borstkas.
-- ISB-style YXY-axiale hoek, met lege stukken waar de ontbinding instabiel is.
-- Een aanvullende **swing-twist**-maat rond de gekalibreerde bovenarm-Y-as.
-  Dit is een andere definitie dan ISB-YXY-axiale rotatie; ze wordt apart benoemd.
-
-De bestaande 3D-beweging voor MuJoCo blijft ongewijzigd. De referentiecorrectie
-wordt op de hoekberekening toegepast; ze verplaatst niet de skeletpunten.
-Het rapport vermeldt de gekozen referentie en alle beperkingen. Er worden nog
-geen hoeken voor alle gewrichten geoptimaliseerd; deze versie richt zich op de
-schouderanalyse die tot nu toe is onderzocht.
-
-## Zelf starten en bouwen
-
-Vanuit de repositoryroot:
-
-```bash
-python -m pip install -r desktop_app/requirements.txt
-python -m desktop_app.app
-python -m unittest desktop_app.test_analysis mujoco_demo.test_demo -v
-python -m desktop_app.app --self-test outputs/nieuwe-desktop-zelftest
-```
-
-De `--self-test` schrijft een echte hoekexport en een 60-frame MuJoCo-validatie.
-Op Windows met Python 3.12:
+Met Python 3.12 en Git, vanuit de repositoryroot:
 
 ```powershell
-powershell -File desktop_app/build_windows.ps1
+python -m pip install -r desktop_app/requirements.txt
+python -m desktop_app.app
+python -m desktop_app.app --self-test outputs/nieuwe-model-desktop-test
+python -m unittest myo_fit.test_export_results myo_fit.test_constraints -v
 ```
 
-Het resultaat is `dist/GEMXDesktop-Windows.zip`. Gebundelde distributienotices
-staan naast het programma in `THIRD_PARTY_LICENSES`. De Windows-build is een
-aparte stap; een succesvolle Linux-test is geen bewijs dat de EXE werkt.
+Op Windows maakt `powershell -File desktop_app/build_windows.ps1` de ZIP met EXE,
+modelassets, ondersteunende bibliotheken en third-party notices. De bouwtests
+controleren de echte modelfit; een Linux-test bewijst niet dat de Windows-EXE
+al werkt. De oorspronkelijke losse MuJoCo-skeletdemo blijft als aparte
+onderzoeksweergave bestaan en is niet de bron van de appmetingen.

@@ -53,11 +53,13 @@ De repository bevat persoonlijke bewegingsdata en video: houd hem privé.
 ## Windows-app in ontwikkeling
 
 [Desktop-app, status en Windows-build](desktop_app/README.md): proefclip,
-MuJoCo-afspelen, schouderhoekexport en aansluiting op een lokale GEM-X-videomotor.
+afspelen van de witte MyoFullBody-modelfit, alle 122 modelcoördinaten en
+aansluiting op een lokale GEM-X-videomotor.
 De Windows-EXE en nieuwe Windows-videoanalyse zijn nog niet bevestigd.
 
 ## Browserinterface
 
 [Lokale browserinterface op je privécomputer](browser_app/README.md): 3D-afspelen,
-schoudergrafieken, voortgang en downloads. Met een eigen Windows-build; nog niet
+grafieken van alle MyoFullBody-modelcoördinaten, voortgang en downloads.
+Bron van de appresultaten is de gefitte MuJoCo-qpos, zonder extra nulcorrectie. Met een eigen Windows-build; nog niet
 online gehost. Eigen videoanalyse vraagt de apart ingestelde GEM-X-videomotor.

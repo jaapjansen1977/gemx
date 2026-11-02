@@ -24,7 +24,9 @@ def main():
         import onnxruntime
         from gem.inference.body_video import load_body_video_config,run_body_video
         from probe.cpu_probe import export_fk
-        from desktop_app.analysis import analyze
+        from myo_fit.fit import run as fit_model, load_model
+        from myo_fit.export_results import export
+        load_model()  # Fail before costly inference if the exact model is unavailable.
         torch.set_num_threads(req.get('threads',2));onnxruntime.disable_telemetry_events()
         config=load_body_video_config(req['config'])
         config['detector']['device']='cpu';config['pose']['batch_size']=1;config['observations']['batch_size']=1
@@ -34,13 +36,14 @@ def main():
         print('Video analyseren met temporele GEM-X Body Motion',flush=True)
         result=run_body_video(Path(req['video']),config,device='cpu',start=req['start'],duration=req['duration'],progress=lambda x:print(x,flush=True))
         raw=output/'raw';raw.mkdir();torch.save(result,raw/'raw_motion.pt');export_fk(result,Path(req['assets']),raw)
-        print('Neutrale modelgeometrie en schouderanalyse',flush=True)
-        neutral=output/'neutral.npz'
-        module('shoulder.calibrate',['--raw',raw/'raw_motion.pt','--assets',req['assets'],'--output',neutral])
-        module('shoulder.analyze',['--kinematics',raw/'kinematics.npz','--neutral',neutral,'--output',output/'raw-shoulder','--threshold-deg','20'])
         module('mujoco_demo',['prepare','--input',raw/'kinematics.npz','--output-dir',output/'motion'])
-        analyze(output/'raw-shoulder'/'shoulder.npz',output/'review',req['neutral_seconds'])
-        (output/'completed.json').write_text(json.dumps({'status':'completed','experimental':True}),encoding='utf-8')
+        print('MyoFullBody-model fitten aan segmentrotaties',flush=True)
+        fit_model(output/'motion/motion.npz',output/'fit')
+        print('Gefitte MuJoCo-modelcoordinaten exporteren',flush=True)
+        export(output/'fit/fit.npz',output/'review',output/'fit/report.json')
+        print('Wit MyoFullBody-model renderen',flush=True)
+        module('myo_fit.view',['--fit',output/'fit/fit.npz','--render',output/'fit/preview.mp4'])
+        (output/'completed.json').write_text(json.dumps({'status':'completed','experimental':True,'source':'mujoco_myofullbody_fit'}),encoding='utf-8')
         print('Analyse voltooid',flush=True)
     except Exception:
         import traceback

@@ -1,0 +1,1498 @@
+{
+  "source": "mujoco_myofullbody_fit",
+  "model_commit": "93b0ca8f4ec90c9899ee7f05fee561e9911da91b",
+  "mujoco": "3.4.0",
+  "nq": 129,
+  "fit_status": "completed",
+  "optimizer_success_all": true,
+  "mean_orientation_error_deg": 2.052231272754431,
+  "fit_sha256": "328bd60d5c8140dc44bbebb711f8d48329839c9feddf897e022921a67efde574",
+  "frames": 60,
+  "coordinates": [
+    {
+      "name": "flex_extension",
+      "qpos_address": 7,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Romp",
+      "limited": true,
+      "model_range": [
+        -77.34930234266115,
+        43.189558596961454
+      ]
+    },
+    {
+      "name": "lat_bending",
+      "qpos_address": 8,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Romp",
+      "limited": true,
+      "model_range": [
+        -24.99814860155782,
+        24.99814860155782
+      ]
+    },
+    {
+      "name": "axial_rotation",
+      "qpos_address": 9,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Romp",
+      "limited": true,
+      "model_range": [
+        -45.00010522957486,
+        45.00010522957486
+      ]
+    },
+    {
+      "name": "Abs_t1",
+      "qpos_address": 10,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -0.05,
+        0.015
+      ]
+    },
+    {
+      "name": "Abs_t2",
+      "qpos_address": 11,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -0.03,
+        0.03
+      ]
+    },
+    {
+      "name": "Abs_r3",
+      "qpos_address": 12,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -40.10704565915762,
+        40.10704565915762
+      ]
+    },
+    {
+      "name": "L4_L5_FE",
+      "qpos_address": 13,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -10.661025693999228,
+        4.810152577461801
+      ]
+    },
+    {
+      "name": "L4_L5_LB",
+      "qpos_address": 14,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -5.097622692012789,
+        5.139603309662024
+      ]
+    },
+    {
+      "name": "L4_L5_AR",
+      "qpos_address": 15,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -18.155955367040942,
+        18.155955367040942
+      ]
+    },
+    {
+      "name": "L3_L4_FE",
+      "qpos_address": 16,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.283150283257267,
+        5.304168247579498
+      ]
+    },
+    {
+      "name": "L3_L4_LB",
+      "qpos_address": 17,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -8.989335383035781,
+        8.989335383035781
+      ]
+    },
+    {
+      "name": "L3_L4_AR",
+      "qpos_address": 18,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -1.7010039776779295,
+        1.7010039776779295
+      ]
+    },
+    {
+      "name": "L2_L3_FE",
+      "qpos_address": 19,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -16.173567232511903,
+        6.006190515641491
+      ]
+    },
+    {
+      "name": "L2_L3_LB",
+      "qpos_address": 20,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -9.11432612604357,
+        9.11432612604357
+      ]
+    },
+    {
+      "name": "L2_L3_AR",
+      "qpos_address": 21,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -5.9831656336863634,
+        5.9831656336863634
+      ]
+    },
+    {
+      "name": "L1_L2_FE",
+      "qpos_address": 22,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -17.85393785407158,
+        6.630210309474373
+      ]
+    },
+    {
+      "name": "L1_L2_LB",
+      "qpos_address": 23,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -4.699651937092869,
+        4.699651937092869
+      ]
+    },
+    {
+      "name": "L1_L2_AR",
+      "qpos_address": 24,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -4.738249811919653,
+        4.738249811919653
+      ]
+    },
+    {
+      "name": "sternoclavicular_r2_r",
+      "qpos_address": 25,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -42.97183463481174,
+        -0.0
+      ]
+    },
+    {
+      "name": "sternoclavicular_r3_r",
+      "qpos_address": 26,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        18.22005788516018
+      ]
+    },
+    {
+      "name": "unrotscap_r3_r",
+      "qpos_address": 27,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -18.22005788516018,
+        -0.0
+      ]
+    },
+    {
+      "name": "unrotscap_r2_r",
+      "qpos_address": 28,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        42.97183463481174
+      ]
+    },
+    {
+      "name": "acromioclavicular_r2_r",
+      "qpos_address": 29,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -8.708958485988513,
+        -0.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r3_r",
+      "qpos_address": 30,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        70.35921724206509
+      ]
+    },
+    {
+      "name": "acromioclavicular_r1_r",
+      "qpos_address": 31,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        31.627270291221446
+      ]
+    },
+    {
+      "name": "unrothum_r1_r",
+      "qpos_address": 32,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -31.627270291221446,
+        -0.0
+      ]
+    },
+    {
+      "name": "unrothum_r3_r",
+      "qpos_address": 33,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -70.35921724206509,
+        -0.0
+      ]
+    },
+    {
+      "name": "unrothum_r2_r",
+      "qpos_address": 34,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        8.708958485988513
+      ]
+    },
+    {
+      "name": "elv_angle_r",
+      "qpos_address": 35,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        -94.99640243269049,
+        130.0041237151838
+      ]
+    },
+    {
+      "name": "shoulder_elv_r",
+      "qpos_address": 36,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        0.0,
+        180.02333923010465
+      ]
+    },
+    {
+      "name": "shoulder1_r2_r",
+      "qpos_address": 37,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        -128.45713766833057,
+        94.99640243269049
+      ]
+    },
+    {
+      "name": "shoulder_rot_r",
+      "qpos_address": 38,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        -90.01166961505233,
+        119.97736230039438
+      ]
+    },
+    {
+      "name": "elbow_flexion_r",
+      "qpos_address": 39,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Elleboog",
+      "limited": true,
+      "model_range": [
+        0.0,
+        130.0041237151838
+      ]
+    },
+    {
+      "name": "pro_sup_r",
+      "qpos_address": 40,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Onderarm",
+      "limited": true,
+      "model_range": [
+        -90.00021045914971,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "deviation_r",
+      "qpos_address": 41,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Pols",
+      "limited": true,
+      "model_range": [
+        -10.000004285756797,
+        24.999982066502238
+      ]
+    },
+    {
+      "name": "flexion_r",
+      "qpos_address": 42,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Pols",
+      "limited": true,
+      "model_range": [
+        -44.99999063801583,
+        44.99999063801583
+      ]
+    },
+    {
+      "name": "cmc_flexion",
+      "qpos_address": 43,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -44.69070802020421,
+        40.10704565915762
+      ]
+    },
+    {
+      "name": "cmc_abduction",
+      "qpos_address": 44,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -28.64788975654116,
+        44.69070802020421
+      ]
+    },
+    {
+      "name": "mp_flexion_r",
+      "qpos_address": 45,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -44.99999063801583,
+        40.000017143027186
+      ]
+    },
+    {
+      "name": "ip_flexion_r",
+      "qpos_address": 46,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -75.00017538262476,
+        24.999982066502238
+      ]
+    },
+    {
+      "name": "mcp2_flexion_r",
+      "qpos_address": 47,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp2_abduction_r",
+      "qpos_address": 48,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm2_flexion_r",
+      "qpos_address": 49,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md2_flexion_r",
+      "qpos_address": 50,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp3_flexion_r",
+      "qpos_address": 51,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp3_abduction_r",
+      "qpos_address": 52,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm3_flexion_r",
+      "qpos_address": 53,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md3_flexion",
+      "qpos_address": 54,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp4_flexion_r",
+      "qpos_address": 55,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp4_abduction_r",
+      "qpos_address": 56,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm4_flexion",
+      "qpos_address": 57,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md4_flexion_r",
+      "qpos_address": 58,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp5_flexion_r",
+      "qpos_address": 59,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp5_abduction_r",
+      "qpos_address": 60,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm5_flexion_r",
+      "qpos_address": 61,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md5_flexion_r",
+      "qpos_address": 62,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "sternoclavicular_r2_l",
+      "qpos_address": 63,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -42.97183463481174,
+        -0.0
+      ]
+    },
+    {
+      "name": "sternoclavicular_r3_l",
+      "qpos_address": 64,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        18.22005788516018
+      ]
+    },
+    {
+      "name": "unrotscap_r3_l",
+      "qpos_address": 65,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -18.22005788516018,
+        -0.0
+      ]
+    },
+    {
+      "name": "unrotscap_r2_l",
+      "qpos_address": 66,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        42.97183463481174
+      ]
+    },
+    {
+      "name": "acromioclavicular_r2_l",
+      "qpos_address": 67,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -8.708958485988513,
+        -0.0
+      ]
+    },
+    {
+      "name": "acromioclavicular_r3_l",
+      "qpos_address": 68,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        70.35921724206509
+      ]
+    },
+    {
+      "name": "acromioclavicular_r1_l",
+      "qpos_address": 69,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        31.627270291221446
+      ]
+    },
+    {
+      "name": "unrothum_r1_l",
+      "qpos_address": 70,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -31.627270291221446,
+        -0.0
+      ]
+    },
+    {
+      "name": "unrothum_r3_l",
+      "qpos_address": 71,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -70.35921724206509,
+        -0.0
+      ]
+    },
+    {
+      "name": "unrothum_r2_l",
+      "qpos_address": 72,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        8.708958485988513
+      ]
+    },
+    {
+      "name": "elv_angle_l",
+      "qpos_address": 73,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        -94.99640243269049,
+        130.0041237151838
+      ]
+    },
+    {
+      "name": "shoulder_elv_l",
+      "qpos_address": 74,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        0.0,
+        180.02333923010465
+      ]
+    },
+    {
+      "name": "shoulder1_r2_l",
+      "qpos_address": 75,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        -128.45713766833057,
+        94.99640243269049
+      ]
+    },
+    {
+      "name": "shoulder_rot_l",
+      "qpos_address": 76,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Schouder",
+      "limited": true,
+      "model_range": [
+        -90.01166961505233,
+        119.97736230039438
+      ]
+    },
+    {
+      "name": "elbow_flexion_l",
+      "qpos_address": 77,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Elleboog",
+      "limited": true,
+      "model_range": [
+        0.0,
+        130.0041237151838
+      ]
+    },
+    {
+      "name": "pro_sup_l",
+      "qpos_address": 78,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Onderarm",
+      "limited": true,
+      "model_range": [
+        -90.00021045914971,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "deviation_l",
+      "qpos_address": 79,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Pols",
+      "limited": true,
+      "model_range": [
+        -10.000004285756797,
+        24.999982066502238
+      ]
+    },
+    {
+      "name": "flexion_l",
+      "qpos_address": 80,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Pols",
+      "limited": true,
+      "model_range": [
+        -44.99999063801583,
+        44.99999063801583
+      ]
+    },
+    {
+      "name": "cmc_flexion_l",
+      "qpos_address": 81,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -44.69070802020421,
+        40.10704565915762
+      ]
+    },
+    {
+      "name": "cmc_abduction_l",
+      "qpos_address": 82,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -28.64788975654116,
+        44.69070802020421
+      ]
+    },
+    {
+      "name": "mp_flexion_l",
+      "qpos_address": 83,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -44.99999063801583,
+        40.000017143027186
+      ]
+    },
+    {
+      "name": "ip_flexion_l",
+      "qpos_address": 84,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -75.00017538262476,
+        24.999982066502238
+      ]
+    },
+    {
+      "name": "mcp2_flexion_l",
+      "qpos_address": 85,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp2_abduction_l",
+      "qpos_address": 86,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm2_flexion_l",
+      "qpos_address": 87,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md2_flexion_l",
+      "qpos_address": 88,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp3_flexion_l",
+      "qpos_address": 89,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp3_abduction_l",
+      "qpos_address": 90,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm3_flexion_l",
+      "qpos_address": 91,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md3_flexion_l",
+      "qpos_address": 92,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp4_flexion_l",
+      "qpos_address": 93,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp4_abduction_l",
+      "qpos_address": 94,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm4_flexion_l",
+      "qpos_address": 95,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md4_flexion_l",
+      "qpos_address": 96,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp5_flexion_l",
+      "qpos_address": 97,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "mcp5_abduction_l",
+      "qpos_address": 98,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        -14.99997778074544,
+        14.99997778074544
+      ]
+    },
+    {
+      "name": "pm5_flexion_l",
+      "qpos_address": 99,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "md5_flexion_l",
+      "qpos_address": 100,
+      "unit": "deg",
+      "role": "fixed_reference",
+      "group": "Overige modelco\u00f6rdinaten",
+      "limited": true,
+      "model_range": [
+        0.0,
+        90.00021045914971
+      ]
+    },
+    {
+      "name": "hip_flexion_r",
+      "qpos_address": 101,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Heup",
+      "limited": true,
+      "model_range": [
+        -30.000012857270395,
+        120.0002806121996
+      ]
+    },
+    {
+      "name": "hip_adduction_r",
+      "qpos_address": 102,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Heup",
+      "limited": true,
+      "model_range": [
+        -50.00002142878399,
+        30.000012857270395
+      ]
+    },
+    {
+      "name": "hip_rotation_r",
+      "qpos_address": 103,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Heup",
+      "limited": true,
+      "model_range": [
+        -40.000017143027186,
+        40.000017143027186
+      ]
+    },
+    {
+      "name": "knee_angle_translation2_r",
+      "qpos_address": 104,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        7.69254e-11,
+        0.006792
+      ]
+    },
+    {
+      "name": "knee_angle_translation1_r",
+      "qpos_address": 105,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        9.53733e-08,
+        0.00159883
+      ]
+    },
+    {
+      "name": "knee_angle_r",
+      "qpos_address": 106,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        0.0,
+        120.0002806121996
+      ]
+    },
+    {
+      "name": "knee_angle_rotation2_r",
+      "qpos_address": 107,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -0.09615435013664989,
+        1.921436884283021
+      ]
+    },
+    {
+      "name": "knee_angle_rotation3_r",
+      "qpos_address": 108,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -15.05664330668388,
+        15.05664330668388
+      ]
+    },
+    {
+      "name": "ankle_angle_r",
+      "qpos_address": 109,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Enkel / voet",
+      "limited": true,
+      "model_range": [
+        -40.000017143027186,
+        30.000012857270395
+      ]
+    },
+    {
+      "name": "subtalar_angle_r",
+      "qpos_address": 110,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Enkel / voet",
+      "limited": true,
+      "model_range": [
+        -20.000008571513593,
+        20.000008571513593
+      ]
+    },
+    {
+      "name": "mtp_angle_r",
+      "qpos_address": 111,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Enkel / voet",
+      "limited": true,
+      "model_range": [
+        -30.000012857270395,
+        30.000012857270395
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation2_r",
+      "qpos_address": 112,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -0.0408267,
+        -0.0108281
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation1_r",
+      "qpos_address": 113,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -0.0227731,
+        0.0524192
+      ]
+    },
+    {
+      "name": "knee_angle_beta_rotation1_r",
+      "qpos_address": 114,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -102.69752815704389,
+        0.6019494595644429
+      ]
+    },
+    {
+      "name": "hip_flexion_l",
+      "qpos_address": 115,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Heup",
+      "limited": true,
+      "model_range": [
+        -30.000012857270395,
+        120.0002806121996
+      ]
+    },
+    {
+      "name": "hip_adduction_l",
+      "qpos_address": 116,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Heup",
+      "limited": true,
+      "model_range": [
+        -50.00002142878399,
+        30.000012857270395
+      ]
+    },
+    {
+      "name": "hip_rotation_l",
+      "qpos_address": 117,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Heup",
+      "limited": true,
+      "model_range": [
+        -40.000017143027186,
+        40.000017143027186
+      ]
+    },
+    {
+      "name": "knee_angle_translation2_l",
+      "qpos_address": 118,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        7.69254e-11,
+        0.006792
+      ]
+    },
+    {
+      "name": "knee_angle_translation1_l",
+      "qpos_address": 119,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        9.53733e-08,
+        0.00159883
+      ]
+    },
+    {
+      "name": "knee_angle_l",
+      "qpos_address": 120,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        0.0,
+        120.0002806121996
+      ]
+    },
+    {
+      "name": "knee_angle_rotation2_l",
+      "qpos_address": 121,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -0.09615435013664989,
+        1.921436884283021
+      ]
+    },
+    {
+      "name": "knee_angle_rotation3_l",
+      "qpos_address": 122,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -15.05664330668388,
+        15.05664330668388
+      ]
+    },
+    {
+      "name": "ankle_angle_l",
+      "qpos_address": 123,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Enkel / voet",
+      "limited": true,
+      "model_range": [
+        -40.000017143027186,
+        30.000012857270395
+      ]
+    },
+    {
+      "name": "subtalar_angle_l",
+      "qpos_address": 124,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Enkel / voet",
+      "limited": true,
+      "model_range": [
+        -20.000008571513593,
+        20.000008571513593
+      ]
+    },
+    {
+      "name": "mtp_angle_l",
+      "qpos_address": 125,
+      "unit": "deg",
+      "role": "optimized",
+      "group": "Enkel / voet",
+      "limited": true,
+      "model_range": [
+        -30.000012857270395,
+        30.000012857270395
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation2_l",
+      "qpos_address": 126,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -0.0408267,
+        -0.0108281
+      ]
+    },
+    {
+      "name": "knee_angle_beta_translation1_l",
+      "qpos_address": 127,
+      "unit": "m",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -0.0227731,
+        0.0524192
+      ]
+    },
+    {
+      "name": "knee_angle_beta_rotation1_l",
+      "qpos_address": 128,
+      "unit": "deg",
+      "role": "coupled",
+      "group": "Knie",
+      "limited": true,
+      "model_range": [
+        -102.69752815704389,
+        0.6019494595644429
+      ]
+    }
+  ],
+  "zero_correction_applied": false,
+  "rotation_reference": "Frame 0 bootstraps constant segment-local offsets against a feasible stock-model pose; initial yaw aligned using hips. Not anatomical calibration.",
+  "coordinate_definition": "Absolute model qpos; hinge coordinates converted radians to degrees. Free root translation/quaternion retained in qpos.csv and NPZ, not treated as joint angles.",
+  "limitations": [
+    "Model coordinates, not independently ISB-calibrated anatomical angles.",
+    "Initial model reference imposed by the existing fit.",
+    "Fixed-reference coordinates are not independently tracked motion.",
+    "Knee feasible intervals remain approximately 1.09 to 42.07 degrees.",
+    "No muscle dynamics or optimized foot contact."
+  ],
+  "validation": {
+    "status": "passed",
+    "source": "mujoco_myofullbody_fit",
+    "frames": 60,
+    "joints": 123,
+    "scalar_coordinates": 122,
+    "max_saved_body_position_error_m": 0.0,
+    "max_range_violation": 0.0,
+    "max_coupling_error": 2.7755575615628914e-17,
+    "max_mujoco_equality_residual": 2.7755575615628914e-17
+  }
+}

@@ -1,4 +1,5 @@
 numpy==2.5.4
 scipy==1.18.1
 matplotlib==3.11.2
-mujoco==3.3.7
+mujoco==3.4.0
+myo-sim @ git+https://github.com/MyoHub/myo_sim.git@93b0ca8f4ec90c9899ee7f05fee561e9911da91b

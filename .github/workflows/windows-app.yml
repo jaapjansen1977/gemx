@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['desktop_app/**', '.github/workflows/windows-app.yml']
+    paths: ['desktop_app/**', 'myo_fit/**', '.github/workflows/windows-app.yml']
 permissions:
   contents: read
 jobs:
@@ -26,7 +26,7 @@ jobs:
           $process = Start-Process -FilePath dist/GEMXDesktop/GEMXDesktop.exe -ArgumentList '--self-test', $output -Wait -PassThru
           if ($process.ExitCode -ne 0) { throw "Frozen self-test failed: $($process.ExitCode)" }
           $result = Get-Content "$output/desktop-self-test.json" | ConvertFrom-Json
-          if ($result.status -ne 'passed' -or $result.frames -ne 60) { throw 'Frozen MuJoCo validation failed' }
+          if ($result.status -ne 'passed' -or $result.frames -ne 60 -or $result.source -ne 'mujoco_myofullbody_fit') { throw 'Frozen MuJoCo validation failed' }
           if (-not (Test-Path "$output/angles.csv")) { throw 'Frozen angle export missing' }
       - name: Smoke test executable startup
         shell: pwsh

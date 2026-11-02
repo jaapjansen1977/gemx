@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['browser_app/**', '.github/workflows/browser-app.yml']
+    paths: ['browser_app/**', 'myo_fit/**', '.github/workflows/browser-app.yml']
 permissions:
   contents: read
 jobs:
@@ -26,7 +26,7 @@ jobs:
           $process = Start-Process -FilePath dist/GEMXBrowser/GEMXBrowser.exe -ArgumentList '--self-test', $output -Wait -PassThru
           if ($process.ExitCode -ne 0) { throw "Frozen self-test failed: $($process.ExitCode)" }
           $result = Get-Content "$output/browser-self-test.json" | ConvertFrom-Json
-          if ($result.status -ne 'passed' -or $result.frames -ne 60) { throw 'Frozen browser test failed' }
+          if ($result.status -ne 'passed' -or $result.frames -ne 60 -or $result.source -ne 'mujoco_myofullbody_fit') { throw 'Frozen browser test failed' }
       - uses: actions/upload-artifact@v4
         with:
           name: GEMXBrowser-Windows

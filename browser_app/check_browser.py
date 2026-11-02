@@ -17,9 +17,17 @@ def main():
         page.wait_for_function('window.gemxResultReady===true || document.getElementById("status").classList.contains("error")',timeout=60000)
         assert page.evaluate('window.gemxResultReady===true'),page.locator('#status').inner_text()
         assert '60 frames' in page.locator('#validation').inner_text()
+        page.wait_for_function('document.getElementById("fit-video").readyState>=1')
+        assert page.evaluate('state.data.source')=='mujoco_myofullbody_fit'
+        assert page.evaluate('state.data.coordinates.length')==122
+        page.select_option('#coordinate','knee_angle_l')
+        page.wait_for_function('document.getElementById("charts").data[0].name==="knee_angle_l"')
+        page.select_option('#coordinate','cmc_flexion')
+        assert 'vaste referentie' in page.locator('#coordinate-info').inner_text()
+        page.click('#toggle-view')
         page.locator('#frame').evaluate("e=>{e.value=30;e.dispatchEvent(new Event('input'));}")
-        page.wait_for_function('state.frame===30 && document.getElementById("skeleton").data[3].x[0]===state.data.positions[30][0][0]')
-        page.click('#play');page.wait_for_timeout(400);page.click('#play')
+        page.wait_for_function('state.frame===30 && document.getElementById("skeleton").data[3].x[state.data.names.indexOf("ulna_l")]===state.data.positions[30][state.data.names.indexOf("ulna_l")][0]')
+        page.click('#play');page.wait_for_function('state.frame>30',timeout=15000);page.click('#play')
         assert page.evaluate('state.frame')>30
         page.click('#reset-camera')
         with page.expect_download() as event:page.click('#download-zip')
@@ -27,7 +35,9 @@ def main():
         with zipfile.ZipFile(output/'resultaten.zip') as archive:
             assert archive.testzip() is None
             assert 'review/angles.csv' in archive.namelist()
-            assert json.loads(archive.read('mujoco-validation.json'))['frames']==60
+            assert json.loads(archive.read('review/validation.json'))['frames']==60
+        page.click('#toggle-view')
+        page.select_option('#coordinate','shoulder_elv_l')
         page.screenshot(path=str(output/'complete.png'),full_page=True)
         page.set_viewport_size({'width':390,'height':844});page.wait_for_timeout(500)
         assert page.evaluate('document.documentElement.scrollWidth<=window.innerWidth'),page.evaluate('document.documentElement.scrollWidth')
@@ -36,7 +46,7 @@ def main():
         assert page.locator('#analyze').is_disabled()
         assert not errors,errors
         assert not remote,remote
-        report={'status':'passed','checks':['real demo analysis','60-frame MuJoCo validation','3D frame coordinates update','play/pause','download ZIP integrity and CSV','mobile layout without overflow','video disabled when engine absent'],'javascript_errors':errors,'external_requests':remote,'browser':browser.version}
+        report={'status':'passed','checks':['actual MyoFullBody qpos source','60-frame MuJoCo validation','fitted model body coordinates update','play/pause','download ZIP integrity and CSV','mobile layout without overflow','video disabled when engine absent'],'javascript_errors':errors,'external_requests':remote,'browser':browser.version}
         (output/'browser-validation.json').write_text(json.dumps(report,indent=2))
         print(json.dumps(report,indent=2))
         browser.close()

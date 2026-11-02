@@ -23,24 +23,20 @@ def open_file(path):
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--play',type=Path);parser.add_argument('--self-test',type=Path);args=parser.parse_args()
     if args.self_test:
-        from desktop_app.analysis import analyze
-        from mujoco_demo.skeleton import Skeleton
-        from mujoco_demo.__main__ import load_motion,validate
-        analyze(resources()/'shoulder/results/shoulder.npz',args.self_test)
-        result=validate(Skeleton(load_motion(resources()/'mujoco_demo/data/motion.npz')))
-        (args.self_test/'desktop-self-test.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+        from myo_fit.export_results import export
+        report=export(resources()/'myo_fit/results/fit.npz',args.self_test,resources()/'myo_fit/results/report.json')
+        (args.self_test/'desktop-self-test.json').write_text(json.dumps(report['validation'],indent=2),encoding='utf-8')
         return
     if args.play:
-        import numpy as np
-        from mujoco_demo.skeleton import Skeleton
-        from mujoco_demo.__main__ import play,load_motion
-        play(Skeleton(load_motion(args.play)));return
+        from myo_fit.view import main as play_model
+        sys.argv=['myo_fit.view','--fit',str(args.play)]
+        play_model();return
     root=tk.Tk();root.title('GEM-X Bewegingsanalyse - experimenteel');root.geometry('850x700')
     frame=ttk.Frame(root,padding=20);frame.pack(fill='both',expand=True)
     ttk.Label(frame,text='GEM-X Bewegingsanalyse',font=('Segoe UI',19,'bold')).pack(anchor='w')
-    ttk.Label(frame,text='Lokale verwerking / MuJoCo-weergave / Schouderhoeken',font=('Segoe UI',11)).pack(anchor='w',pady=(3,14))
-    ttk.Label(frame,text='Onderzoeksversie: beginhouding als neutraal aangenomen; geen gevalideerde ISB-meting.',wraplength=790).pack(anchor='w')
-    video=tk.StringVar();destination=tk.StringVar(value=str(Path.home()/'GEMX-resultaten'));start=tk.StringVar(value='0');duration=tk.StringVar(value='2');neutral=tk.StringVar(value='0.5')
+    ttk.Label(frame,text='MyoFullBody-modelfit / MuJoCo-weergave / Modelcoordinaten',font=('Segoe UI',11)).pack(anchor='w',pady=(3,14))
+    ttk.Label(frame,text='Bron: gefitte MuJoCo-qpos. Alle 122 modelcoordinaten in CSV; geen extra nulcorrectie of ISB-validatie.',wraplength=790).pack(anchor='w')
+    video=tk.StringVar();destination=tk.StringVar(value=str(Path.home()/'GEMX-resultaten'));start=tk.StringVar(value='0');duration=tk.StringVar(value='2')
     runtime=tk.StringVar();config=tk.StringVar();assets=tk.StringVar();state={'process':None,'busy':False,'result':None}
     def row(parent,label,var,folder=False,filetypes=None):
         bar=ttk.Frame(parent);bar.pack(fill='x',pady=4);ttk.Label(bar,text=label,width=23).pack(side='left')
@@ -51,13 +47,13 @@ def main():
         ttk.Button(bar,text='Kiezen...',command=browse).pack(side='right',padx=(6,0))
     row(frame,'Video',video,filetypes=[('Video','*.mp4 *.mov *.avi *.mkv'),('Alle bestanden','*.*')]);row(frame,'Resultaten opslaan in',destination,folder=True)
     opts=ttk.Frame(frame);opts.pack(fill='x',pady=8)
-    for label,var in [('Start (s)',start),('Lengte (s, maximaal 60)',duration),('Neutrale beginperiode (s)',neutral)]:
+    for label,var in [('Start (s)',start),('Lengte (s, maximaal 60)',duration)]:
         ttk.Label(opts,text=label).pack(side='left',padx=(0,5));ttk.Entry(opts,textvariable=var,width=7).pack(side='left',padx=(0,12))
     settings=ttk.LabelFrame(frame,text='Videomotor - eenmalig instellen',padding=8);settings.pack(fill='x',pady=8)
     row(settings,'Python van videomotor',runtime,filetypes=[('Python','python.exe'),('Alle bestanden','*.*')]);row(settings,'GEM-X configuratie',config);row(settings,'SOMA-assetsmap',assets,folder=True)
     ttk.Label(settings,text='Eigen video vraagt de apart geïnstalleerde GEM-X-CPU-motor en officiële lokale modellen. De proefclip werkt zonder die installatie.',wraplength=760).pack(anchor='w')
     settings_path=Path(os.environ.get('APPDATA',str(Path.home()/'.config')))/'GEMXDesktop/settings.json'
-    preferences={'runtime':runtime,'config':config,'assets':assets,'destination':destination,'neutral':neutral}
+    preferences={'runtime':runtime,'config':config,'assets':assets,'destination':destination}
     try:
         saved=json.loads(settings_path.read_text(encoding='utf-8'))
         for key,var in preferences.items():
@@ -81,19 +77,21 @@ def main():
         target=parent/time.strftime('%Y%m%d-%H%M%S');target.mkdir(exist_ok=False);return target
     def sample():
         target=folder();root.after(0,status.set,'Proefclip analyseren...')
-        from desktop_app.analysis import analyze
-        analyze(resources()/'shoulder/results/shoulder.npz',target/'review',float(neutral.get()))
+        from myo_fit.export_results import export
         import shutil
-        (target/'motion').mkdir();shutil.copyfile(resources()/'mujoco_demo/data/motion.npz',target/'motion/motion.npz')
+        (target/'fit').mkdir()
+        shutil.copyfile(resources()/'myo_fit/results/fit.npz',target/'fit/fit.npz')
+        shutil.copyfile(resources()/'myo_fit/results/report.json',target/'fit/report.json')
+        export(target/'fit/fit.npz',target/'review',target/'fit/report.json')
         state['result']=target;root.after(0,status.set,'Proefclip klaar. Open MuJoCo, de hoekgrafiek of de resultatenmap.')
     def process():
         if not Path(video.get()).is_file():raise ValueError('Kies een bestaande video.')
         for value,label in [(runtime.get(),'Python van de videomotor'),(config.get(),'GEM-X-configuratie')]:
             if not value or not Path(value).is_file():raise ValueError('Stel eerst '+label+' in.')
         if not assets.get() or not Path(assets.get()).is_dir():raise ValueError('Kies de SOMA-assetsmap.')
-        s,d,n=float(start.get()),float(duration.get()),float(neutral.get())
-        if not 0<=s or not 0<d<=60 or not 0<n<d:raise ValueError('Gebruik start >= 0, lengte 0-60 s en een kortere neutrale beginperiode.')
-        target=folder();req=dict(video=str(Path(video.get()).resolve()),config=config.get(),assets=assets.get(),output=str(target),start=s,duration=d,neutral_seconds=n,threads=2)
+        s,d=float(start.get()),float(duration.get())
+        if not 0<=s or not 0<d<=60 :raise ValueError('Gebruik start >= 0, lengte 0-60 s.')
+        target=folder();req=dict(video=str(Path(video.get()).resolve()),config=config.get(),assets=assets.get(),output=str(target),start=s,duration=d,threads=2)
         request=target/'request.json';request.write_text(json.dumps(req,indent=2),encoding='utf-8')
         env=os.environ.copy();env['PYTHONPATH']=str(resources()/'engine_source') if getattr(sys,'frozen',False) else str(resources())
         root.after(0,status.set,'Video wordt verwerkt; CPU-analyse kan lang duren. Voortgang staat hieronder.')
@@ -116,7 +114,7 @@ def main():
         target=state['result']
         if not target:messagebox.showinfo('Nog geen resultaat','Voer eerst de proefclip of een videoanalyse uit.');return
         if kind=='play':
-            command=[sys.executable,'--play',str(target/'motion/motion.npz')] if getattr(sys,'frozen',False) else [sys.executable,'-m','desktop_app.app','--play',str(target/'motion/motion.npz')]
+            command=[sys.executable,'--play',str(target/'fit/fit.npz')] if getattr(sys,'frozen',False) else [sys.executable,'-m','desktop_app.app','--play',str(target/'fit/fit.npz')]
             subprocess.Popen(command,cwd=str(resources()))
         else:open_file(target/'review/angles.png' if kind=='plot' else target)
     ttk.Button(actions,text='Bestaande proefclip',command=lambda:job(sample)).pack(side='left',padx=3)

@@ -59,6 +59,11 @@ def main():
         for key,var in preferences.items():
             if isinstance(saved.get(key),str):var.set(saved[key])
     except (OSError,ValueError):pass
+    from video_engine.paths import load_profile
+    engine_profile=load_profile()
+    if engine_profile:
+        for var,key in [(runtime,'python'),(config,'config'),(assets,'assets')]:
+            if not var.get():var.set(engine_profile[key])
     status=tk.StringVar(value='Gereed. Begin eventueel met de bestaande proefclip.')
     ttk.Label(frame,textvariable=status,wraplength=780).pack(anchor='w',pady=8)
     actions=ttk.Frame(frame);actions.pack(fill='x');log=tk.Text(frame,height=13,wrap='word');log.pack(fill='both',expand=True,pady=10)
@@ -92,6 +97,7 @@ def main():
         s,d=float(start.get()),float(duration.get())
         if not 0<=s or not 0<d<=60 :raise ValueError('Gebruik start >= 0, lengte 0-60 s.')
         target=folder();req=dict(video=str(Path(video.get()).resolve()),config=config.get(),assets=assets.get(),output=str(target),start=s,duration=d,threads=2)
+        if engine_profile and runtime.get()==engine_profile['python']:req['ffmpeg_bin']=engine_profile.get('ffmpeg_bin','')
         request=target/'request.json';request.write_text(json.dumps(req,indent=2),encoding='utf-8')
         env=os.environ.copy();env['PYTHONPATH']=str(resources()/'engine_source') if getattr(sys,'frozen',False) else str(resources())
         root.after(0,status.set,'Video wordt verwerkt; CPU-analyse kan lang duren. Voortgang staat hieronder.')

@@ -26,5 +26,7 @@ Invoke-Python -m PyInstaller --noconfirm --clean --onedir --console --name GEMXB
     --add-data 'build/browser-engine-source;engine_source' `
     browser_app/server.py
 Copy-Item browser_app/README.md dist/GEMXBrowser/LEESMIJ.md
+Copy-Item desktop_app/setup_engine_windows.ps1 dist/GEMXBrowser/
+Copy-Item -Recurse video_engine dist/GEMXBrowser/video_engine
 Invoke-Python desktop_app/collect_notices.py dist/GEMXBrowser/THIRD_PARTY_LICENSES
 Compress-Archive -Path dist/GEMXBrowser -DestinationPath dist/GEMXBrowser-Windows.zip -Force

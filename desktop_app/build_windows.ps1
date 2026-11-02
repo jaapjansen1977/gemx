@@ -25,5 +25,6 @@ Invoke-Python -m PyInstaller --noconfirm --clean --onedir --windowed --name GEMX
     desktop_app/app.py
 Copy-Item desktop_app/README.md dist/GEMXDesktop/LEESMIJ.md
 Copy-Item desktop_app/setup_engine_windows.ps1 dist/GEMXDesktop/
+Copy-Item -Recurse video_engine dist/GEMXDesktop/video_engine
 Invoke-Python desktop_app/collect_notices.py dist/GEMXDesktop/THIRD_PARTY_LICENSES
 Compress-Archive -Path dist/GEMXDesktop -DestinationPath dist/GEMXDesktop-Windows.zip -Force

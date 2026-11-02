@@ -81,7 +81,7 @@ class Jobs:
             else:
                 self.update(job, 'Video lokaal verwerken met de ingestelde GEM-X-motor')
                 req = {**settings, 'output': str(job.directory), 'config': str(self.engine['config']),
-                       'assets': str(self.engine['assets']), 'threads': 2}
+                       'assets': str(self.engine['assets']), 'ffmpeg_bin': str(self.engine.get('ffmpeg_bin','')), 'threads': 2}
                 path = job.directory/'request.json'
                 path.write_text(json.dumps(req, indent=2), encoding='utf-8')
                 env = os.environ.copy()
@@ -317,6 +317,9 @@ def main():
     if all(values) and not (values[0].is_file() and values[1].is_file() and values[2].is_dir()):
         parser.error('Controleer de Python-, configuratie- en assetpaden van de videomotor.')
     engine = dict(python=values[0].resolve(), config=values[1].resolve(), assets=values[2].resolve()) if all(values) else None
+    if engine is None:
+        from video_engine.paths import load_profile
+        engine=load_profile()
     app = create_app(args.data_dir, engine)
     print(f'Open http://127.0.0.1:{args.port} in je browser. Stop met Ctrl+C.', flush=True)
     if args.open_browser or getattr(sys, 'frozen', False):

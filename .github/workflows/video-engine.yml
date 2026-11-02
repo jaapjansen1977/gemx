@@ -1,0 +1,52 @@
+name: Windows video engine checks
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['video_engine/**', 'desktop_app/setup_engine_windows.ps1', '.github/workflows/video-engine.yml']
+permissions:
+  contents: read
+jobs:
+  setup-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package setup scripts without models or binaries
+        run: python3 -m video_engine.package_setup --output outputs/GEMX-videomotor-setup.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GEMX-videomotor-setup
+          path: outputs/GEMX-videomotor-setup.zip
+          if-no-files-found: error
+  dependencies:
+    runs-on: windows-2025
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: x64
+      - name: Provide FFmpeg for local runtime checks
+        shell: pwsh
+        run: |
+          if (-not (Get-Command ffmpeg.exe -ErrorAction SilentlyContinue)) {
+            choco install ffmpeg --yes --no-progress --limit-output
+            if ($LASTEXITCODE -ne 0) { throw 'FFmpeg installation failed' }
+          }
+      - name: Install and check actual Windows CPU runtime
+        shell: pwsh
+        run: |
+          $destination = Join-Path $env:RUNNER_TEMP 'gemx-video-engine'
+          ./desktop_app/setup_engine_windows.ps1 -Destination $destination -PythonExecutable (Get-Command python.exe).Source
+          & "$destination/Scripts/python.exe" -m unittest video_engine.test_setup -v
+          if ($LASTEXITCODE -ne 0) { throw 'Installer tests failed' }
+      - name: Keep installation report and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: GEMX-video-engine-checks
+          path: |
+            ${{ runner.temp }}/gemx-video-engine/engine-check.json
+            ~/AppData/Local/GEMX/setup-logs/
+          if-no-files-found: ignore

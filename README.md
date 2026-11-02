@@ -63,3 +63,9 @@ De Windows-EXE en nieuwe Windows-videoanalyse zijn nog niet bevestigd.
 grafieken van alle MyoFullBody-modelcoördinaten, voortgang en downloads.
 Bron van de appresultaten is de gefitte MuJoCo-qpos, zonder extra nulcorrectie. Met een eigen Windows-build; nog niet
 online gehost. Eigen videoanalyse vraagt de apart ingestelde GEM-X-videomotor.
+
+## Eigen video op Windows voorbereiden
+
+[Installatie en controle van de CPU-videomotor](video_engine/README.md), met
+hervatbare modeldownloads, SHA256-controle, codecproef en automatische
+appconfiguratie. De volledige videoanalyse op de eigen pc blijft een aparte test.

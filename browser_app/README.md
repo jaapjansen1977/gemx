@@ -128,3 +128,12 @@ Bij een mislukte Windows-zelftest worden stdout en stderr volledig in het
 staplog getoond. Download zo nodig het artefact **GEMXBrowser-diagnostics**:
 daarin staan de proceslogs en beschikbare PyInstaller-waarschuwingen. De build
 blijft bij een fout falen; het bewaren van logs schakelt geen tests uit.
+
+## Videomotor installeren met automatische herkenning
+
+[De nieuwe Windows-installatieprocedure](../video_engine/README.md) installeert
+de CPU-motor, downloadt desgewenst de vastgelegde modellen, controleert checksums,
+codecs en native onderdelen en registreert de motor voor beide apps. Gebruik een
+recente appversie en herstart de app na de installatie. Een geslaagde controle
+is nog geen geslaagde verwerking van een eigen Windows-video; daarvoor volgt
+een korte proef op je eigen computer.

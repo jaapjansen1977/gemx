@@ -17,6 +17,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('request',type=Path);a=p.parse_args()
     req=json.loads(a.request.read_text(encoding='utf-8')); output=Path(req['output'])
     try:
+        if req.get('ffmpeg_bin'):os.environ['PATH']=req['ffmpeg_bin']+os.pathsep+os.environ.get('PATH','')
         os.environ.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',HF_HUB_DISABLE_TELEMETRY='1',WARP_CACHE_PATH=str(output/'warp-cache'))
         if not all(shutil.which(x) for x in ('ffmpeg','ffprobe')):
             raise RuntimeError('De videomotor vraagt ffmpeg en ffprobe op PATH.')

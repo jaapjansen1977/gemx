@@ -66,3 +66,12 @@ modelassets, ondersteunende bibliotheken en third-party notices. De bouwtests
 controleren de echte modelfit; een Linux-test bewijst niet dat de Windows-EXE
 al werkt. De oorspronkelijke losse MuJoCo-skeletdemo blijft als aparte
 onderzoeksweergave bestaan en is niet de bron van de appmetingen.
+
+## Videomotor installeren met automatische herkenning
+
+[De nieuwe Windows-installatieprocedure](../video_engine/README.md) installeert
+de CPU-motor, downloadt desgewenst de vastgelegde modellen, controleert checksums,
+codecs en native onderdelen en registreert de motor voor beide apps. Gebruik een
+recente appversie en herstart de app na de installatie. Een geslaagde controle
+is nog geen geslaagde verwerking van een eigen Windows-video; daarvoor volgt
+een korte proef op je eigen computer.

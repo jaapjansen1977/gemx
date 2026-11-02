@@ -115,3 +115,16 @@ controleren replay, rollen en downloads, en wijzen een opzettelijk gewijzigde
 modelhouding af. De Windows-build herhaalt de API-/exporttests en de zelftest in
 de gebouwde EXE. Voor de optionele Chromium-controle: installeer Playwright en
 gebruik `python -m browser_app.check_browser` terwijl de server draait.
+
+### Diagnostiek van de gebouwde toepassing
+
+De browser-EXE gebruikt expliciete paden naar de meegeleverde pagina's, scripts
+en modeldata in `_internal`. Ook de daadwerkelijk met PyInstaller verpakte
+Linux-toepassing heeft de volledige zelftest doorlopen; dit is afzonderlijk
+vastgelegd in `evidence/linux-frozen-self-test.json`. De Windows-build blijft
+een aparte controle.
+
+Bij een mislukte Windows-zelftest worden stdout en stderr volledig in het
+staplog getoond. Download zo nodig het artefact **GEMXBrowser-diagnostics**:
+daarin staan de proceslogs en beschikbare PyInstaller-waarschuwingen. De build
+blijft bij een fout falen; het bewaren van logs schakelt geen tests uit.

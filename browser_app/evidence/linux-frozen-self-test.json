@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "source": "mujoco_myofullbody_fit",
+  "frames": 60,
+  "joints": 123,
+  "scalar_coordinates": 122,
+  "template": true,
+  "javascript": true,
+  "angle_export": true,
+  "zip_download": true
+}

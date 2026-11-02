@@ -23,7 +23,13 @@ jobs:
         shell: pwsh
         run: |
           $output = Join-Path $env:RUNNER_TEMP 'gemx-browser-smoke'
-          $process = Start-Process -FilePath dist/GEMXBrowser/GEMXBrowser.exe -ArgumentList '--self-test', $output -Wait -PassThru
+          $logs = Join-Path $env:RUNNER_TEMP 'gemx-browser-diagnostics'
+          New-Item -ItemType Directory -Force $logs | Out-Null
+          $stdout = Join-Path $logs 'stdout.log'
+          $stderr = Join-Path $logs 'stderr.log'
+          $process = Start-Process -FilePath dist/GEMXBrowser/GEMXBrowser.exe -ArgumentList '--self-test', $output -Wait -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+          Get-Content $stdout -ErrorAction SilentlyContinue | Write-Host
+          Get-Content $stderr -ErrorAction SilentlyContinue | Write-Host
           if ($process.ExitCode -ne 0) { throw "Frozen self-test failed: $($process.ExitCode)" }
           $result = Get-Content "$output/browser-self-test.json" | ConvertFrom-Json
           if ($result.status -ne 'passed' -or $result.frames -ne 60 -or $result.source -ne 'mujoco_myofullbody_fit') { throw 'Frozen browser test failed' }
@@ -32,3 +38,14 @@ jobs:
           name: GEMXBrowser-Windows
           path: dist/GEMXBrowser-Windows.zip
           if-no-files-found: error
+
+      - name: Preserve frozen application diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: GEMXBrowser-diagnostics
+          path: |
+            ${{ runner.temp }}/gemx-browser-diagnostics/
+            ${{ runner.temp }}/gemx-browser-smoke/browser-self-test.json
+            build/GEMXBrowser/warn-GEMXBrowser.txt
+          if-no-files-found: ignore

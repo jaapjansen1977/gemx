@@ -18,7 +18,12 @@ from zipfile import ZipFile, ZIP_DEFLATED
 import numpy as np
 from flask import Flask, abort, jsonify, render_template, request, send_file, session
 
-ROOT = Path(__file__).resolve().parents[1]
+def resource_root():
+    # A frozen entry script lives directly in _MEIPASS, outside its source package.
+    return Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parents[1]))
+
+
+ROOT = resource_root()
 FILES = {'csv': 'review/angles.csv', 'qpos': 'review/qpos.csv', 'plot': 'review/angles.png',
          'report': 'review/report.json', 'arrays': 'review/model-coordinates.npz',
          'motion': 'fit/fit.npz', 'video': 'fit/preview.mp4', 'validation': 'review/validation.json',
@@ -109,6 +114,8 @@ class Jobs:
             self.update(job, 'Klaar. De 3D-beweging, hoeken en downloads staan hieronder.')
             job.status = 'completed'
         except Exception as error:
+            import traceback
+            traceback.print_exc()
             self.update(job, str(error))
             job.status = 'failed'
         finally:
@@ -145,7 +152,8 @@ def json_values(array):
 
 
 def create_app(directory=None, engine=None):
-    app = Flask(__name__)
+    app = Flask(__name__, template_folder=str(ROOT/'browser_app/templates'),
+                static_folder=str(ROOT/'browser_app/static'), static_url_path='/static')
     app.config.update(SECRET_KEY=secrets.token_hex(32), MAX_CONTENT_LENGTH=256*1024*1024,
                       SESSION_COOKIE_HTTPONLY=True, SESSION_COOKIE_SAMESITE='Strict',
                       TRUSTED_HOSTS=['localhost', '127.0.0.1'])

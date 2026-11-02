@@ -3,6 +3,8 @@ from pathlib import Path
 import tempfile
 import time
 import unittest
+from unittest.mock import patch
+import shutil
 from browser_app.server import create_app
 
 
@@ -47,6 +49,26 @@ class BrowserTests(unittest.TestCase):
             self.assertTrue(response.data)
             response.close()
         self.assertEqual(self.client.get(f'/api/jobs/{key}/files/request.json').status_code,404)
+
+    def test_frozen_entry_finds_internal_assets(self):
+        from browser_app import server
+        internal=Path(self.directory.name)/'_internal'
+        source=Path(__file__).resolve().parents[1]/'browser_app'
+        for folder in ('templates','static'):
+            shutil.copytree(source/folder,internal/'browser_app'/folder)
+        with patch.object(server.sys,'_MEIPASS',str(internal),create=True):
+            self.assertEqual(server.resource_root(),internal)
+        # PyInstaller executes server.py as __main__, rather than as a package module.
+        with patch.object(server,'ROOT',internal),patch.object(server,'__name__','__main__'):
+            frozen=server.create_app(internal/'results')
+            try:
+                client=frozen.test_client()
+                self.assertEqual(client.get('/').status_code,200)
+                script=client.get('/static/app.js')
+                self.assertEqual(script.status_code,200)
+                self.assertIn(b'mujoco_myofullbody_fit',script.data)
+                script.close()
+            finally:frozen.extensions['jobs'].close()
 
     def test_mutations_require_page_token(self):
         self.assertEqual(self.client.post('/api/jobs/demo',json={}).status_code,403)
